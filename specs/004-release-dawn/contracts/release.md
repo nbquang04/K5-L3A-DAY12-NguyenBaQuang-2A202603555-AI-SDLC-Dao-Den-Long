@@ -1,0 +1,6 @@
+# Contract1.3
+game.contract.json retains1.2tuning/schema and adds bench_cmd='node scripts/bench.mjs',soak_cmd='node --expose-gc scripts/soak.mjs'. run_cmd='npm start'; npm start -- --export-leaderboard out.json uses same.data/leaderboard.json asGUIserver andexits0; malformedCLI/data nonzero/stderr.
+Benchmark args--seed integer,--duration positiveseconds,--out path; headed default1280x720. Optional --headless diagnosticexplicit, not canonicalheaded evidence. RequiredoutputfieldsexactTicket04; extra rawsamples/provenance separatefiles. Metrics computedfrom actualdurationwindow after3warmup; p95nearest-rank. Webmemnull; vsyncfalse.
+Soak args--seed integer,--nights positiveinteger,--out path; oneprocess; output{nights,crashes,results,mem_start_mb,mem_end_mb,duration_s}; actualRSS and nonzeroexit ifcrash. indexi0-based. ExplicitGCifavailable appliedconsistently to load/reset measurements.
+GET/api/leaderboard→{entries:[...]}; POSTname/score/nights_won/seed→validated diskentry withservertime ISO; client achieved_at notaccepted. Top10 scoredesc/timeasc. LEADERBOARD_PATH isolatesdatafile; PORT selectsserver. No secrets/networkaccounts.
+Bindings normalplayonly; headless inputfieldsunchanged. Accessibility andleaderboard neveralter core/RNG/replay.

@@ -42,6 +42,12 @@ function outsideSafety(g,pos){
  return candidates.filter(clear).sort((a,b)=>dist(a,pos)-dist(b,pos))[0]??[Math.max(...circles.map(l=>l.pos[0]+r))+1,pos[1],pos[2]];
 }
 function moveEnemy(g,s,dir,speed,safe=true){const old=s.pos;s.pos=moveHorizontal(g.night,old,dir[0]*speed/HZ,dir[1]*speed/HZ,true);const ground=surfaces(g.night,s.pos[0],s.pos[2]).filter(y=>Math.abs(y-old[1])<.2);if(!ground.length)s.pos=old;else s.pos[1]=Math.max(...ground);if(safe)s.pos=outsideSafety(g,s.pos);}
+export function advanceShadeWander(g,s){const t=g.t;
+const weak=g.lanterns.filter(l=>l.lit&&l.fuelUnits<t.low_fuel_threshold*HZ);
+    const targets=weak.length?weak:g.lanterns.filter(l=>!l.lit);
+    const target=targets.sort((a,b)=>dist(s.pos,a.pos)-dist(s.pos,b.pos)||order(a,b))[0];
+    if(target){s.target_lantern_id=target.id;const distance=dist(s.pos,target.pos);moveEnemy(g,s,direction(s.pos,target.pos),Math.min(2,distance*HZ));if(target.lit&&target.fuelUnits<t.low_fuel_threshold*HZ&&dist(s.pos,target.pos)<=2){s.state='drain';s.drainTicks=0;}}
+}
 export function step(g,patch={}){
  if(g.state==='won'||g.state==='lost')return [];
  validateInputPatch(patch);const prev=g.input,input={...prev,...patch};g.input=input;const edge=k=>input[k]&&!prev[k],p=g.player,t=g.t,events=[];
@@ -117,10 +123,7 @@ export function step(g,patch={}){
    if(s.state==='wander'&&playerDistance<=12)s.state='chase';
    if(s.state==='chase')moveEnemy(g,s,direction(s.pos,p.pos),Math.min(playerDistance*HZ,g.night===3?4.5:t.shade_speed));
    else{
-    const weak=g.lanterns.filter(l=>l.lit&&l.fuelUnits<t.low_fuel_threshold*HZ);
-    const targets=weak.length?weak:g.lanterns.filter(l=>!l.lit);
-    const target=targets.sort((a,b)=>dist(s.pos,a.pos)-dist(s.pos,b.pos)||order(a,b))[0];
-    if(target){s.target_lantern_id=target.id;const distance=dist(s.pos,target.pos);moveEnemy(g,s,direction(s.pos,target.pos),Math.min(2,distance*HZ));if(target.lit&&target.fuelUnits<t.low_fuel_threshold*HZ&&dist(s.pos,target.pos)<=2){s.state='drain';s.drainTicks=0;}}
+    advanceShadeWander(g,s);
    }
   }
  }

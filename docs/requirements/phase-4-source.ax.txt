@@ -1,0 +1,394 @@
+﻿      - main
+        - heading "TICKET-04 — \"Bình minh: phát hành v1.0.0\" (Phase 4)" [level=1, ref=e59]
+        - blockquote
+          - paragraph
+            - StaticText "Loại: Non-functional + Release · Ưu tiên: Cao · Tag nộp: "
+            - code
+              - StaticText "phase-4"
+            - StaticText " + GitHub Release "
+            - code
+              - StaticText "v1.0.0"
+            - StaticText " · Contract: "
+            - strong
+              - StaticText "v1.3"
+        - heading "Mục tiêu" [level=2, ref=e60]
+        - paragraph
+          - StaticText "Đưa game từ \"chạy được\" thành "
+          - strong
+            - StaticText "sản phẩm phát hành được"
+          - StaticText ": đo được hiệu năng, ổn định khi chạy lâu, có bảng xếp hạng, dễ tiếp cận, cài đặt dễ dàng. Mọi yêu cầu dưới đây đều có "
+          - strong
+            - StaticText "số đo cụ thể"
+          - StaticText " và được chấm tự động hoặc theo checklist."
+        - separator
+        - blockquote
+          - paragraph
+            - strong
+              - StaticText "Về sáng tạo:"
+            - StaticText " phần sáng tạo của bạn vẫn được giữ, miễn là luật, số liệu và Test Contract không bị đổi và đầu ra headless không đổi. Trong "
+            - strong
+              - StaticText "cảnh benchmark và soak test"
+            - StaticText ", nhân vật, kẻ địch và hiệu ứng sáng tạo thêm phải "
+            - strong
+              - StaticText "tắt"
+            - StaticText " (hoặc không ảnh hưởng số đo), để mọi bài được đo trên cùng một cảnh chuẩn."
+        - heading "1. Chế độ benchmark (bắt buộc)" [level=2, ref=e61]
+        - paragraph
+          - strong
+            - StaticText "Lệnh:"
+          - code
+            - StaticText "<bench_cmd> --seed 42 --duration 30 --out bench.json"
+        - paragraph
+          - strong
+            - StaticText "Cảnh benchmark (mọi bài giống nhau):"
+        - list
+          - listitem [level=1]
+            - ListMarker "1. "
+            - StaticText "Mở cửa sổ "
+            - strong
+              - StaticText "1280×720"
+            - StaticText ", không toàn màn hình; tắt vsync nếu engine cho phép (ghi rõ trong README nếu không tắt được)."
+          - listitem [level=1]
+            - ListMarker "2. "
+            - StaticText "Tải Đêm 1 với đầy đủ hiệu ứng và ánh sáng như lúc chơi thật."
+          - listitem [level=1]
+            - ListMarker "3. "
+            - StaticText "Sinh "
+            - strong
+              - StaticText "đúng 200 Bóng Mực"
+            - StaticText " ở trạng thái "
+            - code
+              - StaticText "wander"
+            - StaticText ", rải đều trên đảo (seed 42), và "
+            - strong
+              - StaticText "đúng 100 đom đóm"
+            - StaticText " (bench được phép vượt trần của gameplay). 3 đèn L1–L3 đang sáng với "
+            - code
+              - StaticText "fuel"
+            - StaticText " 100."
+          - listitem [level=1]
+            - ListMarker "4. "
+            - StaticText "Trong cảnh bench "
+            - strong
+              - StaticText "tắt"
+            - StaticText ": sinh thêm thực thể, sát thương, nhặt đom đóm, hao dầu và điều kiện kết thúc Đêm. Bóng Mực vẫn di chuyển theo luật "
+            - code
+              - StaticText "wander"
+            - StaticText " bình thường."
+          - listitem [level=1]
+            - ListMarker "5. "
+            - StaticText "Không có input người chơi. Mây đứng yên tại (0,0,0). Camera bay vòng tròn tâm (0,0,0), bán kính 30 m, ở độ cao Y = 15 m, luôn nhìn vào (0,0,0), xuất phát ở góc 0° (điểm (30,15,0)), quay ngược chiều kim đồng hồ khi nhìn từ trên xuống, 15 s một vòng."
+          - listitem [level=1]
+            - ListMarker "6. "
+            - StaticText "3 s đầu là khởi động (không đo). Sau đó đo đúng "
+            - code
+              - StaticText "--duration"
+            - StaticText " giây rồi tự thoát với mã 0."
+        - paragraph
+          - strong
+            - StaticText "Output "
+            - code
+              - StaticText "bench.json"
+            - StaticText ":"
+        - code
+          - StaticText "{\n  \"contract_version\": \"1.3\",\n  \"avg_fps\": 87.3,\n  \"p1_low_fps\": 52.1,\n  \"frame_ms_p95\": 14.2,\n  \"frames\": 2619,\n  \"load_ms\": 2400,\n  \"peak_mem_mb\": 512,\n  \"vsync_off\": true,\n  \"renderer\": \"mô tả engine/renderer và phiên bản\",\n  \"os\": \"tự điền\"\n}\n"
+        - table
+          - rowgroup
+            - row
+              - columnheader "TRƯỜNG" [ref=e89]
+              - columnheader "ĐỊNH NGHĨA" [ref=e90]
+          - row
+            - cell "frames" [ref=e69]
+              - code
+                - StaticText "frames"
+            - cell "Số khung hình N trong khoảng đo" [ref=e70]
+          - row
+            - cell "avg_fps" [ref=e71]
+              - code
+                - StaticText "avg_fps"
+            - cell "1000 × N / Σ dt_i, với dt_i là thời gian từng khung (ms)" [ref=e72]
+              - code
+                - StaticText "1000 × N / Σ dt_i"
+              - StaticText ", với "
+              - code
+                - StaticText "dt_i"
+              - StaticText " là thời gian từng khung (ms)"
+          - row
+            - cell "p1_low_fps" [ref=e73]
+              - code
+                - StaticText "p1_low_fps"
+            - cell "k = max(1, ceil(0.01 × N)); lấy k giá trị dt lớn nhất; p1_low_fps = 1000 / trung bình của k giá trị đó" [ref=e74]
+              - code
+                - StaticText "k = max(1, ceil(0.01 × N))"
+              - StaticText "; lấy k giá trị "
+              - code
+                - StaticText "dt"
+              - StaticText " lớn nhất; "
+              - code
+                - StaticText "p1_low_fps = 1000 / trung bình của k giá trị đó"
+          - row
+            - cell "frame_ms_p95" [ref=e75]
+              - code
+                - StaticText "frame_ms_p95"
+            - cell "Phân vị 95 của dt (ms)" [ref=e76]
+              - StaticText "Phân vị 95 của "
+              - code
+                - StaticText "dt"
+              - StaticText " (ms)"
+          - row
+            - cell "load_ms" [ref=e77]
+              - code
+                - StaticText "load_ms"
+            - cell "Từ lúc tiến trình bắt đầu tới khung hình đầu tiên của cảnh bench" [ref=e78]
+          - row
+            - cell "peak_mem_mb" [ref=e79]
+              - code
+                - StaticText "peak_mem_mb"
+            - cell "Bộ nhớ tiến trình (RSS) cao nhất trong lúc đo; ghi null nếu là bản web không đo được và giải thích" [ref=e80]
+              - StaticText "Bộ nhớ tiến trình (RSS) cao nhất trong lúc đo; ghi "
+              - code
+                - StaticText "null"
+              - StaticText " nếu là bản web không đo được và giải thích"
+        - paragraph
+          - strong
+            - StaticText "Ngưỡng đạt, đo trên máy chấm của giảng viên:"
+          - code
+            - StaticText "avg_fps ≥ 60"
+          - StaticText " · "
+          - code
+            - StaticText "p1_low_fps ≥ 30"
+          - StaticText " · "
+          - code
+            - StaticText "load_ms ≤ 10000"
+          - StaticText "."
+        - paragraph
+          - strong
+            - StaticText "Máy chấm:"
+          - StaticText " giảng viên sẽ công bố cấu hình (CPU, GPU, RAM, hệ điều hành, chế độ nguồn) trước khi đo. Mọi bài được đo trên cùng máy này; số bạn tự đo chỉ để tham khảo."
+        - heading "2. Soak test (bắt buộc)" [level=2, ref=e62]
+        - paragraph
+          - strong
+            - StaticText "Lệnh:"
+          - code
+            - StaticText "<soak_cmd> --seed 7 --nights 10 --out soak.json"
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Chạy headless 10 Đêm liên tiếp "
+            - strong
+              - StaticText "trong cùng một tiến trình"
+            - StaticText " (Đêm 1 → 2 → 3 xoay vòng), Đêm thứ i dùng seed "
+            - code
+              - StaticText "7 + i"
+            - StaticText ", mỗi Đêm chạy tới khi kết thúc hoặc hết thời lượng chuẩn. Input ngẫu nhiên theo seed: mỗi 30 tick chọn lại hướng di chuyển; mỗi tick xác suất 5% nhảy, 3% lướt, 2% tỏa sáng, 10% tương tác."
+          - listitem [level=1]
+            - ListMarker "• "
+            - code
+              - StaticText "mem_start_mb"
+            - StaticText ": bộ nhớ tiến trình (RSS) sau khi tải xong Đêm đầu tiên. "
+            - code
+              - StaticText "mem_end_mb"
+            - StaticText ": RSS sau khi reset xong Đêm cuối cùng."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Output:"
+        - code
+          - StaticText "{\"nights\": 10, \"crashes\": 0, \"results\": [\"lost\",\"won\",\"lost\"],\n \"mem_start_mb\": 120, \"mem_end_mb\": 131, \"duration_s\": 84.2}\n"
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Ngưỡng đạt: "
+            - code
+              - StaticText "crashes = 0"
+            - StaticText " và "
+            - code
+              - StaticText "mem_end_mb ≤ 1.2 × mem_start_mb"
+            - StaticText "."
+        - heading "3. Bảng xếp hạng cục bộ" [level=2, ref=e63]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Sau màn hình Bình Minh (thắng Đêm 3) "
+            - strong
+              - StaticText "hoặc"
+            - StaticText " sau khi thua ở bất kỳ Đêm nào, cho nhập tên để lưu điểm."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Tên: 3–12 ký tự "
+            - code
+              - StaticText "[A-Za-z0-9_]"
+            - StaticText ". Hỗ trợ tiếng Việt có dấu là điểm cộng, không bắt buộc."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Mỗi mục lưu: "
+            - code
+              - StaticText "name"
+            - StaticText ", "
+            - code
+              - StaticText "score"
+            - StaticText " (tổng điểm các Đêm đã thắng), "
+            - code
+              - StaticText "nights_won"
+            - StaticText " (0–3), "
+            - code
+              - StaticText "achieved_at"
+            - StaticText " (ISO 8601 có múi giờ), "
+            - code
+              - StaticText "seed"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Giữ "
+            - strong
+              - StaticText "top 10"
+            - StaticText ". Sắp xếp theo "
+            - code
+              - StaticText "score"
+            - StaticText " giảm dần; bằng điểm thì ai đạt trước đứng trên."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Lưu trên đĩa cục bộ, vẫn còn sau khi tắt và mở lại game."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Có màn hình Bảng xếp hạng từ menu chính."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Lệnh xuất: "
+            - code
+              - StaticText "<run_cmd> --export-leaderboard out.json"
+            - StaticText " cho ra "
+            - code
+              - StaticText "{\"entries\": [ ... ]}"
+            - StaticText " đúng thứ tự."
+        - heading "4. Dễ tiếp cận (accessibility)" [level=2, ref=e64]
+        - table
+          - rowgroup
+            - row
+              - columnheader "YÊU CẦU" [ref=e91]
+              - columnheader "CHI TIẾT" [ref=e92]
+          - row
+            - cell "Đổi phím" [ref=e81]
+            - cell "Mọi hành động: di chuyển (4 hướng), nhảy, lướt, tương tác, tỏa sáng, tạm dừng. Phát hiện trùng phím và báo cho người dùng. Có nút \"Khôi phục mặc định\". Được lưu" [ref=e82]
+          - row
+            - cell "Phụ đề / chỉ báo hình ảnh" [ref=e83]
+            - cell "Bóng Mực xuất hiện (kèm mũi tên chỉ hướng ở mép màn hình), gió sắp thổi, 10 s cuối, đèn có fuel < 30" [ref=e84]
+              - StaticText "Bóng Mực xuất hiện (kèm mũi tên chỉ hướng ở mép màn hình), gió sắp thổi, 10 s cuối, đèn có "
+              - code
+                - StaticText "fuel < 30"
+          - row
+            - cell "Giảm chuyển động" [ref=e85]
+            - cell "Tắt rung camera và hiệu ứng chớp màn hình" [ref=e86]
+          - row
+            - cell "Cỡ chữ UI" [ref=e87]
+            - cell "Tối thiểu 18 px ở 1280×720; tùy chọn chữ lớn (×1.25)" [ref=e88]
+        - heading "5. Đóng gói & tài liệu" [level=2, ref=e65]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Clone repo sạch → làm theo README "
+            - strong
+              - StaticText "tối đa 3 lệnh"
+            - StaticText " → chơi được. Giảng viên sẽ thử trên máy sạch."
+          - listitem [level=1]
+            - ListMarker "• "
+            - code
+              - StaticText "README.md"
+            - StaticText " có: mô tả ngắn, ảnh chụp hoặc GIF, yêu cầu hệ thống, cài đặt, điều khiển, cách chạy test, headless, bench, soak."
+          - listitem [level=1]
+            - ListMarker "• "
+            - code
+              - StaticText "CHANGELOG.md"
+            - StaticText " có mục cho cả 4 phase. "
+            - code
+              - StaticText "CREDITS.md"
+            - StaticText " liệt kê mọi asset, âm thanh và công cụ AI tạo nội dung. Có "
+            - code
+              - StaticText "LICENSE"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "GitHub Release "
+            - code
+              - StaticText "v1.0.0"
+            - StaticText " có bản chạy được: file thực thi, thư mục web tĩnh hoặc Docker image kèm hướng dẫn."
+        - heading "6. Test Contract v1.3" [level=2, ref=e66]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - code
+              - StaticText "contract_version: \"1.3\""
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - code
+              - StaticText "game.contract.json"
+            - StaticText " thêm "
+            - code
+              - StaticText "bench_cmd"
+            - StaticText " và "
+            - code
+              - StaticText "soak_cmd"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Mọi yêu cầu của v1.0–v1.2 vẫn giữ nguyên."
+        - heading "7. Retro & demo" [level=2, ref=e67]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Bản retro (1–2 trang, tên và vị trí tự chọn): tổng hợp Evaluation của 4 phase; điều gì hiệu quả hoặc không hiệu quả khi làm với AI; những lần AI sai và cách bạn phát hiện; harness nào (AGENTS.md, skill, hook) giúp nhiều nhất; tổng token/chi phí AI ước tính và bạn đã tiết kiệm token thế nào; nếu làm lại thì đổi gì."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Video demo "
+            - code
+              - StaticText ".mp4"
+            - strong
+              - StaticText "dưới 5 phút"
+            - StaticText " (đính kèm Release "
+            - code
+              - StaticText "v1.0.0"
+            - StaticText " hoặc "
+            - code
+              - StaticText "docs/demo/demo.mp4"
+            - StaticText "): chơi trực tiếp một đoạn, cho thấy bằng chứng game chạy đúng (test, headless, bench)."
+        - heading "Định nghĩa hoàn thành (DoD)" [level=2, ref=e68]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Có bằng chứng game chạy đúng các yêu cầu của phase (định dạng tự chọn)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Tag "
+            - code
+              - StaticText "phase-4"
+            - StaticText " và Release "
+            - code
+              - StaticText "v1.0.0"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - code
+              - StaticText "bench.json"
+            - StaticText " và "
+            - code
+              - StaticText "soak.json"
+            - StaticText " do bạn tự chạy được commit vào repo."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Mọi test ẩn Phase 1–3 còn hiệu lực vẫn đạt."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Repo public, có đủ harness AI và tài liệu theo quy định nộp bài."
+      - button "Hỏi trợ giảng" [ref=e17]
+      - contentinfo
+        - StaticText "Đảo Đèn Lồng · Day 12 AI SDLC Lab. Các phase mới xuất hiện ở thanh trên khi giảng viên phát hành."
+  - generic
+    - alert
+    - alert
+    - status
+  - status
+  - status
+  - status
+  - status
+  - status
+  - status

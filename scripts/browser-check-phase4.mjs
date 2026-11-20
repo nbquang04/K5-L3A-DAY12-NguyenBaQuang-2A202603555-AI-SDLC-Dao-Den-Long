@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import { readFile, writeFile, mkdir, cp, mkdtemp, rm } from 'node:fs/promises';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import { browserRuntime } from './browser-runtime.mjs';
+const proof='docs/proof/phase-4';await mkdir(`${proof}/browser`,{recursive:true});await mkdir('dist/validation',{recursive:true});
+await cp(`${proof}/results.json`,'dist/validation/phase3-results.json');await cp(`${proof}/regression/results.json`,'dist/validation/phase2-results.json');await cp('scripts/browser-check-phase2.mjs','dist/validation/browser-check-phase2.mjs');
+const temp=await mkdtemp(join(tmpdir(),'dao-browser-')),results=[];let runtime;
+try{
+ runtime=await browserRuntime({server:{dataPath:join(temp,'board.json')}});const page=await runtime.browser.newPage({viewport:{width:1280,height:720}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(`${runtime.url}/?labtest=1`);await page.waitForFunction(()=>window.__lab);
+ const prior=await page.evaluate(await readFile('scripts/browser-check-phase3.mjs','utf8'));assert.equal(prior.status,'PASS');results.push({name:'retained-browser-checks',status:'PASS',checks:prior});
+ await page.evaluate(()=>window.__lab.menu());await page.click('#menu-settings');
+ await page.click('[data-action="left"]');await page.keyboard.press('d');assert.match(await page.textContent('#binding-status'),/Phím/);
+ await page.keyboard.press('j');assert.equal(await page.evaluate(()=>window.__lab.settings.bindings.left),'KeyJ');
+ await page.click('[data-action="pause"]');await page.keyboard.press('k');await page.check('#reducedMotion');await page.check('#largeText');await page.reload();await page.waitForFunction(()=>window.__lab);
+ assert.equal(await page.evaluate(()=>window.__lab.settings.bindings.pause),'KeyK');assert.ok(await page.evaluate(()=>document.body.classList.contains('large-text')&&document.body.classList.contains('reduced-motion')));results.push({name:'rebind-conflict-persistence-options',status:'PASS'});
+ await page.evaluate(()=>window.__lab.start({random_shades:false,random_motes:false}));const before=await page.evaluate(()=>window.__lab.snapshot().player.pos[0]);await page.keyboard.down('j');await page.waitForTimeout(150);await page.keyboard.up('j');assert.ok((await page.evaluate(()=>window.__lab.snapshot().player.pos[0]))>before);
+ await page.keyboard.press('k');assert.equal(await page.evaluate(()=>window.__lab.mode),'paused');results.push({name:'actual-remapped-movement-pause',status:'PASS'});
+ await page.evaluate(()=>window.__lab.menu());await page.click('#menu-settings');await page.click('#reset-bindings');await page.uncheck('#largeText');await page.click('#close-settings');
+ const fontIssues=async()=>page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getClientRects().length&&getComputedStyle(e).visibility!=='hidden'&&[...e.childNodes].some(n=>n.nodeType===3&&n.textContent.trim())).filter(e=>parseFloat(getComputedStyle(e).fontSize)<18).map(e=>({id:e.id,tag:e.tagName,font:getComputedStyle(e).fontSize,text:e.textContent.slice(0,60)})));
+ assert.deepEqual(await fontIssues(),[]);await page.screenshot({path:`${proof}/browser/menu.png`});
+ await page.evaluate(()=>{window.__lab.start({time_left_s:9,random_motes:false,random_shades:false,lanterns:[{id:'L1',lit:true,fuel:20}]});});await page.waitForTimeout(100);
+ assert.match(await page.textContent('#captions'),/9|8/);assert.match(await page.textContent('#captions'),/L1/);assert.deepEqual(await fontIssues(),[]);await page.screenshot({path:`${proof}/browser/hud.png`});results.push({name:'visible-fonts-18-and-captions',status:'PASS'});
+ await page.evaluate(()=>{window.__lab.start({random_motes:false});window.__lab.advance(Array.from({length:300},()=>({})));window.__lab.resume();});await page.waitForTimeout(100);assert.ok(await page.isVisible('#spawn-arrow'));const arrow=await page.locator('#spawn-arrow').boundingBox();assert.ok(arrow.x<70||arrow.x+arrow.width>1210||arrow.y<70||arrow.y+arrow.height>650);results.push({name:'spawn-arrow-at-screen-edge',status:'PASS'});
+ await page.evaluate(()=>{window.__lab.start({time_left_s:.016,random_shades:false,random_motes:false});window.__lab.advance([{}]);});assert.ok(await page.isVisible('#score-form'));
+ await page.fill('#player-name','May_04');await page.click('#save-score');await page.waitForFunction(()=>document.getElementById('save-status').textContent.includes('Đã lưu'));
+ const board=await(await page.request.get(`${runtime.url}/api/leaderboard`)).json();assert.equal(board.entries[0].score,0);assert.equal(board.entries[0].nights_won,0);
+ await page.evaluate(()=>window.__lab.menu());await page.click('#show-board');await page.waitForFunction(()=>document.querySelector('#board-entries li'));assert.match(await page.textContent('#board-entries'),/May_04/);await page.screenshot({path:`${proof}/browser/leaderboard.png`});results.push({name:'loss-name-save-board-zero-unwon-score',status:'PASS'});
+ assert.deepEqual(errors,[]);await writeFile(`${proof}/browser-results.json`,JSON.stringify({status:'PASS',results,errors,viewport:[1280,720],browser:runtime.executablePath},null,2)+'\n');console.log(`PASS: ${results.length} release groups and retained browser checks`);
+}finally{await runtime?.close();await rm(temp,{recursive:true,force:true});}

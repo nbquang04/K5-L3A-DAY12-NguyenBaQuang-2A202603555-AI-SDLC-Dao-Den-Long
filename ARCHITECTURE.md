@@ -145,3 +145,12 @@ Phase 2 mở rộng mapping: src/core/maps.mjs là nguồn hình học chung cho
 
 Chạy `?labtest=1` mới có window.__lab dùng QA/parity. Bản bình thường không có API inject scenario;
 fixture QA chỉ copy tạm vào dist khi kiểm tra và bị xóa bởi build sạch. Đồ họa không thay state core.
+
+
+## Phase4 release boundaries
+- Core benchmark shares advanceShadeWander with normal simulation; only ticket suppressions differ. General instancing retains geometry/materials for large populations.
+- Shared metrics: average, worst1%, nearest-rankp95; browser rAF postwarmup; Node CLI owns load clock and lifecycle.
+- Node server API/store: validated local disk, queued atomic rename, corrupt-file preservation, same file for CLI export. No localStorage-only leaderboard.
+- Pure settings map plus unclaimed aliases. Release UI owns captions/forms, no gameplay laws. Null campaign score means incomplete; retry resets current/later wins.
+- Soak one process, separate seeded input RNG, explicit false buttons, symmetric GC and documented public flags.
+- ZIP packages self-contained dist and dependency-free Node server; Playwright/video tooling stays outside runtime.

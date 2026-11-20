@@ -1,14 +1,10 @@
-import { createServer } from 'node:http';
-import { readFile, stat } from 'node:fs/promises';
-import { resolve, extname, sep } from 'node:path';
-const root = resolve('dist'); const port = Number(process.env.PORT || 4173);
-const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript', '.json': 'application/json', '.txt': 'text/plain' };
-createServer(async (req, res) => {
-  try {
-    const path = resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
-    if (path !== root && !path.startsWith(root + sep)) { res.writeHead(403); res.end(); return; }
-    const file = (await stat(path)).isDirectory() ? resolve(path, 'index.html') : path;
-    const data = await readFile(file);
-    res.writeHead(200, { 'Content-Type': mime[extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' }); res.end(data);
-  } catch { res.writeHead(404); res.end('Not found. Run npm ci && npm run build first.'); }
-}).listen(port, '0.0.0.0', () => console.log(`Đảo Đèn Lồng: http://localhost:${port}`));
+import { resolve } from 'node:path';
+import { writeFile } from 'node:fs/promises';
+import { loadBoard } from './leaderboard-store.mjs';
+import { startServer } from './server.mjs';
+try{
+ if(process.argv[2]==='--export-leaderboard'){
+  if(process.argv.length!==4)throw new Error('Usage: --export-leaderboard out.json');
+  await writeFile(process.argv[3],JSON.stringify(await loadBoard(resolve(process.env.LEADERBOARD_PATH||'.data/leaderboard.json')),null,2)+'\n');
+ }else{if(process.argv.length!==2)throw new Error('Unknown argument');const server=await startServer();console.log(`Dao Den Long: http://localhost:${server.address().port}`);}
+}catch(e){console.error(e.message);process.exitCode=2;}

@@ -30,7 +30,9 @@
         "tests/cli.test.mjs",
         "tests/input.test.mjs",
         "tests/phase2.test.mjs",
-        "tests/phase3.test.mjs"
+        "tests/phase3.test.mjs",
+        "tests/phase4.test.mjs",
+        "tests/server.test.mjs"
       ],
       "timeout_seconds": 120
     },
@@ -46,7 +48,7 @@
       ],
       "command": [
         "node",
-        "scripts/check-phase3.mjs"
+        "scripts/check-phase4.mjs"
       ],
       "timeout_seconds": 120
     },

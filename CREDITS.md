@@ -1,5 +1,9 @@
 # Nguồn và giấy phép
 
+- Phase 4: Playwright 1.65.1 (Apache-2.0, Microsoft) cho benchmark/QA/video; không nằm trong runtime web. https://github.com/microsoft/playwright
+- FFmpeg (binary từ imageio-ffmpeg trong môi trường máy) chuyển bản ghi WebM thành MP4 H.264; chỉ phân phối video kết quả, không đóng gói binary FFmpeg. https://ffmpeg.org
+- Screenshot/video là bản chạy thực tế của dự án. Không dùng ảnh/video AI giả lập gameplay.
+
 - Mây, Bóng Mực, Đảo Đèn Lồng, PRD-0 và Test Contract: nội dung gốc của lab
   Day 12 AI SDLC trên artifact do giảng viên cung cấp. Dùng trong bài tập này;
   LICENSE của mã nguồn không cấp lại quyền sở hữu các nội dung lab.

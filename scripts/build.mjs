@@ -7,6 +7,7 @@ if (output !== expected) throw new Error('Build must run from the project root')
 await rm(output, { recursive: true, force: true });
 await mkdir('dist/vendor', { recursive: true });
 await cp('src/core', 'dist/src/core', { recursive: true });
+await cp('src/shared', 'dist/src/shared', { recursive: true });
 await cp('src/web', 'dist/src/web', { recursive: true });
 await cp('index.html', 'dist/index.html'); await cp('game.contract.json', 'dist/game.contract.json');
 for (const file of ['three.module.js', 'three.core.js']) await cp(`node_modules/three/build/${file}`, `dist/vendor/${file}`);

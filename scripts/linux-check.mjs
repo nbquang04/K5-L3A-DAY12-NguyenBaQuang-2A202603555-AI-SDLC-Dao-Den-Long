@@ -2,12 +2,12 @@ import { spawnSync } from 'node:child_process';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
-const proof = resolve('docs/proof/phase-3'); mkdirSync(proof, { recursive: true });
+const proof = resolve('docs/proof/phase-4'); mkdirSync(proof, { recursive: true });
 const commands = [
-  ['build', ['build', '-t', 'dao-den-long:phase-3', '.']],
-  ['tests', ['run', '--rm', 'dao-den-long:phase-3', 'npm', 'test']],
-  ['scenarios', ['run', '--rm', '--mount', `type=bind,source=${proof},target=/proof`, '-e', 'PROOF_DIR=/proof/linux', 'dao-den-long:phase-3', 'node', 'scripts/check-phase3.mjs']],
-  ['environment', ['run', '--rm', 'dao-den-long:phase-3', 'node', '-e', 'console.log(JSON.stringify({node:process.version,platform:process.platform,arch:process.arch}))']],
+  ['build', ['build', '-t', 'dao-den-long:phase-4', '.']],
+  ['tests', ['run', '--rm', 'dao-den-long:phase-4', 'npm', 'test']],
+  ['scenarios', ['run', '--rm', '--mount', `type=bind,source=${proof},target=/proof`, '-e', 'PROOF_DIR=/proof/linux', 'dao-den-long:phase-4', 'node', 'scripts/check-phase3.mjs']],
+  ['environment', ['run', '--rm', 'dao-den-long:phase-4', 'node', '-e', 'console.log(JSON.stringify({node:process.version,platform:process.platform,arch:process.arch}))']],
 ];
 const results = [];
 for (const [name, args] of commands) {

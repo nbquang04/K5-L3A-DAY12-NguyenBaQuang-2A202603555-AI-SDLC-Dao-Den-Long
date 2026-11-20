@@ -1,6 +1,6 @@
 {
   "name": "dao-den-long",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -12,9 +12,14 @@
     "build": "node scripts/build.mjs",
     "test": "node --test tests/*.test.mjs",
     "headless": "node src/headless/cli.mjs",
-    "verify": "node scripts/check-phase3.mjs"
+    "verify": "node scripts/check-phase4.mjs",
+    "bench": "node scripts/bench.mjs",
+    "soak": "node --jitless --max-semi-space-size=1 --expose-gc scripts/soak.mjs"
   },
   "dependencies": {
     "three": "0.181.2"
+  },
+  "devDependencies": {
+    "playwright": "1.65.1"
   }
 }

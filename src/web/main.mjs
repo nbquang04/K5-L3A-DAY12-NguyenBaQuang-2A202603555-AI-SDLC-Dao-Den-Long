@@ -3,6 +3,13 @@ import { createGame, step, snapshot, HZ, capacity, lightingCost, isSafeLantern }
 import { keyboardInput } from './input.mjs';
 import { mapFor } from '../core/maps.mjs';
 import { GameAudio } from './audio.mjs';
+import { installReleaseUI } from './release-ui.mjs';
+import { pressed } from './settings.mjs';
+import { createBenchmark, stepBenchmark } from '../core/benchmark.mjs';
+import { benchmarkSession } from './benchmark.mjs';
+import { ModelInstances } from './instances.mjs';
+let shadeBatch,moteBatch;
+const benchmarkParams=new URLSearchParams(location.search);let benchmark;
 
 const $ = id => document.getElementById(id);
 const canvas = $('world'); const keys = new Set();
@@ -11,7 +18,7 @@ let mode = 'intro', yaw = 0, accumulator = 0, lastTime = 0, dragging = false;
 let pulseAge = 100, hitAge = 100, toastAge = 100, visualTime = 0, facing = 0;
 const lanternMeshes = new Map(), moteMeshes = new Map(), shadeMeshes = new Map();
 let pulseMesh, motesGroup, shadesGroup;
-let currentNight=1, wonScores=[0,0,0], settingsReturn='menu', lastCountdown=-1;
+let currentNight=1, wonScores=[null,null,null], settingsReturn='menu', lastCountdown=-1, releaseUI;
 let settings={volume:.35,sensitivity:.3,colorblind:false};
 try {settings={...settings,...JSON.parse(localStorage.getItem('dao-settings')||'{}')};}catch{}
 settings.volume=Math.min(1,Math.max(0,Number(settings.volume)||0));settings.sensitivity=Math.min(1,Math.max(.05,Number(settings.sensitivity)||.3));
@@ -147,9 +154,17 @@ function disposeGroup(group) {
   group.removeFromParent();
 }
 function syncEntities() {
+  if(moteBatch&&g.motes.length>moteBatch.parts[0].mesh.instanceMatrix.count){moteBatch.dispose();moteBatch=null;}
+  if(shadeBatch&&g.shades.length>shadeBatch.parts[0].mesh.instanceMatrix.count){shadeBatch.dispose();shadeBatch=null;}
+  if(g.motes.length>50&&!moteBatch){const model=new THREE.Group();sphere(.13,lightMaterial(),model,0,0,0,1);const halo=sphere(.28,new THREE.MeshBasicMaterial({color:0xffd27d,transparent:true,opacity:.12,depthWrite:false}),model,0,0,0);halo.scale.y=.8;moteBatch=new ModelInstances(model,motesGroup,g.motes.length);}
+  if(g.shades.length>32&&!shadeBatch)shadeBatch=new ModelInstances(makeShade(),shadesGroup,g.shades.length);
+  if(moteBatch&&moteMeshes.size){for(const m of moteMeshes.values())disposeGroup(m);moteMeshes.clear();}
+  if(shadeBatch&&shadeMeshes.size){for(const m of shadeMeshes.values())disposeGroup(m);shadeMeshes.clear();}
+  if(moteBatch)moteBatch.update(g.motes,(o,m)=>o.position.set(m.pos[0],m.pos[1]+.65+Math.sin(visualTime*2+Number(m.id.slice(1)))*.15,m.pos[2]));
+  if(shadeBatch)shadeBatch.update(g.shades,(o,s)=>{o.position.set(s.pos[0],s.pos[1]+Math.sin(visualTime*3)*.07,s.pos[2]);o.rotation.y=Math.atan2(g.player.pos[0]-s.pos[0],g.player.pos[2]-s.pos[2]);});
   const active = new Set(g.motes.map(m => m.id));
   for (const [id, m] of moteMeshes) if (!active.has(id)) { disposeGroup(m); moteMeshes.delete(id); }
-  for (const m of g.motes) {
+  for (const m of moteBatch?[]:g.motes) {
     if (!moteMeshes.has(m.id)) {
       const group = new THREE.Group(); sphere(0.13, lightMaterial(), group, 0, 0, 0, 1);
       const halo = sphere(0.28, new THREE.MeshBasicMaterial({ color: 0xffd27d, transparent: true, opacity: 0.12, depthWrite: false }), group, 0, 0, 0);
@@ -160,7 +175,7 @@ function syncEntities() {
   }
   const ids = new Set(g.shades.map(s => s.id));
   for (const [id, m] of shadeMeshes) if (!ids.has(id)) { disposeGroup(m); shadeMeshes.delete(id); }
-  for (const s of g.shades) {
+  for (const s of shadeBatch?[]:g.shades) {
     if (!shadeMeshes.has(s.id)) shadeMeshes.set(s.id, makeShade());
     const m = shadeMeshes.get(s.id); m.position.set(s.pos[0], s.pos[1] + Math.sin(visualTime * 3) * 0.07, s.pos[2]);
     m.rotation.y = Math.atan2(g.player.pos[0] - s.pos[0], g.player.pos[2] - s.pos[2]);
@@ -192,6 +207,7 @@ function syncEntities() {
 function toast(text) { $('toast').textContent = text; toastAge = 0; }
 function eventsVisual(events) {
   for (const event of events) {
+    releaseUI?.event(event);
     audio.effect(event.name);
     if (event.name === 'pulse') { pulseAge = 0; pulseMesh.position.set(g.player.pos[0], 0.08, g.player.pos[2]); }
     if (event.name === 'player_hit') { hitAge = 0; toast(`${settings.colorblind?'⚠ ':''}Mây mất một Ngọn Lửa. Hãy tìm ánh đèn còn đủ dầu!`); }
@@ -225,8 +241,9 @@ function hud() {
   const near = g.lanterns.filter(l=>(!l.lit||l.fuelUnits<tuning.fuel_max*HZ)&&Math.hypot(l.pos[0]-g.player.pos[0],l.pos[2]-g.player.pos[2])<=tuning.interact_radius).sort((a,b)=>Math.hypot(a.pos[0]-g.player.pos[0],a.pos[2]-g.player.pos[2])-Math.hypot(b.pos[0]-g.player.pos[0],b.pos[2]-g.player.pos[2])||a.id.localeCompare(b.id))[0];
   $('prompt').textContent = near ? near.lit?`E — Châm dầu (${Math.floor(near.fuelUnits/HZ)}/${tuning.fuel_max})`:`E — ${near.ever_lit?'Thắp lại':'Nạp ánh sáng'} (${near.deposited}/${lightingCost(g,near)})` : '';
 }
-function rebuild(){if(scene){scene.traverse(o=>{o.geometry?.dispose();if(o.material){for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});}scene=new THREE.Scene();lanternMeshes.clear();moteMeshes.clear();shadeMeshes.clear();drifterMeshes.clear();charmMeshes.clear();environment();playerMesh=makePlayer();}
+function rebuild(){shadeBatch?.dispose();moteBatch?.dispose();shadeBatch=moteBatch=null;if(scene){scene.traverse(o=>{o.geometry?.dispose();if(o.material){for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});}scene=new THREE.Scene();lanternMeshes.clear();moteMeshes.clear();shadeMeshes.clear();drifterMeshes.clear();charmMeshes.clear();environment();playerMesh=makePlayer();}
 function start(scenario = {},night=currentNight) {
+  for(let i=night-1;i<3;i++)wonScores[i]=null;releaseUI?.start();
   currentNight=night;g = createGame(tuning, 42, scenario,night); rebuild();yaw = 0; facing = 0; accumulator = 0; keys.clear(); pulseAge = hitAge = toastAge = 100;lastCountdown=-1;
   mode = 'playing'; document.body.classList.add('playing');
   $('welcome').hidden = true; $('result').hidden = true; $('paused').hidden = true; $('hud').hidden = false;
@@ -239,6 +256,7 @@ function finish() {
   $('result-title').innerHTML = won ? 'Đảo lại<br><em>sáng rồi.</em>' : 'Hẹn một<br><em>đêm khác.</em>';
   $('result-story').textContent = won ? 'Mây đã giữ được ánh sáng cho Đảo Bến. Những chú đom đóm sẽ nhớ đêm này.' : g.reason === 'dawn' ? 'Bình minh đến trước khi năm ngọn đèn thức giấc. Thử một hành trình khác nhé.' : 'Sương đen đã bắt kịp Mây. Giữ lại chút ánh sáng cho lần trở về tiếp theo.';
   if(won)wonScores[currentNight-1]=g.score;
+  releaseUI?.finish(won,currentNight);
   $('result-kicker').textContent=won?`ĐÊM ${currentNight} · ${g.map.name.toUpperCase()} ĐÃ SÁNG`:'MỘT HÀNH TRÌNH KHÁC ĐANG ĐỢI';
   $('result-story').textContent=won?`Ông Đăng: “Con đã giữ được ánh sáng cho ${g.map.name}. Hãy mang hy vọng đến hòn đảo tiếp theo.”`:'Ông Đăng: “Đừng sợ bóng tối. Con có thể thử lại đêm này.”';
   if(won&&currentNight===3){$('result-title').innerHTML='Bình<br><em>Minh.</em>';$('final-score').textContent=wonScores.reduce((a,b)=>a+b,0);}else $('final-score').textContent=g.score;
@@ -250,7 +268,7 @@ function intro(night){currentNight=night;mode='night-intro';$('welcome').hidden=
 function menu(){mode='intro';keys.clear();$('welcome').hidden=false;for(const id of ['hud','result','paused','night-intro','settings'])$(id).hidden=true;document.body.classList.remove('playing');}
 function showSettings(){settingsReturn=mode;if(mode==='playing')pause();$('settings').hidden=false;$('paused').hidden=true;mode='settings';$('volume').value=settings.volume;$('sensitivity').value=settings.sensitivity;$('colorblind').checked=settings.colorblind;}
 function input() {
-  return keyboardInput(keys, yaw);
+  return keyboardInput(keys, yaw, settings.bindings);
 }
 function animate(now) {
   requestAnimationFrame(animate);
@@ -260,10 +278,11 @@ function animate(now) {
     accumulator += dt; let budget = 600;
     while (accumulator >= 1 / HZ && mode === 'playing' && budget-- > 0) { eventsVisual(step(g, input())); accumulator -= 1 / HZ; }
   }
+  if(mode==='benchmark'){accumulator+=dt;while(accumulator>=1/HZ){stepBenchmark(g);accumulator-=1/HZ;}benchmark.camera(camera,now);}
   pulseAge += dt; hitAge += dt; toastAge += dt;
   pulseMesh.material.opacity = Math.max(0, 1 - pulseAge / 0.7) * 0.8;
   pulseMesh.scale.setScalar(Math.min(1, pulseAge / 0.7) * tuning.pulse_radius);
-  $('hit-flash').style.opacity = hitAge < 0.6 ? String(0.7 * (1 - hitAge / 0.6)) : '0';
+  $('hit-flash').style.opacity = !settings.reducedMotion && hitAge < 0.6 ? String(0.7 * (1 - hitAge / 0.6)) : '0';
   $('toast').style.opacity = toastAge < 3 ? '1' : '0';
   syncEntities();
   playerMesh.position.fromArray(g.player.pos);
@@ -274,11 +293,13 @@ function animate(now) {
   playerMesh.userData.shadow.position.set(g.player.pos[0], 0.025, g.player.pos[2]);
   playerMesh.visible = g.player.invuln===0 || Math.sin(visualTime * 30) > -0.3;
   if (mode === 'intro') { camera.position.set(38, 29, -40); camera.lookAt(3, 0, 2); }
-  else {
+  else if(mode!=='benchmark') {
     const a = yaw * Math.PI / 180; const desired = new THREE.Vector3(g.player.pos[0] - Math.sin(a) * 11, g.player.pos[1] + 8, g.player.pos[2] - Math.cos(a) * 11);
     camera.position.lerp(desired, 1 - Math.exp(-7 * Math.min(dt, 0.1))); camera.lookAt(g.player.pos[0], g.player.pos[1] + 0.7, g.player.pos[2]);
   }
   if (['playing','paused'].includes(mode)) hud(); renderer.render(scene, camera);
+  if(mode==='benchmark')benchmark.frame(now);
+  releaseUI?.update(camera);
 }
 async function boot() {
   const response = await fetch('/game.contract.json'); if (!response.ok) throw new Error('Không đọc được cấu hình game. Chạy npm run build rồi npm start.');
@@ -288,10 +309,14 @@ async function boot() {
   renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.2;
   scene = new THREE.Scene(); camera = new THREE.PerspectiveCamera(52, innerWidth / innerHeight, 0.1, 250);
   environment(); playerMesh = makePlayer();
+  releaseUI=installReleaseUI({settings,getState:()=>g,getScores:()=>wonScores,getMode:()=>mode,menu});
+  if(benchmarkParams.has('benchmark')){g=createBenchmark(tuning,Number(benchmarkParams.get('seed')??42));rebuild();mode='benchmark';benchmark=benchmarkSession(Number(benchmarkParams.get('duration')??30));for(const section of document.querySelectorAll('main section'))section.hidden=true;document.body.classList.add('playing');}
   addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
   addEventListener('keydown', e => {
+    if(releaseUI.capture(e))return;
+    if(e.target instanceof HTMLInputElement && mode!=='playing')return;
     if (['Space', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.code)) e.preventDefault();
-    if (e.code === 'Escape'||e.code==='KeyP') {if(!e.repeat)mode === 'paused' ? resume() : pause(); return; }
+    if (pressed(new Set([e.code]),'pause',settings.bindings)) {if(!e.repeat)mode === 'paused' ? resume() : pause(); return; }
     if(e.code==='Space'&&!e.repeat&&mode==='playing'&&g.player.grounded)audio.effect('jump');
     if (mode === 'playing') keys.add(e.code);
   });
@@ -301,7 +326,7 @@ async function boot() {
   canvas.addEventListener('pointermove', e => { if (dragging && mode === 'playing') yaw -= e.movementX * settings.sensitivity; });
   canvas.addEventListener('pointerup', () => { dragging = false; });
   canvas.addEventListener('pointercancel', () => { dragging = false; });
-  $('start').onclick = () => {wonScores=[0,0,0];intro(1);}; $('enter-night').onclick=()=>start();$('next-night').onclick=()=>intro(currentNight+1);
+  $('start').onclick = () => {wonScores=[null,null,null];intro(1);}; $('enter-night').onclick=()=>start();$('next-night').onclick=()=>intro(currentNight+1);
   $('restart').onclick = () => g.state==='won'&&currentNight===3?menu():start(); $('pause').onclick = pause; $('resume').onclick = resume;
   $('retry-night').onclick=()=>start();$('to-menu').onclick=menu;$('menu-settings').onclick=showSettings;$('pause-settings').onclick=showSettings;
   for(const id of ['volume','sensitivity'])$(id).oninput=()=>{settings[id]=Number($(id).value);audio.setVolume(settings.volume);try{localStorage.setItem('dao-settings',JSON.stringify(settings));}catch{}};
