@@ -1,0 +1,11 @@
+﻿{
+  "id": "5619ff80-0f81-4d32-bfde-36c0645544b1",
+  "ok": true,
+  "result": {
+    "result": "{\"debug_exposed\":false,\"fps\":113.41526283382635,\"frames\":682,\"normal_url\":\"http://localhost:4173/\",\"persisted_settings\":{\"sensitivity\":0.45,\"volume\":0.25},\"seconds\":6.013300000011921,\"status\":\"PASS\",\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.7871.250 Safari/537.36\",\"viewport\":[1280,720]}",
+    "origin": "http://localhost:4173/"
+  },
+  "_meta": {
+    "runtimeId": "18ea352d-b264-4dbf-97d6-03c1a517b1e3"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "revision": "8db6afd2c756a2c794bc0ff60b8a74de6c5ce6af",
+  "working_tree": " M README.md\n M docs/STATUS.md\n M docs/notes/ai-log.md\n M docs/notes/decisions.md\n M docs/requirements/README.md\n M specs/002-three-islands/tasks.md\n?? docs/proof/phase-2/\n?? specs/002-three-islands/verification.md\n",
+  "normalization": "CRLF to LF for source hashes",
+  "sha256": {
+    "index.html": "68930c20b35643c8e1ea0d9cdd74954200e6a8e86d3aec1c3e8c8b1af1e7f5ff",
+    "game.contract.json": "7c9408a85f6d938fa9d2c3ab731a75ad1dfb3b7c3d630618cebda4545f1c6bea",
+    "package.json": "9f0850a8327ce749477b1c88c559ab622a8698715d27f5c55c36c4a4f7ce94b2",
+    "package-lock.json": "e5a6666cff6d18e914c8fc2145480e486a611a51b6b968d1ecf9ccb015c6369f",
+    "src/core/maps.mjs": "64b5831fabaa11c12e537552ef98361b7f71df80879e6478a24b54402d7bb8cd",
+    "src/core/simulation.mjs": "794f81d1aa65d219f4254f529084c2a4d04fb9eac7fa3018bec0e8f79ea96ddd",
+    "src/core/validation.mjs": "4170f4a6949c7161aa72973e6907e5549cc3fa2cc7676a1e2ad859573d3ac19a",
+    "src/headless/cli.mjs": "d2b9c39aa99f67e8035401593ce5ee08b21567b1c54ea17b3686feb2f02c10c4",
+    "src/web/audio.mjs": "e10bbce7f678565eee54a2816248b2f8a48c07ba12bd488b0deeaffb284b5236",
+    "src/web/input.mjs": "89a1fe38f87e5d4d077abdd77204f1dd72111f7f2878c46bb0a925ceb10c948a",
+    "src/web/main.mjs": "c3c91f7e4f40e72689eeefe0efae012fa34c39542b35b308ef1584e6751d4850",
+    "src/web/style.css": "393215d796cd7af2378df9330bf90c1e3d08780be3ddc4b583e91aa66dd85eb0"
+  }
+}

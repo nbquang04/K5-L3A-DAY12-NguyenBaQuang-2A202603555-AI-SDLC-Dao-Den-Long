@@ -19,3 +19,12 @@ Mỗi quyết định mới ghi: nguồn/yêu cầu, bối cảnh, phương án 
 - D008: Địch không vào hợp các vùng an toàn; thuật toán projection tuần tự bị reviewer tìm lỗi, thay bằng exposed arc/intersection và test hồi quy.
 - D009: UI pause khi hidden/blur; không bypass điều này để làm xanh test. Restore cửa sổ rồi chạy browser assertion lại.
 - D010: Bằng chứng có revision nguồn và hash runtime; commit bằng chứng/tag sau đó không đổi mã gameplay.
+
+## Phase2 technical defaults
+Ticket-02 replaces Phase1 tuning/geometry/score/terminal rules; requirements table links affected tests.
+Pure multi-surface terrain queries; continuous ramp ascent, swept descending landing, solid tower/walls, shared rendering map data.
+Immediate safe-circle ejection satisfies <=30ticks. Spawning lasts only until next tick; no unsupported1second delay.
+Pause tick increases, sim_tick freezes; resume immediately simulates after clearing held movement.
+Night3 unspecified start/respawn chosen (0,0,-30) to avoid spawning buried below the central terrace/tower.
+night_start on first nonpaused tick; boolean invuln, random ttl_s=0; extended scenario defaults in feature contract.
+Audio synthesized locally and does not touch gameplay RNG. Campaign totals won nights only.

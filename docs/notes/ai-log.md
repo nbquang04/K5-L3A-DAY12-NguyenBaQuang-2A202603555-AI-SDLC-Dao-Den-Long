@@ -53,3 +53,13 @@ Mỗi phase bổ sung: yêu cầu đạt/chưa đạt, lệnh/bằng chứng và
   tests giảng viên; không tuyên bố tương thích các yêu cầu chưa được công bố.
 
 - User-reported A/D reversal fixed in keyboard adapter. Four-yaw regression and browser passed; final Verify: 25/25 Windows/Linux, browser 8/8.
+
+## Phase2 ? 2026-11-20
+Released Ticket-02 read via Orca; phase1 tagged/pushed first. Spec/plan/research/data-model/contracts/tasks/analyze then implementation and Verify.
+Tests failed before missing maps implementation. Revised superseded Phase1 assertions by requirements.md rule table.
+Research reviewer found exact-drop/recoil/spawn/ID/resume issues; fixed and added regression, reviewer18/18 passed.
+Final suite43/43 Windows/Linux, ten CLI scenarios/two-process and cross-platform bytes, browser parity17checks.
+Normal1280x720 FPS measured113 over6seconds, settings persisted on reload; headless21600ticks below1second.
+Browser hidden-tab checks correctly failed; restored window without bypassing pause.
+Added project dao-verify skill using skill-creator guidance; official Spec Kit skills unchanged.
+Token/cost not measured. No hidden-test or full-human-playthrough certification.

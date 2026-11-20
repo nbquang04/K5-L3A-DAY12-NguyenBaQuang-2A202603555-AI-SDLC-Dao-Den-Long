@@ -78,11 +78,11 @@ trạng thái; không thay thế việc review ảnh/camera/HUD. Xem [ma trận]
 ## Docker Linux
 
 ```sh
-docker build -t dao-den-long:phase-1 .
-docker run --rm -p 4173:4173 dao-den-long:phase-1
+docker build -t dao-den-long:phase-2 .
+docker run --rm -p 4173:4173 dao-den-long:phase-2
 ```
 
-CLI: `docker run --rm -v "${PWD}/artifacts:/out" dao-den-long:phase-1 node src/headless/cli.mjs --seed 42 --night 1 --ticks 600 --out /out/run.jsonl`.
+CLI: `docker run --rm -v "${PWD}/artifacts:/out" dao-den-long:phase-2 node src/headless/cli.mjs --seed 42 --night 2 --ticks 600 --out /out/run.jsonl`.
 Tạo thư mục artifacts trước khi bind mount nếu Docker yêu cầu. Base image pin digest trong Dockerfile.
 
 ## Sáng tạo của tôi
@@ -96,9 +96,9 @@ thực thể vào output headless. [Ảnh bắt đầu](docs/proof/phase-1/intro
 
 [AGENTS](AGENTS.md), [ARCHITECTURE](ARCHITECTURE.md), [constitution](.specify/memory/constitution.md),
 [Spec Kit](docs/SPECKIT.md), [STATUS](docs/STATUS.md), [CREDITS](CREDITS.md), [LICENSE](LICENSE).
-Phase 1 chưa có âm thanh, lưu game hoặc hỗ trợ touch/mobile; các phần đó không nằm trong PRD.
-Video demo và Release v1.0.0 là bàn giao cuối Phase 4, chưa tạo ở Phase 1.
-Tuning và quyết định đồng thời là lựa chọn của dự án, được ghi ở spec/assumptions.
+Phase 2 có âm thanh và lưu cài đặt; chưa lưu tiến độ chiến dịch hoặc hỗ trợ touch/mobile.
+Video demo và Release v1.0.0 thuộc bàn giao cuối Phase 4.
+Số liệu/bản đồ theo Ticket-02; các điểm chưa đặc tả được ghi rõ trong spec/assumptions.
 
 <details>
 <summary>Hướng dẫn lab gốc (giữ để tham khảo)</summary>

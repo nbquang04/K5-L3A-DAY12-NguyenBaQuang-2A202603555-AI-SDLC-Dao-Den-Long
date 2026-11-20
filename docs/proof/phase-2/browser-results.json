@@ -1,0 +1,11 @@
+﻿{
+    "id":  "df968586-a4eb-4738-8cb1-e12d3919175e",
+    "ok":  true,
+    "result":  {
+                   "result":  "{\"results\":[{\"name\":\"KeyA\",\"pass\":true,\"pos\":[3.7,0,0]},{\"name\":\"KeyD\",\"pass\":true,\"pos\":[-3.2,0,0]},{\"name\":\"dash-pause-resume\",\"pass\":true},{\"name\":\"settings-persist-storage\",\"pass\":true,\"saved\":{\"sensitivity\":0.45,\"volume\":0.25}},{\"name\":\"parity-dash\",\"pass\":true},{\"name\":\"parity-fall\",\"pass\":true},{\"name\":\"parity-pad\",\"pass\":true},{\"name\":\"parity-drifter\",\"pass\":true},{\"name\":\"parity-charm\",\"pass\":true},{\"name\":\"parity-wind\",\"pass\":true},{\"name\":\"parity-pause\",\"pass\":true},{\"name\":\"parity-win-night1\",\"pass\":true},{\"name\":\"parity-win-night2\",\"pass\":true},{\"name\":\"parity-win-night3\",\"pass\":true},{\"name\":\"three-night-dawn-total\",\"pass\":true},{\"name\":\"retry-current-night\",\"pass\":true},{\"audio\":{\"effects\":17,\"notes\":31,\"state\":\"running\"},\"fps\":106.24479600333056,\"frames\":638,\"name\":\"normal-core-night3-fps-1280x720\",\"pass\":true}],\"status\":\"PASS\",\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.7871.250 Safari/537.36\",\"viewport\":[1280,720]}",
+                   "origin":  "http://localhost:4173/?labtest=1"
+               },
+    "_meta":  {
+                  "runtimeId":  "18ea352d-b264-4dbf-97d6-03c1a517b1e3"
+              }
+}
