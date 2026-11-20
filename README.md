@@ -80,11 +80,11 @@ trạng thái; không thay thế việc review ảnh/camera/HUD. Xem [ma trận]
 ## Docker Linux
 
 ```sh
-docker build -t dao-den-long:phase-2 .
-docker run --rm -p 4173:4173 dao-den-long:phase-2
+docker build -t dao-den-long:phase-3 .
+docker run --rm -p 4173:4173 dao-den-long:phase-3
 ```
 
-CLI: `docker run --rm -v "${PWD}/artifacts:/out" dao-den-long:phase-2 node src/headless/cli.mjs --seed 42 --night 2 --ticks 600 --out /out/run.jsonl`.
+CLI: `docker run --rm -v "${PWD}/artifacts:/out" dao-den-long:phase-3 node src/headless/cli.mjs --seed 42 --night 2 --ticks 600 --out /out/run.jsonl`.
 Tạo thư mục artifacts trước khi bind mount nếu Docker yêu cầu. Base image pin digest trong Dockerfile.
 
 ## Sáng tạo của tôi

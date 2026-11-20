@@ -1,0 +1,19 @@
+{
+  "revision": "c8c62ccd45771d53415141a8daad666c20071245",
+  "working_tree": " M README.md\n M docs/STATUS.md\n M docs/notes/ai-log.md\n M docs/requirements/README.md\n M specs/003-lantern-fuel/tasks.md\n?? docs/proof/phase-3/\n?? specs/003-lantern-fuel/verification.md\n",
+  "normalization": "CRLF to LF",
+  "sha256": {
+    "index.html": "b9ffadde5aa30efdf5baf9d551f376b6686ac57d46b4f8b8f837ce2fc4b4d6be",
+    "game.contract.json": "c57c9fda78cb1157e2219008588510ebca0d887d35b10662c9c6d043a9db5946",
+    "package.json": "3deaaa3865671a347710bdf129da23019f603deb77bf963930d3bd2ffe4a137b",
+    "package-lock.json": "eca32aa3d7a1e0b381a4041edf7b58e78c3f672625092089eaa85b1dbac0c075",
+    "src/core/maps.mjs": "64b5831fabaa11c12e537552ef98361b7f71df80879e6478a24b54402d7bb8cd",
+    "src/core/simulation.mjs": "6b144ec461f5a7140c46b0289a74ff3720c44a43bf3aa5be4865f02e075a912d",
+    "src/core/validation.mjs": "5d4593c9a8d69d49e3d684c9251908fd1362289161e7fcda9a47f658fa437aa5",
+    "src/headless/cli.mjs": "d2b9c39aa99f67e8035401593ce5ee08b21567b1c54ea17b3686feb2f02c10c4",
+    "src/web/audio.mjs": "e10bbce7f678565eee54a2816248b2f8a48c07ba12bd488b0deeaffb284b5236",
+    "src/web/input.mjs": "89a1fe38f87e5d4d077abdd77204f1dd72111f7f2878c46bb0a925ceb10c948a",
+    "src/web/main.mjs": "3c39c10e5efce2b6a67d310e9ef56276720673fb604230631d95a73f8a60733f",
+    "src/web/style.css": "290b46d65b1be73557f8dc62f19ea15e5e7769833d7a24bd103085ba7268ddac"
+  }
+}

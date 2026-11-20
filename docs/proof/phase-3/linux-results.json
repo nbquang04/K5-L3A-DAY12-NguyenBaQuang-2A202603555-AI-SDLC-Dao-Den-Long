@@ -1,0 +1,58 @@
+[
+  {
+    "name": "build",
+    "command": [
+      "docker",
+      "build",
+      "-t",
+      "dao-den-long:phase-3",
+      "."
+    ],
+    "exit": 0
+  },
+  {
+    "name": "tests",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "dao-den-long:phase-3",
+      "npm",
+      "test"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "scenarios",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "--mount",
+      "type=bind,source=D:\\Workspace\\VinAI\\K5-L3A-DAY12-NguyenBaQuang-2A202603555-AI-SDLC-Dao-Den-Long\\docs\\proof\\phase-3,target=/proof",
+      "-e",
+      "PROOF_DIR=/proof/linux",
+      "dao-den-long:phase-3",
+      "node",
+      "scripts/check-phase3.mjs"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "environment",
+    "command": [
+      "docker",
+      "run",
+      "--rm",
+      "dao-den-long:phase-3",
+      "node",
+      "-e",
+      "console.log(JSON.stringify({node:process.version,platform:process.platform,arch:process.arch}))"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "windows-linux-byte-parity",
+    "status": "PASS"
+  }
+]

@@ -63,3 +63,12 @@ Normal1280x720 FPS measured113 over6seconds, settings persisted on reload; headl
 Browser hidden-tab checks correctly failed; restored window without bypassing pause.
 Added project dao-verify skill using skill-creator guidance; official Spec Kit skills unchanged.
 Token/cost not measured. No hidden-test or full-human-playthrough certification.
+
+## Phase3 2026-11-20
+Read released Ticket03 only; specify/plan/research/tasks/analyze/implement/verify/review/converge.
+New tests failed before capacity helper/fuel implementation.53tests passed after explicit rule replacements, no silent skips.
+12new+10retained CLIcases, Linux/process/browser parity,32browser checks passed.
+Normal FPS trials in background tabs throttled; final visible side-pane normalgame119FPS, palette persisted.
+Reviewer independently ran53tests and checked fuel/drain/capacity/scoring/terminal/UI, no mandatory defect found in scope.
+ADR003,CHANGELOG and requirements table record breakingchanges and scenario/cadence interpretations.
+Token/cost not measured; no hidden-test or full-human-playthrough claim.

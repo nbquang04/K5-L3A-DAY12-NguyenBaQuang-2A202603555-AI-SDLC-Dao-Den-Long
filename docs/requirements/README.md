@@ -15,3 +15,6 @@ Phần mô tả thiếu nguồn bên trên là lịch sử thời điểm chuẩ
 
 ## Phase2 source verified
 2026-11-20: released Ticket-02 / contract1.1 read from artifact #p2 after reload. Saved phase-2-source.ax.txt and text extraction. No locked/future ticket content was read.
+
+## Phase3 verified
+2026-11-20: released Ticket03/contract1.2 read from artifact #p3. Source in phase-3-source.ax.txt and text extraction. Phase4 tab was visible but its content not opened.
