@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "root": "D:\\Workspace\\VinAI\\K5-L3A-DAY12-NguyenBaQuang-2A202603555-AI-SDLC-Dao-Den-Long\\artifacts\\package-smoke",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/src/web/main.mjs",
+      "status": 200
+    },
+    {
+      "path": "/src/shared/edge-indicator.mjs",
+      "status": 200
+    },
+    {
+      "path": "/vendor/three.module.js",
+      "status": 200
+    },
+    {
+      "path": "/api/leaderboard",
+      "status": 200
+    }
+  ],
+  "leaderboard": "POST and packaged CLI export identical",
+  "export_exit": 0,
+  "zip": {
+    "bytes": 454415,
+    "sha256": "3eabbaa24bedbc4b66e2b94bbadbc212341f19f0b851f2d73fc3b4b6cc297df6"
+  },
+  "video": {
+    "bytes": 4875385,
+    "sha256": "9b9c79afcaf7f2c050b01f1e0ca643992692ade0104cadf2fcdb420475c0dc67"
+  },
+  "node": "v22.17.0",
+  "platform": "win32"
+}

@@ -1,0 +1,70 @@
+﻿[
+    {
+        "path":  "src/core/benchmark.mjs",
+        "sha256":  "d8d900e2b7540316b3c6a5346957e301c9fb514fa34d7882b35e46429668168a"
+    },
+    {
+        "path":  "src/core/maps.mjs",
+        "sha256":  "9a6eb6a9212ceb39e36626744a78ad1c8c313d330f4c9b214c13dc3b56ce6813"
+    },
+    {
+        "path":  "src/core/simulation.mjs",
+        "sha256":  "b374f973e4b61ac43c4a8b3848da63108d1ce7e5346cc576056256eaf948e9fc"
+    },
+    {
+        "path":  "src/core/validation.mjs",
+        "sha256":  "5d4593c9a8d69d49e3d684c9251908fd1362289161e7fcda9a47f658fa437aa5"
+    },
+    {
+        "path":  "src/headless/cli.mjs",
+        "sha256":  "d2b9c39aa99f67e8035401593ce5ee08b21567b1c54ea17b3686feb2f02c10c4"
+    },
+    {
+        "path":  "src/shared/edge-indicator.mjs",
+        "sha256":  "51f19af86e25a4815313fe48f25317e74bcf110d13b443704507bc4f51f09816"
+    },
+    {
+        "path":  "src/shared/leaderboard.mjs",
+        "sha256":  "d0545fc0ee446effe56191b0331972a904cf0bde267fc7d0e41bc9bf43dcb8f3"
+    },
+    {
+        "path":  "src/shared/metrics.mjs",
+        "sha256":  "df70aa436e3d07c74e580976e0ebb723314dd17927463025e2d31f65cb04b110"
+    },
+    {
+        "path":  "src/web/audio.mjs",
+        "sha256":  "e10bbce7f678565eee54a2816248b2f8a48c07ba12bd488b0deeaffb284b5236"
+    },
+    {
+        "path":  "src/web/benchmark.mjs",
+        "sha256":  "0e1db1b00475fea0b77cec1016b428a60b2a577a2bc502b8e87134be1569326a"
+    },
+    {
+        "path":  "src/web/input.mjs",
+        "sha256":  "12fe627cf9d8766f329960d109acda18cd0a2ef969cc2eee5e78860acac80f6a"
+    },
+    {
+        "path":  "src/web/instances.mjs",
+        "sha256":  "0da2aa6cb15d1316f36bf7d760ba99ad40c8a2e9a2dcf019728ddb874492be5b"
+    },
+    {
+        "path":  "src/web/main.mjs",
+        "sha256":  "4037abe4022ca9bafd2cde85075dc3ff4fcbce6b37408e04c735caaaeb9c6816"
+    },
+    {
+        "path":  "src/web/release.css",
+        "sha256":  "b1d164f319eab15553378624703212f68126c101fb29841b7e1f24a5bb2481ef"
+    },
+    {
+        "path":  "src/web/release-ui.mjs",
+        "sha256":  "f9015e00740780cad8cce7082310398cfa8378c5a165fd6a2f3e7f5fde431e9a"
+    },
+    {
+        "path":  "src/web/settings.mjs",
+        "sha256":  "c267823761255294e5f799ec33d45b03b4438e65d38da08d443dc0cb330fbd2a"
+    },
+    {
+        "path":  "src/web/style.css",
+        "sha256":  "290b46d65b1be73557f8dc62f19ea15e5e7769833d7a24bd103085ba7268ddac"
+    }
+]

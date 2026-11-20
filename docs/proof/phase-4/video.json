@@ -1,0 +1,12 @@
+{
+  "path": "Release asset demo.mp4",
+  "duration_s": 62.48,
+  "size": [
+    1280,
+    720
+  ],
+  "source": "actual normal UI + real keyboard input; benchmark scene; actual proof files",
+  "recording": "D:\\Workspace\\VinAI\\K5-L3A-DAY12-NguyenBaQuang-2A202603555-AI-SDLC-Dao-Den-Long\\artifacts\\demo\\page@6350c02fef1d601750c88edea6ad9d53.webm",
+  "conversion": "FFmpeg libx264 CRF23 yuv420p",
+  "exit": 0
+}

@@ -1,0 +1,109 @@
+{
+  "run_id": "20261120T103450Z-30b281fb",
+  "started_at_utc": "2026-11-20T10:34:50.013922+00:00",
+  "revision": "3986a150342dc1efaac1dca2d2dc4fe1cc93ad6e",
+  "working_tree_before_run": "?? bench.json\n?? bench.json.frames.json\n?? docs/proof/phase-4/\n?? soak.json\n?? soak.json.details.json",
+  "environment": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "cwd": "D:\\Workspace\\VinAI\\K5-L3A-DAY12-NguyenBaQuang-2A202603555-AI-SDLC-Dao-Den-Long"
+  },
+  "config": "D:\\Workspace\\VinAI\\K5-L3A-DAY12-NguyenBaQuang-2A202603555-AI-SDLC-Dao-Den-Long\\verification\\checks.json",
+  "scope": "Configured automated commands only; manual checks and phase acceptance are separate.",
+  "checks": [
+    {
+      "id": "build",
+      "requirements": [
+        "FR-001",
+        "FR-007",
+        "FR-008"
+      ],
+      "command": [
+        "node",
+        "scripts/build.mjs"
+      ],
+      "timeout_seconds": 60,
+      "stdout": "001.stdout.log",
+      "stderr": "001.stderr.log",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.125
+    },
+    {
+      "id": "unit-and-cli",
+      "requirements": [
+        "US-01",
+        "US-02",
+        "US-03",
+        "US-04",
+        "US-05",
+        "FR-006"
+      ],
+      "command": [
+        "node",
+        "--test",
+        "tests/core.test.mjs",
+        "tests/cli.test.mjs",
+        "tests/input.test.mjs",
+        "tests/phase2.test.mjs",
+        "tests/phase3.test.mjs",
+        "tests/phase4.test.mjs",
+        "tests/server.test.mjs"
+      ],
+      "timeout_seconds": 120,
+      "stdout": "002.stdout.log",
+      "stderr": "002.stderr.log",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.281
+    },
+    {
+      "id": "scenarios-and-replay",
+      "requirements": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-008",
+        "FR-009"
+      ],
+      "command": [
+        "node",
+        "scripts/check-phase4.mjs"
+      ],
+      "timeout_seconds": 120,
+      "stdout": "003.stdout.log",
+      "stderr": "003.stderr.log",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 7.703
+    },
+    {
+      "id": "linux-clean-build-tests-parity",
+      "requirements": [
+        "FR-008",
+        "FR-009",
+        "SC-005"
+      ],
+      "command": [
+        "node",
+        "scripts/linux-check.mjs"
+      ],
+      "timeout_seconds": 600,
+      "stdout": "004.stdout.log",
+      "stderr": "004.stderr.log",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 10.813
+    }
+  ],
+  "issues": [],
+  "status": "PASS",
+  "counts": {
+    "PASS": 4,
+    "FAIL": 0,
+    "BLOCKED": 0,
+    "NOT_RUN": 0
+  },
+  "finished_at_utc": "2026-11-20T10:35:10.136740+00:00"
+}

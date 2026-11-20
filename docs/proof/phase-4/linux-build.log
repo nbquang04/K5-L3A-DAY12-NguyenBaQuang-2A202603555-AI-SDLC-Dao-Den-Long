@@ -1,0 +1,440 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 370B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 118B done
+#3 DONE 0.0s
+
+#4 [1/9] FROM docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32
+#4 resolve docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 23.07kB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/9] WORKDIR /game
+#6 CACHED
+
+#7 [3/9] COPY package.json package-lock.json ./
+#7 CACHED
+
+#8 [4/9] RUN npm ci --ignore-scripts
+#8 CACHED
+
+#9 [5/9] COPY src ./src
+#9 CACHED
+
+#10 [6/9] COPY scripts ./scripts
+#10 DONE 0.0s
+
+#11 [7/9] COPY tests ./tests
+#11 DONE 0.0s
+
+#12 [8/9] COPY index.html game.contract.json ./
+#12 DONE 0.0s
+
+#13 [9/9] RUN npm test && npm run build
+#13 0.398 
+#13 0.398 > dao-den-long@1.0.0 test
+#13 0.398 > node --test tests/*.test.mjs
+#13 0.398 
+#13 0.474 TAP version 13
+#13 1.087 # Subtest: CLI N steps, snapshot zero + interval, exactly one end; two processes identical
+#13 1.088 ok 1 - CLI N steps, snapshot zero + interval, exactly one end; two processes identical
+#13 1.088   ---
+#13 1.088   duration_ms: 203.890576
+#13 1.088   type: 'test'
+#13 1.088   ...
+#13 1.089 # Subtest: tick 0 run and input k -> event k+1; inputs persist
+#13 1.089 ok 2 - tick 0 run and input k -> event k+1; inputs persist
+#13 1.089   ---
+#13 1.089   duration_ms: 154.091261
+#13 1.089   type: 'test'
+#13 1.089   ...
+#13 1.090 # Subtest: invalid JSON/schema/CLI return nonzero, data errors 2 and stderr
+#13 1.090 ok 3 - invalid JSON/schema/CLI return nonzero, data errors 2 and stderr
+#13 1.090   ---
+#13 1.090   duration_ms: 203.028268
+#13 1.090   type: 'test'
+#13 1.090   ...
+#13 1.102 # Subtest: tick zero, scenario has no score/events; lantern patch preserves five
+#13 1.102 ok 4 - tick zero, scenario has no score/events; lantern patch preserves five
+#13 1.102   ---
+#13 1.102   duration_ms: 5.414714
+#13 1.102   type: 'test'
+#13 1.102   ...
+#13 1.102 # Subtest: movement camera yaw, diagonal normalization and held input
+#13 1.103 ok 5 - movement camera yaw, diagonal normalization and held input
+#13 1.103   ---
+#13 1.103   duration_ms: 8.728109
+#13 1.103   type: 'test'
+#13 1.103   ...
+#13 1.103 # Subtest: jump rising edge only, lands, release allows next jump
+#13 1.103 ok 6 - jump rising edge only, lands, release allows next jump
+#13 1.103   ---
+#13 1.103   duration_ms: 2.965284
+#13 1.103   type: 'test'
+#13 1.103   ...
+#13 1.103 # Subtest: standing exactly on canonical edge is supported
+#13 1.103 ok 7 - standing exactly on canonical edge is supported
+#13 1.103   ---
+#13 1.103   duration_ms: 10.146339
+#13 1.103   type: 'test'
+#13 1.103   ...
+#13 1.104 # Subtest: pickup exactly at radius; full bag leaves motes; horizontal distance while jumping
+#13 1.104 ok 8 - pickup exactly at radius; full bag leaves motes; horizontal distance while jumping
+#13 1.104   ---
+#13 1.104   duration_ms: 5.284382
+#13 1.104   type: 'test'
+#13 1.104   ...
+#13 1.104 # Subtest: partial deposit retained, hold interact does not retrigger, lit once
+#13 1.104 ok 9 - partial deposit retained, hold interact does not retrigger, lit once
+#13 1.104   ---
+#13 1.104   duration_ms: 1.869031
+#13 1.104   type: 'test'
+#13 1.104   ...
+#13 1.104 # Subtest: shades chase, contact hit once per immunity and drop half the motes
+#13 1.104 ok 10 - shades chase, contact hit once per immunity and drop half the motes
+#13 1.104   ---
+#13 1.104   duration_ms: 6.844708
+#13 1.104   type: 'test'
+#13 1.104   ...
+#13 1.105 # Subtest: safe light blocks shade movement including shade placed inside safety
+#13 1.105 ok 11 - safe light blocks shade movement including shade placed inside safety
+#13 1.105   ---
+#13 1.105   duration_ms: 3.161571
+#13 1.105   type: 'test'
+#13 1.105   ...
+#13 1.105 # Subtest: pulse consumes exact cost, stuns/pushes, no retrigger while held, cooldown
+#13 1.105 ok 12 - pulse consumes exact cost, stuns/pushes, no retrigger while held, cooldown
+#13 1.105   ---
+#13 1.105   duration_ms: 7.544449
+#13 1.105   type: 'test'
+#13 1.105   ...
+#13 1.105 # Subtest: pulse insufficient and outside radius leave enemy unaffected; zero direction finite
+#13 1.105 ok 13 - pulse insufficient and outside radius leave enemy unaffected; zero direction finite
+#13 1.105   ---
+#13 1.105   duration_ms: 3.765637
+#13 1.105   type: 'test'
+#13 1.105   ...
+#13 1.106 # Subtest: dawn fuel bonus exact once, terminal freezes; enough lights at deadline
+#13 1.106 ok 14 - dawn fuel bonus exact once, terminal freezes; enough lights at deadline
+#13 1.106   ---
+#13 1.106   duration_ms: 2.099027
+#13 1.106   type: 'test'
+#13 1.106   ...
+#13 1.106 # Subtest: no_flames and dawn losses
+#13 1.106 ok 15 - no_flames and dawn losses
+#13 1.106   ---
+#13 1.106   duration_ms: 0.92939
+#13 1.106   type: 'test'
+#13 1.106   ...
+#13 1.106 # Subtest: seed replay and reset create identical snapshots
+#13 1.107 ok 16 - seed replay and reset create identical snapshots
+#13 1.107   ---
+#13 1.107   duration_ms: 21.344756
+#13 1.107   type: 'test'
+#13 1.107   ...
+#13 1.107 # Subtest: input/schema rejects invalid types, duplicate ticks, NaN, unknown lanterns
+#13 1.107 ok 17 - input/schema rejects invalid types, duplicate ticks, NaN, unknown lanterns
+#13 1.107   ---
+#13 1.107   duration_ms: 1.717221
+#13 1.107   type: 'test'
+#13 1.107   ...
+#13 1.107 # Subtest: deposit outside radius fails, tie chooses L1, full scenario deposit becomes lit
+#13 1.107 ok 18 - deposit outside radius fails, tie chooses L1, full scenario deposit becomes lit
+#13 1.107   ---
+#13 1.107   duration_ms: 0.859291
+#13 1.107   type: 'test'
+#13 1.107   ...
+#13 1.108 # Subtest: pulse inclusive radius and positive cooldown boundary
+#13 1.108 ok 19 - pulse inclusive radius and positive cooldown boundary
+#13 1.108   ---
+#13 1.108   duration_ms: 4.332891
+#13 1.108   type: 'test'
+#13 1.108   ...
+#13 1.108 # Subtest: safe-radius inclusive protects player; just outside can be hit
+#13 1.108 ok 20 - safe-radius inclusive protects player; just outside can be hit
+#13 1.108   ---
+#13 1.108   duration_ms: 0.83883
+#13 1.108   type: 'test'
+#13 1.108   ...
+#13 1.108 # Subtest: random spawn flags and generated IDs stay deterministic without collisions
+#13 1.108 ok 21 - random spawn flags and generated IDs stay deterministic without collisions
+#13 1.109   ---
+#13 1.109   duration_ms: 78.08443
+#13 1.109   type: 'test'
+#13 1.109   ...
+#13 1.110 # Subtest: scenario time override follows exact elapsed formula and coordinates alone round
+#13 1.110 ok 22 - scenario time override follows exact elapsed formula and coordinates alone round
+#13 1.110   ---
+#13 1.110   duration_ms: 1.50405
+#13 1.110   type: 'test'
+#13 1.110   ...
+#13 1.111 # Subtest: regression: overlapping safe circles must exclude shades from their entire union
+#13 1.111 ok 23 - regression: overlapping safe circles must exclude shades from their entire union
+#13 1.111   ---
+#13 1.111   duration_ms: 0.658721
+#13 1.111   type: 'test'
+#13 1.111   ...
+#13 1.111 # Subtest: regression: A projects left and D projects right for camera yaw 0/90/180/270
+#13 1.112 ok 24 - regression: A projects left and D projects right for camera yaw 0/90/180/270
+#13 1.112   ---
+#13 1.112   duration_ms: 30.335154
+#13 1.112   type: 'test'
+#13 1.112   ...
+#13 1.112 # Subtest: W/S follow camera depth, arrows match keys and opposing keys cancel
+#13 1.112 ok 25 - W/S follow camera depth, arrows match keys and opposing keys cancel
+#13 1.112   ---
+#13 1.112   duration_ms: 52.255318
+#13 1.112   type: 'test'
+#13 1.112   ...
+#13 1.114 # Subtest: canonical maps and terrain include bridge, tiers, ramp and tower
+#13 1.114 ok 26 - canonical maps and terrain include bridge, tiers, ramp and tower
+#13 1.114   ---
+#13 1.114   duration_ms: 4.904367
+#13 1.114   type: 'test'
+#13 1.114   ...
+#13 1.114 # Subtest: dash lasts12 ticks, cooldown90, airborne height held and edge required
+#13 1.114 ok 27 - dash lasts12 ticks, cooldown90, airborne height held and edge required
+#13 1.115   ---
+#13 1.115   duration_ms: 6.08351
+#13 1.115   type: 'test'
+#13 1.115   ...
+#13 1.115 # Subtest: pause increments tick only and freezes timers, counters and TTL
+#13 1.115 ok 28 - pause increments tick only and freezes timers, counters and TTL
+#13 1.115   ---
+#13 1.115   duration_ms: 1.168388
+#13 1.115   type: 'test'
+#13 1.115   ...
+#13 1.116 # Subtest: fall loses once, waits60, resets velocity and grants90 invulnerability
+#13 1.116 ok 29 - fall loses once, waits60, resets velocity and grants90 invulnerability
+#13 1.116   ---
+#13 1.116   duration_ms: 4.30663
+#13 1.116   type: 'test'
+#13 1.116   ...
+#13 1.117 # Subtest: pickup height/capacity, deposit scores rather than pickup, partial retained
+#13 1.117 ok 30 - pickup height/capacity, deposit scores rather than pickup, partial retained
+#13 1.117   ---
+#13 1.117   duration_ms: 2.427782
+#13 1.117   type: 'test'
+#13 1.117   ...
+#13 1.117 # Subtest: pulse uses3D radius, stun120 push4 over15ticks and costs3
+#13 1.117 ok 31 - pulse uses3D radius, stun120 push4 over15ticks and costs3
+#13 1.117   ---
+#13 1.117   duration_ms: 3.369839
+#13 1.117   type: 'test'
+#13 1.117   ...
+#13 1.118 # Subtest: shade hit drops half, recoil, invulnerability, dropped motes expire
+#13 1.118 ok 32 - shade hit drops half, recoil, invulnerability, dropped motes expire
+#13 1.118   ---
+#13 1.118   duration_ms: 2.363097
+#13 1.118   type: 'test'
+#13 1.118   ...
+#13 1.118 # Subtest: drifter steals through invulnerability and pulse recovers stolen motes
+#13 1.119 ok 33 - drifter steals through invulnerability and pulse recovers stolen motes
+#13 1.119   ---
+#13 1.119   duration_ms: 1.457873
+#13 1.119   type: 'test'
+#13 1.119   ...
+#13 1.119 # Subtest: charm refreshes600, run7.2 and repeated edge dash without cooldown
+#13 1.119 ok 34 - charm refreshes600, run7.2 and repeated edge dash without cooldown
+#13 1.119   ---
+#13 1.119   duration_ms: 2.191874
+#13 1.119   type: 'test'
+#13 1.119   ...
+#13 1.119 # Subtest: spawn schedules,20 distinct initial motes and no same-tick contact
+#13 1.119 ok 35 - spawn schedules,20 distinct initial motes and no same-tick contact
+#13 1.119   ---
+#13 1.119   duration_ms: 17.641294
+#13 1.119   type: 'test'
+#13 1.119   ...
+#13 1.119 # Subtest: wind warns before1800 and active300ticks then stops
+#13 1.120 ok 36 - wind warns before1800 and active300ticks then stops
+#13 1.120   ---
+#13 1.120   duration_ms: 55.327311
+#13 1.120   type: 'test'
+#13 1.120   ...
+#13 1.120 # Subtest: no_flames overrides all_lit; win overrides dawn if alive
+#13 1.120 ok 37 - no_flames overrides all_lit; win overrides dawn if alive
+#13 1.120   ---
+#13 1.120   duration_ms: 1.630733
+#13 1.120   type: 'test'
+#13 1.120   ...
+#13 1.120 # Subtest: launch pad crosses night2 sea and retains horizontal launch despite opposite input
+#13 1.120 ok 38 - launch pad crosses night2 sea and retains horizontal launch despite opposite input
+#13 1.121   ---
+#13 1.121   duration_ms: 4.516287
+#13 1.121   type: 'test'
+#13 1.121   ...
+#13 1.121 # Subtest: night3 pad lands on upper tier; vertical wall and tower stop walking/dash
+#13 1.121 ok 39 - night3 pad lands on upper tier; vertical wall and tower stop walking/dash
+#13 1.121   ---
+#13 1.121   duration_ms: 2.862411
+#13 1.121   type: 'test'
+#13 1.121   ...
+#13 1.121 # Subtest: ramp climbs from ground to terrace, bridge edge falls, lost last flame never respawns
+#13 1.121 ok 40 - ramp climbs from ground to terrace, bridge edge falls, lost last flame never respawns
+#13 1.121   ---
+#13 1.121   duration_ms: 2.622114
+#13 1.121   type: 'test'
+#13 1.121   ...
+#13 1.121 # Subtest: dropped motes cannot be collected on birth tick and expire after480 sim ticks
+#13 1.121 ok 41 - dropped motes cannot be collected on birth tick and expire after480 sim ticks
+#13 1.122   ---
+#13 1.122   duration_ms: 11.277173
+#13 1.122   type: 'test'
+#13 1.122   ...
+#13 1.122 # Subtest: review regression: drifter releases stolen light at its exact location
+#13 1.122 ok 42 - review regression: drifter releases stolen light at its exact location
+#13 1.122   ---
+#13 1.122   duration_ms: 1.237369
+#13 1.122   type: 'test'
+#13 1.122   ...
+#13 1.122 # Subtest: review regression: shade recoil travels2m in60ticks and new shade activates next tick
+#13 1.122 ok 43 - review regression: shade recoil travels2m in60ticks and new shade activates next tick
+#13 1.122   ---
+#13 1.122   duration_ms: 20.577821
+#13 1.122   type: 'test'
+#13 1.122   ...
+#13 1.124 # Subtest: lit scenario defaults fuel100/ever_lit; no score/capacity gain and exact6000tick out
+#13 1.124 ok 44 - lit scenario defaults fuel100/ever_lit; no score/capacity gain and exact6000tick out
+#13 1.124   ---
+#13 1.124   duration_ms: 90.344714
+#13 1.124   type: 'test'
+#13 1.124   ...
+#13 1.124 # Subtest: refuel uses ceiling in exact units and consumes only needed motes; full excluded
+#13 1.124 ok 45 - refuel uses ceiling in exact units and consumes only needed motes; full excluded
+#13 1.124   ---
+#13 1.124   duration_ms: 6.197421
+#13 1.124   type: 'test'
+#13 1.124   ...
+#13 1.125 # Subtest: relight costs5, firstlight10, partial held; score/history/capacity exact
+#13 1.125 ok 46 - relight costs5, firstlight10, partial held; score/history/capacity exact
+#13 1.125   ---
+#13 1.125   duration_ms: 2.140422
+#13 1.125   type: 'test'
+#13 1.125   ...
+#13 1.125 # Subtest: capacity max20 from successful lights; scenario permits carried20 only when capacity allows
+#13 1.126 ok 47 - capacity max20 from successful lights; scenario permits carried20 only when capacity allows
+#13 1.126   ---
+#13 1.126   duration_ms: 2.46698
+#13 1.126   type: 'test'
+#13 1.126   ...
+#13 1.126 # Subtest: exact30 safe; fuel below30 unsafe even snapshot rounds30.0; refuel ejects
+#13 1.127 ok 48 - exact30 safe; fuel below30 unsafe even snapshot rounds30.0; refuel ejects
+#13 1.127   ---
+#13 1.127   duration_ms: 3.07098
+#13 1.127   type: 'test'
+#13 1.127   ...
+#13 1.127 # Subtest: two drainers stack atstep2, cadence60, pause freezes; out resets progress
+#13 1.128 ok 49 - two drainers stack atstep2, cadence60, pause freezes; out resets progress
+#13 1.128   ---
+#13 1.128   duration_ms: 7.348933
+#13 1.128   type: 'test'
+#13 1.128   ...
+#13 1.128 # Subtest: wander prefers weak lit target; chase never switches to lantern; drain reacts at6m and pulse15
+#13 1.128 ok 50 - wander prefers weak lit target; chase never switches to lantern; drain reacts at6m and pulse15
+#13 1.128   ---
+#13 1.128   duration_ms: 3.657148
+#13 1.128   type: 'test'
+#13 1.128   ...
+#13 1.129 # Subtest: no early win; eachnight threshold onlyatdawn, correct fuel/flame bonus and deathpriority
+#13 1.129 ok 51 - no early win; eachnight threshold onlyatdawn, correct fuel/flame bonus and deathpriority
+#13 1.129   ---
+#13 1.129   duration_ms: 4.786513
+#13 1.129   type: 'test'
+#13 1.129   ...
+#13 1.129 # Subtest: finaltick out before interaction can relight and count towards dawn; roundingonlyoutput
+#13 1.129 ok 52 - finaltick out before interaction can relight and count towards dawn; roundingonlyoutput
+#13 1.130   ---
+#13 1.130   duration_ms: 1.505834
+#13 1.130   type: 'test'
+#13 1.130   ...
+#13 1.130 # Subtest: invalid fuel/ever_lit/target schema rejected
+#13 1.130 ok 53 - invalid fuel/ever_lit/target schema rejected
+#13 1.130   ---
+#13 1.130   duration_ms: 3.156442
+#13 1.130   type: 'test'
+#13 1.130   ...
+#13 1.131 # Subtest: edge indicator preserves pixel direction on non-square viewport and behind camera
+#13 1.131 ok 54 - edge indicator preserves pixel direction on non-square viewport and behind camera
+#13 1.131   ---
+#13 1.131   duration_ms: 2.357117
+#13 1.131   type: 'test'
+#13 1.131   ...
+#13 1.132 # Subtest: metrics use all samples, worst ceil 1%, nearest-rank p95
+#13 1.132 ok 55 - metrics use all samples, worst ceil 1%, nearest-rank p95
+#13 1.132   ---
+#13 1.132   duration_ms: 1.14959
+#13 1.132   type: 'test'
+#13 1.132   ...
+#13 1.132 # Subtest: benchmark exact counts, seed, fuel, origin and suppressed rules
+#13 1.132 ok 56 - benchmark exact counts, seed, fuel, origin and suppressed rules
+#13 1.133   ---
+#13 1.133   duration_ms: 352.72488
+#13 1.133   type: 'test'
+#13 1.133   ...
+#13 1.133 # Subtest: leaderboard validates, ranks ties by time, trims ten
+#13 1.133 ok 57 - leaderboard validates, ranks ties by time, trims ten
+#13 1.134   ---
+#13 1.134   duration_ms: 1.188595
+#13 1.134   type: 'test'
+#13 1.134   ...
+#13 1.134 # Subtest: disk store survives reopen and preserves corrupt data
+#13 1.134 ok 58 - disk store survives reopen and preserves corrupt data
+#13 1.134   ---
+#13 1.134   duration_ms: 14.09671
+#13 1.134   type: 'test'
+#13 1.134   ...
+#13 1.134 # Subtest: bindings reject conflicts and preserve unclaimed aliases
+#13 1.134 ok 59 - bindings reject conflicts and preserve unclaimed aliases
+#13 1.134   ---
+#13 1.134   duration_ms: 0.714722
+#13 1.134   type: 'test'
+#13 1.134   ...
+#13 1.135 # Subtest: soak input stream reproducible and independent; direction lasts thirty ticks
+#13 1.135 ok 60 - soak input stream reproducible and independent; direction lasts thirty ticks
+#13 1.135   ---
+#13 1.135   duration_ms: 0.924303
+#13 1.135   type: 'test'
+#13 1.135   ...
+#13 1.135 # Subtest: server API rejects invalid/cross-origin, serializes concurrent writes; export after restart
+#13 1.135 ok 61 - server API rejects invalid/cross-origin, serializes concurrent writes; export after restart
+#13 1.135   ---
+#13 1.135   duration_ms: 336.378672
+#13 1.135   type: 'test'
+#13 1.135   ...
+#13 1.135 1..61
+#13 1.135 # tests 61
+#13 1.136 # suites 0
+#13 1.136 # pass 61
+#13 1.136 # fail 0
+#13 1.136 # cancelled 0
+#13 1.136 # skipped 0
+#13 1.136 # todo 0
+#13 1.136 # duration_ms 660.768681
+#13 1.302 
+#13 1.302 > dao-den-long@1.0.0 build
+#13 1.302 > node scripts/build.mjs
+#13 1.302 
+#13 1.377 Built self-contained static game in dist/
+#13 DONE 1.4s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.2s done
+#14 exporting manifest sha256:f4c7b2ec39a592ec01aeeba38d146a56fd9522462c211195852e8b14d68859ef 0.0s done
+#14 exporting config sha256:77d0e8cdb8a1b343db78dcded9f55a71ec2751c4120359633b61f1f17dc2e19c 0.0s done
+#14 exporting attestation manifest sha256:e4092d8d18076a978d54302f696e8602b18e19792d5686b347fe1520fbc284cb 0.0s done
+#14 exporting manifest list sha256:f6059b15a180db64be9260442e640965b719e5d803b5fc188553dd1ae24126a8 0.0s done
+#14 naming to docker.io/library/dao-den-long:phase-4 done
+#14 unpacking to docker.io/library/dao-den-long:phase-4 0.1s done
+#14 DONE 0.5s

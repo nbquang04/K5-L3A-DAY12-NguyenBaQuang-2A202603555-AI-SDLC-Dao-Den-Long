@@ -28,3 +28,7 @@ Pause tick increases, sim_tick freezes; resume immediately simulates after clear
 Night3 unspecified start/respawn chosen (0,0,-30) to avoid spawning buried below the central terrace/tower.
 night_start on first nonpaused tick; boolean invuln, random ttl_s=0; extended scenario defaults in feature contract.
 Audio synthesized locally and does not touch gameplay RNG. Campaign totals won nights only.
+
+
+## Phase4
+ADR004: local Node disk leaderboard, Playwright development-only benchmark/QA/video, shared wander/general instancing, webvsyncfalse/RSSnull, public jitless/1MiB/symmetricGC soak; ASCII names baseline. Static fallback store was considered but not needed; Node server ships in ZIP. No gameplay law changed.

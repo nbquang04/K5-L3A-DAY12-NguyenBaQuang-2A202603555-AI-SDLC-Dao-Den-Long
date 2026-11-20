@@ -1,10 +1,11 @@
 # Project status
 
-2026-11-20: Phase1 and Phase2 tagged/pushed; Phase3 implemented and verified.
-Phase3 runtime c8c62cc, contract1.2; fuel/refuel/relight/drain/capacity/dawn/palette implemented.
-53/53 Windows/Linux tests PASS;12new+10retained CLIscenarios byte-identical;32browserchecks PASS.
-Normal game measured119FPS at1280x720; palette persisted after reload.
-[Report](proof/phase-3/report.md), [matrix](../specs/003-lantern-fuel/verification.md), ADR003 and CHANGELOG.
-Run npm ci, npm run build, npm start; http://localhost:4173.
-Do not start Phase4 until requested and its ticket read. Human game-feel acceptance pending; hidden tests unavailable.
-Token/cost not measured. Final video/Release1.0.0 belong to Phase4.
+2026-11-20: Phases1-3 tagged/pushed; Phase4 implementation and verification complete, release publication pending.
+Runtime ff70a7c; contract1.3, package1.0.0. Core/shared tests unchanged since3986a15.
+61Windows/Linux tests PASS;22CLIscenarios byte-identical;32retained+6release browsergroups PASS.
+Latest isolated benchmark99.23avg/56.35p1low/3.57sload. Soak10nights0crashes/RSS+5.02% with public documented flags.
+ExtractedZIP HTTP/API/CLIexport PASS; MP4 actual keyboardplay+proof62.48s.
+See proof/phase-4/report.md, specs/004-release-dawn/verification.md, ADR004 and retrospective.
+Run npm ci, npm run build, npm start; http://localhost:4173. Node server restarted to current release.
+Remaining: push final proof/tag phase-4/v1.0.0, upload ZIP/MP4 and record public release metadata.
+External grading hardware/hidden tests and macOS unavailable; human game-feel acceptance pending; tokens/cost chua do.

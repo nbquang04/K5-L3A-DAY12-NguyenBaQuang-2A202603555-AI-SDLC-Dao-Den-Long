@@ -1,0 +1,225 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "name": "retained-browser-checks",
+      "status": "PASS",
+      "checks": {
+        "status": "PASS",
+        "regression": {
+          "status": "PASS",
+          "results": [
+            {
+              "name": "KeyA",
+              "pass": true,
+              "pos": [
+                4.1,
+                0,
+                0
+              ]
+            },
+            {
+              "name": "KeyD",
+              "pass": true,
+              "pos": [
+                -3.2,
+                0,
+                0
+              ]
+            },
+            {
+              "name": "dash-pause-resume",
+              "pass": true
+            },
+            {
+              "name": "settings-persist-storage",
+              "pass": true,
+              "saved": {
+                "volume": 0.25,
+                "sensitivity": 0.45,
+                "colorblind": false,
+                "bindings": {
+                  "forward": "KeyW",
+                  "back": "KeyS",
+                  "left": "KeyA",
+                  "right": "KeyD",
+                  "jump": "Space",
+                  "dash": "ShiftLeft",
+                  "interact": "KeyE",
+                  "pulse": "KeyQ",
+                  "pause": "Escape"
+                },
+                "reducedMotion": false,
+                "largeText": false
+              }
+            },
+            {
+              "name": "parity-dash",
+              "pass": true
+            },
+            {
+              "name": "parity-fall",
+              "pass": true
+            },
+            {
+              "name": "parity-pad",
+              "pass": true
+            },
+            {
+              "name": "parity-drifter",
+              "pass": true
+            },
+            {
+              "name": "parity-charm",
+              "pass": true
+            },
+            {
+              "name": "parity-wind",
+              "pass": true
+            },
+            {
+              "name": "parity-pause",
+              "pass": true
+            },
+            {
+              "name": "parity-win-night1",
+              "pass": true
+            },
+            {
+              "name": "parity-win-night2",
+              "pass": true
+            },
+            {
+              "name": "parity-win-night3",
+              "pass": true
+            },
+            {
+              "name": "three-night-dawn-total",
+              "pass": true
+            },
+            {
+              "name": "retry-current-night",
+              "pass": true
+            },
+            {
+              "name": "normal-core-night3-fps-1280x720",
+              "pass": true,
+              "fps": 112.20990244020322,
+              "frames": 674,
+              "audio": {
+                "notes": 31,
+                "effects": 17,
+                "state": "running"
+              }
+            }
+          ],
+          "viewport": [
+            1280,
+            720
+          ],
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36"
+        },
+        "results": [
+          {
+            "name": "parity-refuel",
+            "pass": true
+          },
+          {
+            "name": "parity-relight",
+            "pass": true
+          },
+          {
+            "name": "parity-out",
+            "pass": true
+          },
+          {
+            "name": "parity-drain",
+            "pass": true
+          },
+          {
+            "name": "parity-drain-pulse",
+            "pass": true
+          },
+          {
+            "name": "parity-capacity",
+            "pass": true
+          },
+          {
+            "name": "parity-pause-fuel",
+            "pass": true
+          },
+          {
+            "name": "parity-no-early-win",
+            "pass": true
+          },
+          {
+            "name": "parity-dawn-night1",
+            "pass": true
+          },
+          {
+            "name": "parity-dawn-night2",
+            "pass": true
+          },
+          {
+            "name": "parity-dawn-night3",
+            "pass": true
+          },
+          {
+            "name": "parity-dawn-loss",
+            "pass": true
+          },
+          {
+            "name": "palette-fuelbar-torn-collapse-blink",
+            "pass": true,
+            "eye": "00b3ff",
+            "warning": "rgb(255, 255, 255)",
+            "off_scale": 0.8,
+            "intensities": [
+              5,
+              24
+            ]
+          },
+          {
+            "name": "relight-capacity-HUD",
+            "pass": true
+          },
+          {
+            "name": "no-early-win-UI",
+            "pass": true
+          }
+        ],
+        "viewport": [
+          1280,
+          720
+        ],
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36"
+      }
+    },
+    {
+      "name": "rebind-conflict-persistence-options",
+      "status": "PASS"
+    },
+    {
+      "name": "actual-remapped-movement-pause",
+      "status": "PASS"
+    },
+    {
+      "name": "visible-fonts-18-and-captions",
+      "status": "PASS"
+    },
+    {
+      "name": "spawn-arrow-at-screen-edge",
+      "status": "PASS"
+    },
+    {
+      "name": "loss-name-save-board-zero-unwon-score",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "viewport": [
+    1280,
+    720
+  ],
+  "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+}

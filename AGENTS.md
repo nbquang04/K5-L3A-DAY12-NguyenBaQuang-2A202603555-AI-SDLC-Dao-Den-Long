@@ -66,3 +66,7 @@ Ghi thay đổi, kiểm tra đã chạy, lỗi còn lại và bước tiếp the
 Lệnh đã có: `npm ci`, `npm run build`, `npm start`, `npm test`, `npm run verify`; CLI: `node src/headless/cli.mjs --seed 42 --night 1 --ticks 600 --out artifacts/run.jsonl`. Tuning ở game.contract.json; không nhân bản sang renderer.
 
 Lệnh điều phối Verify có thật: `python scripts/verify.py --config verification/checks.json` (Python 3.10+). Manifest có build, unit/CLI, scenario/replay và Linux Docker; môi trường thiếu Docker sẽ BLOCKED/FAIL, không bỏ kiểm tra âm thầm. Sau code, tạo/cập nhật test hành vi phù hợp, thêm command thật, chạy runner và báo cáo theo mẫu trong VERIFICATION. Trước tag dùng [release checklist](docs/RELEASE-CHECKLIST.md).
+
+
+## Phase4 runtime
+Contract1.3 adds `npm run bench -- --seed 42 --duration 30 --out bench.json` and `npm run soak -- --seed 7 --nights 10 --out soak.json`. Read ADR004 and phase4 proof before changing flags/metrics. Local leaderboard requires shipped Node server, exports with `npm start -- --export-leaderboard out.json`. Preserve all four phase proofs and released tags.

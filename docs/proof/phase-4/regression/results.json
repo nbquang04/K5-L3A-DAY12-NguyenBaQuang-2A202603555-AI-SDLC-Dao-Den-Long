@@ -1,0 +1,1570 @@
+{
+  "status": "PASS",
+  "environment": {
+    "node": "v22.17.0",
+    "platform": "win32"
+  },
+  "performance_seconds": 0.16641739999999983,
+  "results": [
+    {
+      "name": "dash",
+      "night": 1,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": false,
+        "motes": [],
+        "shades": [],
+        "drifters": [],
+        "charms": [],
+        "player": {
+          "pos": [
+            0,
+            2,
+            0
+          ]
+        }
+      },
+      "frames": [
+        {
+          "tick": 0,
+          "dash": true
+        }
+      ],
+      "final": {
+        "type": "snapshot",
+        "tick": 12,
+        "sim_tick": 12,
+        "state": "playing",
+        "night": 1,
+        "wind": {
+          "active": false,
+          "dir_deg": 0
+        },
+        "time_left_s": 239.8,
+        "score": 0,
+        "player": {
+          "pos": [
+            0,
+            2,
+            2.8
+          ],
+          "vel": [
+            0,
+            0,
+            14
+          ],
+          "grounded": false,
+          "flames": 3,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": false,
+          "dash_cd_s": 1.3166666666666667,
+          "pulse_cd_s": 0,
+          "charm_s": 0
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              0,
+              25
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              23.8,
+              0,
+              7.7
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              14.7,
+              0,
+              -20.2
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              -14.7,
+              0,
+              -20.2
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              -23.8,
+              0,
+              7.7
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 0,
+        "motes": [],
+        "drifters": [],
+        "charms": []
+      }
+    },
+    {
+      "name": "fall",
+      "night": 2,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": false,
+        "motes": [],
+        "shades": [],
+        "drifters": [],
+        "charms": [],
+        "player": {
+          "pos": [
+            35,
+            -11,
+            3
+          ],
+          "carried": 8
+        }
+      },
+      "frames": [],
+      "final": {
+        "type": "snapshot",
+        "tick": 61,
+        "sim_tick": 61,
+        "state": "playing",
+        "night": 2,
+        "wind": {
+          "active": false,
+          "dir_deg": 0
+        },
+        "time_left_s": 268.98333333333335,
+        "score": 0,
+        "player": {
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "vel": [
+            0,
+            0,
+            0
+          ],
+          "grounded": true,
+          "flames": 2,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": true,
+          "dash_cd_s": 0,
+          "pulse_cd_s": 0,
+          "charm_s": 0
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              0,
+              20
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              17,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              -17,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              70,
+              0,
+              20
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              87,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L6",
+            "pos": [
+              53,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 0,
+        "motes": [],
+        "drifters": [],
+        "charms": []
+      }
+    },
+    {
+      "name": "pad",
+      "night": 2,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": false,
+        "motes": [],
+        "shades": [],
+        "drifters": [],
+        "charms": [],
+        "player": {
+          "pos": [
+            20,
+            0,
+            18
+          ]
+        }
+      },
+      "frames": [],
+      "final": {
+        "type": "snapshot",
+        "tick": 90,
+        "sim_tick": 90,
+        "state": "playing",
+        "night": 2,
+        "wind": {
+          "active": false,
+          "dir_deg": 0
+        },
+        "time_left_s": 268.5,
+        "score": 0,
+        "player": {
+          "pos": [
+            51.237,
+            0,
+            6.755
+          ],
+          "vel": [
+            0,
+            0,
+            0
+          ],
+          "grounded": true,
+          "flames": 3,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": false,
+          "dash_cd_s": 0,
+          "pulse_cd_s": 0,
+          "charm_s": 0
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              0,
+              20
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              17,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              -17,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              70,
+              0,
+              20
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              87,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L6",
+            "pos": [
+              53,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 0,
+        "motes": [],
+        "drifters": [],
+        "charms": []
+      }
+    },
+    {
+      "name": "drifter",
+      "night": 2,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": false,
+        "motes": [],
+        "shades": [],
+        "drifters": [
+          {
+            "id": "D1",
+            "pos": [
+              0,
+              0,
+              0
+            ],
+            "state": "chase"
+          }
+        ],
+        "charms": [],
+        "player": {
+          "carried": 6
+        }
+      },
+      "frames": [
+        {
+          "tick": 1,
+          "pulse": true
+        }
+      ],
+      "final": {
+        "type": "snapshot",
+        "tick": 2,
+        "sim_tick": 2,
+        "state": "playing",
+        "night": 2,
+        "wind": {
+          "active": false,
+          "dir_deg": 0
+        },
+        "time_left_s": 269.96666666666664,
+        "score": 0,
+        "player": {
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "vel": [
+            0,
+            0,
+            0
+          ],
+          "grounded": true,
+          "flames": 3,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": false,
+          "dash_cd_s": 0,
+          "pulse_cd_s": 3,
+          "charm_s": 0
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              0,
+              20
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              17,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              -17,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              70,
+              0,
+              20
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              87,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L6",
+            "pos": [
+              53,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 3,
+        "motes": [
+          {
+            "id": "M1",
+            "pos": [
+              0.117,
+              0,
+              0
+            ],
+            "kind": "dropped",
+            "ttl_s": 8
+          },
+          {
+            "id": "M2",
+            "pos": [
+              0.117,
+              0,
+              0
+            ],
+            "kind": "dropped",
+            "ttl_s": 8
+          },
+          {
+            "id": "M3",
+            "pos": [
+              0.117,
+              0,
+              0
+            ],
+            "kind": "dropped",
+            "ttl_s": 8
+          }
+        ],
+        "drifters": [
+          {
+            "id": "D1",
+            "pos": [
+              0.233,
+              0,
+              0
+            ],
+            "state": "flee",
+            "stolen": 0
+          }
+        ],
+        "charms": []
+      }
+    },
+    {
+      "name": "charm",
+      "night": 2,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": false,
+        "motes": [],
+        "shades": [],
+        "drifters": [],
+        "charms": [
+          {
+            "id": "C1",
+            "pos": [
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      },
+      "frames": [
+        {
+          "tick": 1,
+          "move": [
+            0,
+            1
+          ]
+        }
+      ],
+      "final": {
+        "type": "snapshot",
+        "tick": 2,
+        "sim_tick": 2,
+        "state": "playing",
+        "night": 2,
+        "wind": {
+          "active": false,
+          "dir_deg": 0
+        },
+        "time_left_s": 269.96666666666664,
+        "score": 0,
+        "player": {
+          "pos": [
+            0,
+            0,
+            0.12
+          ],
+          "vel": [
+            0,
+            0,
+            7.2
+          ],
+          "grounded": true,
+          "flames": 3,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": false,
+          "dash_cd_s": 0,
+          "pulse_cd_s": 0,
+          "charm_s": 9.983333333333333
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              0,
+              20
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              17,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              -17,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              70,
+              0,
+              20
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              87,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L6",
+            "pos": [
+              53,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 0,
+        "motes": [],
+        "drifters": [],
+        "charms": [
+          {
+            "id": "C1",
+            "available": false,
+            "respawn_s": 44.983333333333334
+          }
+        ]
+      }
+    },
+    {
+      "name": "wind",
+      "night": 3,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": true,
+        "motes": [],
+        "shades": [],
+        "drifters": [],
+        "charms": []
+      },
+      "frames": [],
+      "final": {
+        "type": "snapshot",
+        "tick": 1800,
+        "sim_tick": 1800,
+        "state": "playing",
+        "night": 3,
+        "wind": {
+          "active": true,
+          "dir_deg": 0.9518013149499893
+        },
+        "time_left_s": 270,
+        "score": 0,
+        "player": {
+          "pos": [
+            0.033,
+            0,
+            -29.999
+          ],
+          "vel": [
+            2,
+            0,
+            0.033
+          ],
+          "grounded": true,
+          "flames": 3,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": false,
+          "dash_cd_s": 0,
+          "pulse_cd_s": 0,
+          "charm_s": 0
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              6,
+              6
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              18,
+              3,
+              10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              -18,
+              3,
+              10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              35,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              -35,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L6",
+            "pos": [
+              20,
+              0,
+              -35
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L7",
+            "pos": [
+              -20,
+              0,
+              -35
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 0,
+        "motes": [],
+        "drifters": [],
+        "charms": []
+      }
+    },
+    {
+      "name": "pause",
+      "night": 3,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": false,
+        "motes": [],
+        "shades": [],
+        "drifters": [],
+        "charms": [],
+        "player": {
+          "charm_ticks": 600
+        }
+      },
+      "frames": [
+        {
+          "tick": 0,
+          "pause": true
+        },
+        {
+          "tick": 10,
+          "pause": false
+        },
+        {
+          "tick": 11,
+          "pause": true
+        }
+      ],
+      "final": {
+        "type": "snapshot",
+        "tick": 12,
+        "sim_tick": 1,
+        "state": "playing",
+        "night": 3,
+        "wind": {
+          "active": false,
+          "dir_deg": 0
+        },
+        "time_left_s": 299.98333333333335,
+        "score": 0,
+        "player": {
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "vel": [
+            0,
+            0,
+            0
+          ],
+          "grounded": true,
+          "flames": 3,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": false,
+          "dash_cd_s": 0,
+          "pulse_cd_s": 0,
+          "charm_s": 9.983333333333333
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              6,
+              6
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              18,
+              3,
+              10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              -18,
+              3,
+              10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              35,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              -35,
+              0,
+              -10
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L6",
+            "pos": [
+              20,
+              0,
+              -35
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          },
+          {
+            "id": "L7",
+            "pos": [
+              -20,
+              0,
+              -35
+            ],
+            "lit": false,
+            "deposited": 0,
+            "fuel": 0,
+            "ever_lit": false,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 0,
+        "motes": [],
+        "drifters": [],
+        "charms": []
+      }
+    },
+    {
+      "name": "win-night1",
+      "night": 1,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": false,
+        "motes": [],
+        "shades": [],
+        "drifters": [],
+        "charms": [],
+        "time_left_s": 0.016666666666666666,
+        "lanterns": [
+          {
+            "id": "L1",
+            "lit": true
+          },
+          {
+            "id": "L2",
+            "lit": true
+          },
+          {
+            "id": "L3",
+            "lit": true
+          },
+          {
+            "id": "L4",
+            "lit": true
+          },
+          {
+            "id": "L5",
+            "lit": true
+          }
+        ]
+      },
+      "frames": [],
+      "final": {
+        "type": "snapshot",
+        "tick": 1,
+        "sim_tick": 1,
+        "state": "won",
+        "night": 1,
+        "wind": {
+          "active": false,
+          "dir_deg": 0
+        },
+        "time_left_s": 0,
+        "score": 895,
+        "player": {
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "vel": [
+            0,
+            0,
+            0
+          ],
+          "grounded": true,
+          "flames": 3,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": false,
+          "dash_cd_s": 0,
+          "pulse_cd_s": 0,
+          "charm_s": 0
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              0,
+              25
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              23.8,
+              0,
+              7.7
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              14.7,
+              0,
+              -20.2
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              -14.7,
+              0,
+              -20.2
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              -23.8,
+              0,
+              7.7
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 0,
+        "motes": [],
+        "drifters": [],
+        "charms": []
+      }
+    },
+    {
+      "name": "win-night2",
+      "night": 2,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": false,
+        "motes": [],
+        "shades": [],
+        "drifters": [],
+        "charms": [],
+        "time_left_s": 0.016666666666666666,
+        "lanterns": [
+          {
+            "id": "L1",
+            "lit": true
+          },
+          {
+            "id": "L2",
+            "lit": true
+          },
+          {
+            "id": "L3",
+            "lit": true
+          },
+          {
+            "id": "L4",
+            "lit": true
+          },
+          {
+            "id": "L5",
+            "lit": true
+          },
+          {
+            "id": "L6",
+            "lit": true
+          }
+        ]
+      },
+      "frames": [],
+      "final": {
+        "type": "snapshot",
+        "tick": 1,
+        "sim_tick": 1,
+        "state": "won",
+        "night": 2,
+        "wind": {
+          "active": false,
+          "dir_deg": 0
+        },
+        "time_left_s": 0,
+        "score": 1044,
+        "player": {
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "vel": [
+            0,
+            0,
+            0
+          ],
+          "grounded": true,
+          "flames": 3,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": false,
+          "dash_cd_s": 0,
+          "pulse_cd_s": 0,
+          "charm_s": 0
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              0,
+              20
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              17,
+              0,
+              -10
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              -17,
+              0,
+              -10
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              70,
+              0,
+              20
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              87,
+              0,
+              -10
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L6",
+            "pos": [
+              53,
+              0,
+              -10
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 0,
+        "motes": [],
+        "drifters": [],
+        "charms": []
+      }
+    },
+    {
+      "name": "win-night3",
+      "night": 3,
+      "status": "PASS",
+      "scenario": {
+        "random_motes": false,
+        "random_shades": false,
+        "random_drifters": false,
+        "wind_enabled": false,
+        "motes": [],
+        "shades": [],
+        "drifters": [],
+        "charms": [],
+        "time_left_s": 0.016666666666666666,
+        "lanterns": [
+          {
+            "id": "L1",
+            "lit": true
+          },
+          {
+            "id": "L2",
+            "lit": true
+          },
+          {
+            "id": "L3",
+            "lit": true
+          },
+          {
+            "id": "L4",
+            "lit": true
+          },
+          {
+            "id": "L5",
+            "lit": true
+          },
+          {
+            "id": "L6",
+            "lit": true
+          },
+          {
+            "id": "L7",
+            "lit": true
+          }
+        ]
+      },
+      "frames": [],
+      "final": {
+        "type": "snapshot",
+        "tick": 1,
+        "sim_tick": 1,
+        "state": "won",
+        "night": 3,
+        "wind": {
+          "active": false,
+          "dir_deg": 0
+        },
+        "time_left_s": 0,
+        "score": 1193,
+        "player": {
+          "pos": [
+            0,
+            0,
+            -30
+          ],
+          "vel": [
+            0,
+            0,
+            0
+          ],
+          "grounded": true,
+          "flames": 3,
+          "carried": 0,
+          "capacity": 10,
+          "invuln": false,
+          "dash_cd_s": 0,
+          "pulse_cd_s": 0,
+          "charm_s": 0
+        },
+        "lanterns": [
+          {
+            "id": "L1",
+            "pos": [
+              0,
+              6,
+              6
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L2",
+            "pos": [
+              18,
+              3,
+              10
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L3",
+            "pos": [
+              -18,
+              3,
+              10
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L4",
+            "pos": [
+              35,
+              0,
+              -10
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L5",
+            "pos": [
+              -35,
+              0,
+              -10
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L6",
+            "pos": [
+              20,
+              0,
+              -35
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          },
+          {
+            "id": "L7",
+            "pos": [
+              -20,
+              0,
+              -35
+            ],
+            "lit": true,
+            "deposited": 10,
+            "fuel": 100,
+            "ever_lit": true,
+            "relit_count": 0
+          }
+        ],
+        "shades": [],
+        "motes_active": 0,
+        "motes": [],
+        "drifters": [],
+        "charms": []
+      }
+    }
+  ]
+}

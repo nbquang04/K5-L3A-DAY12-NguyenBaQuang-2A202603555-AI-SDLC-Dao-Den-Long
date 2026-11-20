@@ -1,0 +1,31 @@
+﻿{
+    "revision":  "ff70a7c6d94040f7c51f8528e74d5180fbc63a84",
+    "working_tree":  [
+                         "?? bench.json",
+                         "?? bench.json.frames.json",
+                         "?? docs/proof/phase-4/",
+                         "?? soak.json",
+                         "?? soak.json.details.json"
+                     ],
+    "node":  "v22.17.0",
+    "os":  "Microsoft Windows NT 10.0.26300.0",
+    "cpu":  "AMD Ryzen 5 5600H with Radeon Graphics         ",
+    "gpu":  [
+                {
+                    "Name":  "AMD Radeon(TM) Graphics",
+                    "DriverVersion":  "31.0.21916.2001"
+                },
+                {
+                    "Name":  "NVIDIA GeForce RTX 3050 Laptop GPU",
+                    "DriverVersion":  "32.0.15.6607"
+                }
+            ],
+    "ram_bytes":  16539545600,
+    "power":  "Power Scheme GUID: c88c0e7d-6c63-4ed7-a566-dfa357380ad7  (ASUS Recommended)",
+    "commands":  [
+                     "python scripts/verify.py --config verification/checks.json",
+                     "node scripts/browser-check-phase4.mjs",
+                     "node scripts/bench.mjs --seed 42 --duration 30 --out bench.json",
+                     "node --jitless --max-semi-space-size=1 --expose-gc scripts/soak.mjs --seed 7 --nights 10 --out soak.json"
+                 ]
+}

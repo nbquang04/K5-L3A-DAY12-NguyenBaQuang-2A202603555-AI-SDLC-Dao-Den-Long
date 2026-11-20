@@ -1,0 +1,91 @@
+{
+  "results": [
+    {
+      "night": 1,
+      "seed": 7,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 1304,
+      "score": 0
+    },
+    {
+      "night": 2,
+      "seed": 8,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 1086,
+      "score": 0
+    },
+    {
+      "night": 3,
+      "seed": 9,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 2484,
+      "score": 0
+    },
+    {
+      "night": 1,
+      "seed": 10,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 2705,
+      "score": 0
+    },
+    {
+      "night": 2,
+      "seed": 11,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 1785,
+      "score": 0
+    },
+    {
+      "night": 3,
+      "seed": 12,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 5745,
+      "score": 0
+    },
+    {
+      "night": 1,
+      "seed": 13,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 1982,
+      "score": 0
+    },
+    {
+      "night": 2,
+      "seed": 14,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 1393,
+      "score": 0
+    },
+    {
+      "night": 3,
+      "seed": 15,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 10390,
+      "score": 15
+    },
+    {
+      "night": 1,
+      "seed": 16,
+      "result": "lost",
+      "reason": "no_flames",
+      "ticks": 1765,
+      "score": 5
+    }
+  ],
+  "node": "v22.17.0",
+  "flags": [
+    "--jitless",
+    "--max-semi-space-size=1",
+    "--expose-gc"
+  ],
+  "gc": true
+}

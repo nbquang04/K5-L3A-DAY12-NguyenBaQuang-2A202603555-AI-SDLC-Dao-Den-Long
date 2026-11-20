@@ -72,3 +72,7 @@ Normal FPS trials in background tabs throttled; final visible side-pane normalga
 Reviewer independently ran53tests and checked fuel/drain/capacity/scoring/terminal/UI, no mandatory defect found in scope.
 ADR003,CHANGELOG and requirements table record breakingchanges and scenario/cadence interpretations.
 Token/cost not measured; no hidden-test or full-human-playthrough claim.
+
+
+## Phase4 - 2026-11-20
+Codex implemented released Ticket04 via SpecKit specify/plan/tasks/analyze/implement and dao-verify. Research/review agent read-only found soak-results schema and edge-arrow placement/aspect defects, fixed and retested. Failed FPS/RSS/default-runtime trials disclosed. Final61tests/22replays/32retained+6release browsergroups PASS, actual bench/soak, ZIP smoke and62.48s MP4. Tokens/cost: chua do; no billing estimate available.
