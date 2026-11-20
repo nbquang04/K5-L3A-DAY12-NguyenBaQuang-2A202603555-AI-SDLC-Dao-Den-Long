@@ -1,4 +1,4 @@
-# Đảo Đèn Lồng — Phase 4 · Đèn cạn dầu
+# Đảo Đèn Lồng — Phase 4 · Bình Minh · v1.0.0
 
 Game 3D góc nhìn thứ ba: dẫn Mây qua Đảo Bến, Đảo Cau và Đảo Chuông, thắp 18 ngọn đèn,
 tránh Bóng Mực và Gió Lạc. Cảnh/âm thanh procedural; bản web và CLI dùng chung core 60 Hz.

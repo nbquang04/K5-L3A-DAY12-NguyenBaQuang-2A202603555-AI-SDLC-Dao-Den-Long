@@ -11,4 +11,4 @@ Dependencies are sequential; no implementation delegation.
 - [x] T007 [US5] Update contract 1.3, build/package commands, README, architecture, credits, changelog and retrospective.
 - [x] T008 [US6] Run retained tests/scenarios/Linux parity, real 30-second benchmark/10-night soak and browser checks; record verification.
 - [x] T009 [US5] Record actual MP4 demo, smoke-test extracted release and independently review delivery.
-- [ ] T010 [US5] Commit tested delivery, push phase-4/v1.0.0 tags and publish release assets; update status.
+- [x] T010 [US5] Commit tested delivery, push phase-4/v1.0.0 tags and publish release assets; update status.

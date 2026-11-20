@@ -1,0 +1,35 @@
+﻿{
+    "status":  "PUBLISHED",
+    "url":  "https://github.com/nbquang04/K5-L3A-DAY12-NguyenBaQuang-2A202603555-AI-SDLC-Dao-Den-Long/releases/tag/v1.0.0",
+    "id":  452567499,
+    "tag":  "v1.0.0",
+    "target":  "f71401ba656f869678cb0397fc80270b19f4a407",
+    "published_at":  "2026-11-20T10:43:58Z",
+    "draft":  false,
+    "assets":  [
+                   {
+                       "name":  "dao-den-long-v1.0.0.zip",
+                       "bytes":  454415,
+                       "url":  "https://github.com/nbquang04/K5-L3A-DAY12-NguyenBaQuang-2A202603555-AI-SDLC-Dao-Den-Long/releases/download/v1.0.0/dao-den-long-v1.0.0.zip",
+                       "sha256":  "3eabbaa24bedbc4b66e2b94bbadbc212341f19f0b851f2d73fc3b4b6cc297df6",
+                       "remote_digest":  "sha256:3eabbaa24bedbc4b66e2b94bbadbc212341f19f0b851f2d73fc3b4b6cc297df6",
+                       "assertion":  "PASS"
+                   },
+                   {
+                       "name":  "demo.mp4",
+                       "bytes":  4875385,
+                       "url":  "https://github.com/nbquang04/K5-L3A-DAY12-NguyenBaQuang-2A202603555-AI-SDLC-Dao-Den-Long/releases/download/v1.0.0/demo.mp4",
+                       "sha256":  "9b9c79afcaf7f2c050b01f1e0ca643992692ade0104cadf2fcdb420475c0dc67",
+                       "remote_digest":  "sha256:9b9c79afcaf7f2c050b01f1e0ca643992692ade0104cadf2fcdb420475c0dc67",
+                       "assertion":  "PASS"
+                   },
+                   {
+                       "name":  "SHA256SUMS.txt",
+                       "bytes":  167,
+                       "url":  "https://github.com/nbquang04/K5-L3A-DAY12-NguyenBaQuang-2A202603555-AI-SDLC-Dao-Den-Long/releases/download/v1.0.0/SHA256SUMS.txt",
+                       "sha256":  "4c4be6ef01a49937f8f394c39647b415147ad516a740aaaed9bc6622fb99c3a1",
+                       "remote_digest":  "sha256:4c4be6ef01a49937f8f394c39647b415147ad516a740aaaed9bc6622fb99c3a1",
+                       "assertion":  "PASS"
+                   }
+               ]
+}
