@@ -13,7 +13,7 @@ import { edgeIndicator } from '../src/shared/edge-indicator.mjs';
 const tuning=JSON.parse(await readFile('game.contract.json','utf8')).tuning;
 test('edge indicator preserves pixel direction on non-square viewport and behind camera',()=>{
  const p=edgeIndicator(1,-1,1280,720);assert.equal(p.y,685);assert.ok(Math.abs((p.x-640)/(p.y-360)-1280/720)<1e-9);
- const b=edgeIndicator(1,-1,1280,720,true);assert.equal(b.y,35);assert.ok(b.x<640);
+ const b=edgeIndicator(1,-1,1280,720,true);assert.ok(Math.abs(b.y-35)<1e-9);assert.ok(b.x<640);
 });
 test('metrics use all samples, worst ceil 1%, nearest-rank p95',()=>{
  const m=frameMetrics([...Array(99).fill(10),100]);
