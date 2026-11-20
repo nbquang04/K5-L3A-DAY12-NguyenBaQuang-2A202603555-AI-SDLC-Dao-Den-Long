@@ -82,7 +82,7 @@ function environment() {
   if(g.night===2){mesh(new THREE.BoxGeometry(18,.25,4),gold,scene,35,-.125,0);for(let x=26;x<=44;x+=.6)mesh(new THREE.BoxGeometry(.1,.05,4),mat(0xc9b48a),scene,x,.025,0);}
   if(g.night===3){
     const terrace=mesh(new THREE.RingGeometry(12,24,64,1,Math.PI,Math.PI),green,scene,0,3,0);terrace.rotation.x=-Math.PI/2;
-    for(const r of [12,24]){const wall=mesh(new THREE.CylinderGeometry(r,r,3,64,1,true,Math.PI/2,Math.PI),rock,scene,0,1.5,0);wall.material.side=THREE.DoubleSide;}
+    for(const r of [12,24]){const wall=mesh(new THREE.CylinderGeometry(r,r,3,64,1,true,-Math.PI/2,Math.PI),rock,scene,0,1.5,0);wall.material.side=THREE.DoubleSide;}
     cylinder(8,8,6,rock,scene,0,3,0,64);const top=disc(8,0x2f5d50,scene);top.position.y=6.01;
     cylinder(2,2,8,gold,scene,0,10,0,20);sphere(1.2,mat(0xf2c14e),scene,0,13,0,2);
     for(const deg of [30,150]){const a=deg*Math.PI/180,c=Math.cos(a),s=Math.sin(a),verts=[];for(const [u,v,y]of [[30,-1.5,0],[30,1.5,0],[24,1.5,3],[30,-1.5,0],[24,1.5,3],[24,-1.5,3]])verts.push(u*c-v*s,y+.015,u*s+v*c);const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));geo.computeVertexNormals();mesh(geo,mat(0xc9b48a,{side:THREE.DoubleSide}),scene);}
