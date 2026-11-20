@@ -1,0 +1,486 @@
+﻿      - main
+        - heading "TICKET-03 — CHANGE REQUEST \"Đèn cạn dầu\" (Phase 3)" [level=1, ref=e57]
+        - blockquote
+          - paragraph
+            - StaticText "Loại: "
+            - strong
+              - StaticText "Change Request — thay đổi luật cốt lõi"
+            - StaticText " · Ưu tiên: Rất cao · Tag nộp: "
+            - code
+              - StaticText "phase-3"
+            - StaticText " · Contract: "
+            - strong
+              - StaticText "v1.2"
+        - heading "Vì sao thay đổi" [level=2, ref=e58]
+        - paragraph
+          - StaticText "Playtest cho thấy người chơi giỏi thắp hết đèn trong 2 phút rồi game kết thúc, thiếu căng thẳng ở cuối Đêm. Nhà thiết kế quyết định: "
+          - strong
+            - StaticText "đèn thắp rồi vẫn có thể tắt"
+          - StaticText ", mục tiêu chuyển từ \"thắp hết\" sang "
+          - strong
+            - StaticText "\"giữ đảo sáng tới bình minh\""
+          - StaticText "."
+        - blockquote
+          - paragraph
+            - StaticText "⚠ Ticket này "
+            - strong
+              - StaticText "thay thế"
+            - StaticText " một số luật đã có. Những luật cũ bị thay được đánh dấu "
+            - strong
+              - StaticText "[THAY THẾ]"
+            - StaticText ". Bạn phải ghi lại quyết định thiết kế (ví dụ một ADR ngắn) và cập nhật test của mình."
+        - separator
+        - blockquote
+          - paragraph
+            - strong
+              - StaticText "Về sáng tạo:"
+            - StaticText " phần sáng tạo của bạn từ các phase trước vẫn được giữ và vẫn được thêm ý riêng (kể cả nhân vật, kẻ địch mới), miễn là luật, số liệu và Test Contract dưới đây không bị đổi và đầu ra headless không đổi. Ý sáng tạo nào xung đột với luật mới thì phải điều chỉnh theo luật mới."
+        - heading "1. Nhiên liệu đèn — [THAY THẾ] luật \"đèn đã sáng không nhận thêm đom đóm\"" [level=2, ref=e59]
+        - table
+          - rowgroup
+            - row
+              - columnheader "QUY TẮC" [ref=e113]
+              - columnheader "GIÁ TRỊ" [ref=e114]
+          - row
+            - cell "Nhiên liệu tối đa" [ref=e67]
+            - cell "100" [ref=e68]
+          - row
+            - cell "Khi vừa thắp (lần đầu hoặc thắp lại)" [ref=e69]
+            - cell "fuel = 100" [ref=e70]
+              - code
+                - StaticText "fuel = 100"
+          - row
+            - cell "Hao hụt khi đang sáng" [ref=e71]
+            - cell "1.0 đơn vị/giây (tính theo tick: 1/60 mỗi tick)" [ref=e72]
+          - row
+            - cell "Châm dầu" [ref=e73]
+            - cell "Bấm Tương tác ở đèn đang sáng: used = min(đang mang, ceil((100 − fuel) / 10)), fuel = min(100, fuel + 10 × used), trừ used đom đóm. Đèn đầy dầu (used = 0) không được chọn khi tương tác, không phát sự kiện, không cộng điểm" [ref=e74]
+              - StaticText "Bấm Tương tác ở đèn đang sáng: "
+              - code
+                - StaticText "used = min(đang mang, ceil((100 − fuel) / 10))"
+              - StaticText ", "
+              - code
+                - StaticText "fuel = min(100, fuel + 10 × used)"
+              - StaticText ", trừ "
+              - code
+                - StaticText "used"
+              - StaticText " đom đóm. Đèn đầy dầu ("
+              - code
+                - StaticText "used = 0"
+              - StaticText ") không được chọn khi tương tác, không phát sự kiện, không cộng điểm"
+          - row
+            - cell "Chọn đèn khi tương tác" [ref=e75]
+            - cell "Chỉ xét đèn nhận được (chưa sáng, hoặc sáng nhưng chưa đầy dầu); gần nhất, bằng nhau thì id nhỏ hơn" [ref=e76]
+              - StaticText "Chỉ xét đèn "
+              - strong
+                - StaticText "nhận được"
+              - StaticText " (chưa sáng, hoặc sáng nhưng chưa đầy dầu); gần nhất, bằng nhau thì id nhỏ hơn"
+          - row
+            - cell "Độ chính xác" [ref=e77]
+            - cell "Nên tính dầu theo đơn vị nguyên 1/60 để không bị sai số số thực; chỉ làm tròn khi xuất ra" [ref=e78]
+          - row
+            - cell "Hết dầu (fuel ≤ 0)" [ref=e79]
+              - StaticText "Hết dầu ("
+              - code
+                - StaticText "fuel ≤ 0"
+              - StaticText ")"
+            - cell "Đèn chuyển sang tắt, deposited = 0, phát sự kiện lantern_out, ánh sáng môi trường giảm theo. Đèn nhớ ever_lit = true" [ref=e80]
+              - StaticText "Đèn chuyển sang "
+              - strong
+                - StaticText "tắt"
+              - StaticText ", "
+              - code
+                - StaticText "deposited = 0"
+              - StaticText ", phát sự kiện "
+              - code
+                - StaticText "lantern_out"
+              - StaticText ", ánh sáng môi trường giảm theo. Đèn nhớ "
+              - code
+                - StaticText "ever_lit = true"
+          - row
+            - cell "Thắp lại" [ref=e81]
+            - cell "Đèn đã từng sáng (ever_lit) chỉ cần 5 đom đóm; đèn chưa từng sáng vẫn cần 10" [ref=e82]
+              - StaticText "Đèn đã từng sáng ("
+              - code
+                - StaticText "ever_lit"
+              - StaticText ") chỉ cần "
+              - strong
+                - StaticText "5"
+              - StaticText " đom đóm; đèn chưa từng sáng vẫn cần 10"
+          - row
+            - cell "Hiển thị" [ref=e83]
+            - cell "Thanh dầu trên đèn đang sáng; khi fuel < 30 thì đèn và thanh dầu nhấp nháy chậm (1 Hz)" [ref=e84]
+              - StaticText "Thanh dầu trên đèn đang sáng; khi "
+              - code
+                - StaticText "fuel < 30"
+              - StaticText " thì đèn và thanh dầu nhấp nháy chậm (1 Hz)"
+        - heading "2. Bóng Mực hút dầu — [THAY THẾ] luật \"Bóng Mực không bao giờ vào vùng an toàn\"" [level=2, ref=e60]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Đèn có "
+            - code
+              - StaticText "fuel < 30"
+            - strong
+              - StaticText "mất vùng an toàn"
+            - StaticText ". Đúng 30 thì vẫn còn vùng an toàn."
+          - listitem [level=1]
+            - ListMarker "• "
+            - strong
+              - StaticText "Chỉ"
+            - StaticText " Bóng Mực ở trạng thái "
+            - code
+              - StaticText "wander"
+            - StaticText " mới chọn đèn yếu: đi tới "
+            - strong
+              - StaticText "đèn sáng có "
+              - code
+                - StaticText "fuel < 30"
+              - StaticText " gần nhất"
+            - StaticText " (bằng nhau thì id nhỏ hơn). Không có thì đi về đèn tắt gần nhất như trước. Bóng đang "
+            - code
+              - StaticText "chase"
+            - StaticText " không đổi mục tiêu."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Khi cách đèn đó ≤ 2 m (XZ): chuyển sang trạng thái mới "
+            - strong
+              - code
+                - StaticText "drain"
+            - StaticText ", đứng yên và hút "
+            - strong
+              - StaticText "5 fuel/giây liên tục"
+            - StaticText " (5/60 mỗi tick). Nhiều con thì cộng dồn. Đèn vẫn tự hao 1/giây."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Từ "
+            - code
+              - StaticText "drain"
+            - StaticText ": sang "
+            - code
+              - StaticText "chase"
+            - StaticText " nếu Mây vào trong 6 m; sang "
+            - code
+              - StaticText "stunned"
+            - StaticText " nếu trúng Tỏa Sáng; sang "
+            - code
+              - StaticText "wander"
+            - StaticText " nếu đèn tắt, nếu "
+            - code
+              - StaticText "fuel"
+            - StaticText " được châm lên ≥ 30, hoặc nếu cách đèn > 2 m."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Hết choáng thì về "
+            - code
+              - StaticText "wander"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Khi đèn được châm dầu lên ≥ 30 lúc có Bóng Mực trong vùng 6 m, các con đó bị đẩy ra mép vùng trong tối đa 30 tick và không gây sát thương trong lúc đó (giống khi đèn vừa thắp)."
+        - heading "3. Luật thắng mới — [THAY THẾ] \"thắng ngay khi tất cả đèn sáng\"" [level=2, ref=e61]
+        - table
+          - rowgroup
+            - row
+              - columnheader "QUY TẮC" [ref=e115]
+              - columnheader "GIÁ TRỊ MỚI" [ref=e116]
+          - row
+            - cell "Thời gian Đêm 1 / 2 / 3" [ref=e85]
+            - cell "240 / 270 / 300 s" [ref=e86]
+              - strong
+                - StaticText "240 / 270 / 300 s"
+          - row
+            - cell "Thắng" [ref=e87]
+            - cell "Mây còn sống khi hết giờ (bình minh) và số đèn đang sáng tại tick cuối ≥ ceil(0.6 × tổng đèn): Đêm 1 cần 3/5, Đêm 2 cần 4/6, Đêm 3 cần 5/7" [ref=e88]
+              - StaticText "Mây "
+              - strong
+                - StaticText "còn sống khi hết giờ"
+              - StaticText " (bình minh) "
+              - strong
+                - StaticText "và"
+              - StaticText " số đèn đang sáng tại tick cuối ≥ "
+              - code
+                - StaticText "ceil(0.6 × tổng đèn)"
+              - StaticText ": Đêm 1 cần 3/5, Đêm 2 cần 4/6, Đêm 3 cần 5/7"
+          - row
+            - cell "Không còn thắng sớm" [ref=e89]
+            - cell "Thắp đủ đèn không kết thúc Đêm" [ref=e90]
+              - StaticText "Thắp đủ đèn "
+              - strong
+                - StaticText "không"
+              - StaticText " kết thúc Đêm"
+          - row
+            - cell "Thua" [ref=e91]
+            - cell "Hết Ngọn Lửa (ngay lập tức, kể cả ở tick cuối) · hoặc hết giờ mà số đèn sáng dưới ngưỡng" [ref=e92]
+          - row
+            - cell "Lý do kết thúc" [ref=e93]
+            - cell "Thắng: dawn_survived · Thua: dawn hoặc no_flames" [ref=e94]
+              - StaticText "Thắng: "
+              - code
+                - StaticText "dawn_survived"
+              - StaticText " · Thua: "
+              - code
+                - StaticText "dawn"
+              - StaticText " hoặc "
+              - code
+                - StaticText "no_flames"
+          - row
+            - cell "Thứ tự trong tick" [ref=e95]
+            - cell "Theo thứ tự xử lý của Ticket-02, bổ sung: ở bước 2 trừ dầu (hao + bị hút); ngay sau bước 2, đèn có fuel ≤ 0 tắt. Bước \"xét thắng/thua\" diễn ra sau mọi cập nhật của tick, kể cả tick bình minh: hết Ngọn Lửa luôn thua no_flames trước" [ref=e96]
+              - StaticText "Theo thứ tự xử lý của Ticket-02, bổ sung: ở bước 2 trừ dầu (hao + bị hút); ngay sau bước 2, đèn có "
+              - code
+                - StaticText "fuel ≤ 0"
+              - StaticText " tắt. Bước \"xét thắng/thua\" diễn ra sau mọi cập nhật của tick, kể cả tick bình minh: hết Ngọn Lửa luôn thua "
+              - code
+                - StaticText "no_flames"
+              - StaticText " trước"
+        - heading "4. Sức chứa tăng dần (mới)" [level=2, ref=e62]
+        - paragraph
+          - StaticText "Sức chứa = "
+          - code
+            - StaticText "10 + 2 × successful_lights"
+          - StaticText ", tối đa "
+          - strong
+            - StaticText "20"
+          - StaticText ". "
+          - code
+            - StaticText "successful_lights"
+          - StaticText " = số lần thắp thành công trong Đêm (tính cả thắp lại; đèn đặt sẵn bằng scenario không tính). Đặt lại về 0 ở đầu mỗi Đêm. HUD hiển thị "
+          - code
+            - StaticText "đang mang / sức chứa"
+          - StaticText "."
+        - heading "5. Điểm mới — [THAY THẾ] toàn bộ công thức điểm cũ" [level=2, ref=e63]
+        - table
+          - rowgroup
+            - row
+              - columnheader "SỰ KIỆN" [ref=e117]
+              - columnheader "ĐIỂM" [ref=e118]
+          - row
+            - cell "Mỗi đom đóm nạp vào đèn (thắp mới, thắp lại hoặc châm dầu)" [ref=e97]
+            - cell "+5" [ref=e98]
+          - row
+            - cell "Thắp lần đầu" [ref=e99]
+            - cell "+100" [ref=e100]
+          - row
+            - cell "Thắp lại" [ref=e101]
+            - cell "+40" [ref=e102]
+          - row
+            - cell "Bóng Mực trúng Tỏa Sáng" [ref=e103]
+            - cell "Tổng +5 mỗi con; tổng +15 nếu ngay trước đó nó đang drain" [ref=e104]
+              - StaticText "Tổng +5 mỗi con; "
+              - strong
+                - StaticText "tổng +15"
+              - StaticText " nếu ngay trước đó nó đang "
+              - code
+                - StaticText "drain"
+          - row
+            - cell "Bình minh (chỉ khi thắng): mỗi đèn đang sáng" [ref=e105]
+            - cell "+50 + floor(fuel)" [ref=e106]
+              - StaticText "+50 + "
+              - code
+                - StaticText "floor(fuel)"
+          - row
+            - cell "Bình minh (chỉ khi thắng): mỗi Ngọn Lửa còn lại" [ref=e107]
+            - cell "+50" [ref=e108]
+          - row
+            - cell "Thưởng thời gian" [ref=e109]
+            - cell "Bỏ" [ref=e110]
+              - strong
+                - StaticText "Bỏ"
+          - row
+            - cell "Tổng điểm game, chơi lại" [ref=e111]
+            - cell "Không đổi so với Ticket-02" [ref=e112]
+        - heading "6. Chế độ mù màu (mới)" [level=2, ref=e64]
+        - paragraph
+          - StaticText "Thêm cài đặt "
+          - strong
+            - StaticText "\"Bảng màu dễ phân biệt\""
+          - StaticText " (được lưu):"
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Viền và mắt Bóng Mực đổi từ "
+            - code
+              - StaticText "#7A3CFF"
+            - StaticText " sang "
+            - code
+              - StaticText "#00B3FF"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Màu cảnh báo UI đổi từ "
+            - code
+              - StaticText "#FF5A5F"
+            - StaticText " sang "
+            - code
+              - StaticText "#FFFFFF"
+            - StaticText ", kèm biểu tượng ⚠."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Đèn tắt và đèn sáng phải phân biệt được "
+            - strong
+              - StaticText "không cần màu"
+            - StaticText ": đèn tắt bị xẹp 20% và giấy có vết rách; đèn sắp hết dầu nhấp nháy."
+        - heading "7. Test Contract v1.2 (thay đổi)" [level=2, ref=e65]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - code
+              - StaticText "contract_version: \"1.2\""
+            - StaticText ". "
+            - code
+              - StaticText "tuning"
+            - StaticText " thêm "
+            - code
+              - StaticText "fuel_max: 100"
+            - StaticText ", "
+            - code
+              - StaticText "fuel_decay_per_s: 1.0"
+            - StaticText ", "
+            - code
+              - StaticText "fuel_per_mote: 10"
+            - StaticText ", "
+            - code
+              - StaticText "relight_cost: 5"
+            - StaticText ", "
+            - code
+              - StaticText "win_ratio: 0.6"
+            - StaticText ", "
+            - code
+              - StaticText "drain_per_s: 5"
+            - StaticText ", "
+            - code
+              - StaticText "low_fuel_threshold: 30"
+            - StaticText ", "
+            - code
+              - StaticText "capacity_max: 20"
+            - StaticText "; "
+            - code
+              - StaticText "night1_duration_s"
+            - StaticText " = 240, "
+            - code
+              - StaticText "night2_duration_s"
+            - StaticText " = 270, "
+            - code
+              - StaticText "night3_duration_s"
+            - StaticText " = 300."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Snapshot: mỗi đèn thêm "
+            - code
+              - StaticText "fuel"
+            - StaticText " (số thực, 1 chữ số thập phân; đèn tắt có "
+            - code
+              - StaticText "fuel: 0"
+            - StaticText "), "
+            - code
+              - StaticText "ever_lit"
+            - StaticText " và "
+            - code
+              - StaticText "relit_count"
+            - StaticText "; "
+            - code
+              - StaticText "player"
+            - StaticText " thêm "
+            - code
+              - StaticText "capacity"
+            - StaticText ". Bóng Mực có thêm trạng thái "
+            - code
+              - StaticText "drain"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Scenario: mỗi đèn được đặt "
+            - code
+              - StaticText "lit"
+            - StaticText ", "
+            - code
+              - StaticText "fuel"
+            - StaticText ", "
+            - code
+              - StaticText "ever_lit"
+            - StaticText "; "
+            - code
+              - StaticText "player"
+            - StaticText " thêm "
+            - code
+              - StaticText "successful_lights"
+            - StaticText "; "
+            - code
+              - StaticText "shades[]"
+            - StaticText " thêm "
+            - code
+              - StaticText "target_lantern_id"
+            - StaticText ". Đèn đặt "
+            - code
+              - StaticText "lit: true"
+            - StaticText " mà không có "
+            - code
+              - StaticText "fuel"
+            - StaticText " thì mặc định "
+            - code
+              - StaticText "fuel: 100"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Sự kiện mới: "
+            - code
+              - StaticText "refuel {lantern_id, amount, fuel}"
+            - StaticText ", "
+            - code
+              - StaticText "lantern_out {lantern_id}"
+            - StaticText ", "
+            - code
+              - StaticText "fuel_drain {lantern_id, shade_id, fuel}"
+            - StaticText " (ghi "
+            - strong
+              - StaticText "mỗi 60 tick"
+            - StaticText " khi đang hút). "
+            - code
+              - StaticText "lantern_lit"
+            - StaticText " thêm "
+            - code
+              - StaticText "relight: true|false"
+            - StaticText ". "
+            - code
+              - StaticText "game_over.reason"
+            - StaticText " có thêm "
+            - code
+              - StaticText "dawn_survived"
+            - StaticText "; "
+            - code
+              - StaticText "all_lit"
+            - StaticText " không còn dùng."
+        - heading "Định nghĩa hoàn thành (DoD)" [level=2, ref=e66]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Có bằng chứng game chạy đúng các yêu cầu của phase (định dạng tự chọn)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Có ít nhất 1 ghi chú quyết định thiết kế (ADR hoặc tương đương, tên và vị trí tự chọn) mô tả cách bạn thay đổi mô hình trạng thái đèn và luật thắng."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Test cũ bị luật mới làm sai phải được "
+            - strong
+              - StaticText "cập nhật hoặc xóa có ghi lý do"
+            - StaticText ", không được bỏ qua (skip) âm thầm."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Có changelog (tên và vị trí tự chọn) liệt kê các thay đổi phá vỡ tương thích (breaking changes) của Phase 3."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Mọi test ẩn Phase 1–2 không bị thay thế vẫn đạt."
+      - button "Hỏi trợ giảng" [ref=e15]
+      - contentinfo
+        - StaticText "Đảo Đèn Lồng · Day 12 AI SDLC Lab. Các phase mới xuất hiện ở thanh trên khi giảng viên phát hành."
+  - generic
+    - alert
+    - alert
+    - status
+  - status
+  - status
+  - status
+  - status
+  - status
+  - status
