@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: CLI N steps, snapshot zero + interval, exactly one end; two processes identical
+ok 1 - CLI N steps, snapshot zero + interval, exactly one end; two processes identical
+  ---
+  duration_ms: 284.6625
+  type: 'test'
+  ...
+# Subtest: tick 0 run and input k -> event k+1; inputs persist
+ok 2 - tick 0 run and input k -> event k+1; inputs persist
+  ---
+  duration_ms: 246.2411
+  type: 'test'
+  ...
+# Subtest: invalid JSON/schema/CLI return nonzero, data errors 2 and stderr
+ok 3 - invalid JSON/schema/CLI return nonzero, data errors 2 and stderr
+  ---
+  duration_ms: 417.8808
+  type: 'test'
+  ...
+# Subtest: tick zero, scenario has no score/events; lantern patch preserves five
+ok 4 - tick zero, scenario has no score/events; lantern patch preserves five
+  ---
+  duration_ms: 3.2197
+  type: 'test'
+  ...
+# Subtest: movement camera yaw, diagonal normalization and held input
+ok 5 - movement camera yaw, diagonal normalization and held input
+  ---
+  duration_ms: 3.4374
+  type: 'test'
+  ...
+# Subtest: jump rising edge only, lands, release allows next jump
+ok 6 - jump rising edge only, lands, release allows next jump
+  ---
+  duration_ms: 1.0717
+  type: 'test'
+  ...
+# Subtest: island edge blocks without hit
+ok 7 - island edge blocks without hit
+  ---
+  duration_ms: 2.5936
+  type: 'test'
+  ...
+# Subtest: pickup exactly at radius; full bag leaves motes; horizontal distance while jumping
+ok 8 - pickup exactly at radius; full bag leaves motes; horizontal distance while jumping
+  ---
+  duration_ms: 1.5763
+  type: 'test'
+  ...
+# Subtest: partial deposit retained, hold interact does not retrigger, lit once
+ok 9 - partial deposit retained, hold interact does not retrigger, lit once
+  ---
+  duration_ms: 0.4712
+  type: 'test'
+  ...
+# Subtest: shades chase, contact hit once per immunity and keep motes
+ok 10 - shades chase, contact hit once per immunity and keep motes
+  ---
+  duration_ms: 1.0585
+  type: 'test'
+  ...
+# Subtest: safe light blocks shade movement including shade placed inside safety
+ok 11 - safe light blocks shade movement including shade placed inside safety
+  ---
+  duration_ms: 0.8949
+  type: 'test'
+  ...
+# Subtest: pulse consumes exact cost, stuns/pushes, no retrigger while held, cooldown
+ok 12 - pulse consumes exact cost, stuns/pushes, no retrigger while held, cooldown
+  ---
+  duration_ms: 1.5624
+  type: 'test'
+  ...
+# Subtest: pulse insufficient and outside radius leave enemy unaffected; zero direction finite
+ok 13 - pulse insufficient and outside radius leave enemy unaffected; zero direction finite
+  ---
+  duration_ms: 0.9269
+  type: 'test'
+  ...
+# Subtest: win bonus exact once, terminal freezes; all_lit wins at deadline
+ok 14 - win bonus exact once, terminal freezes; all_lit wins at deadline
+  ---
+  duration_ms: 0.6713
+  type: 'test'
+  ...
+# Subtest: no_flames and dawn losses
+ok 15 - no_flames and dawn losses
+  ---
+  duration_ms: 0.3733
+  type: 'test'
+  ...
+# Subtest: seed replay and reset create identical snapshots
+ok 16 - seed replay and reset create identical snapshots
+  ---
+  duration_ms: 11.1371
+  type: 'test'
+  ...
+# Subtest: input/schema rejects invalid types, duplicate ticks, NaN, unknown lanterns
+ok 17 - input/schema rejects invalid types, duplicate ticks, NaN, unknown lanterns
+  ---
+  duration_ms: 0.9788
+  type: 'test'
+  ...
+# Subtest: deposit outside radius fails, tie chooses L1, full scenario deposit becomes lit
+ok 18 - deposit outside radius fails, tie chooses L1, full scenario deposit becomes lit
+  ---
+  duration_ms: 0.6117
+  type: 'test'
+  ...
+# Subtest: pulse inclusive radius and positive cooldown boundary
+ok 19 - pulse inclusive radius and positive cooldown boundary
+  ---
+  duration_ms: 0.616
+  type: 'test'
+  ...
+# Subtest: safe-radius inclusive protects player; just outside can be hit
+ok 20 - safe-radius inclusive protects player; just outside can be hit
+  ---
+  duration_ms: 0.2806
+  type: 'test'
+  ...
+# Subtest: random spawn flags and generated IDs stay deterministic without collisions
+ok 21 - random spawn flags and generated IDs stay deterministic without collisions
+  ---
+  duration_ms: 10.4299
+  type: 'test'
+  ...
+# Subtest: scenario time override follows exact elapsed formula and coordinates alone round
+ok 22 - scenario time override follows exact elapsed formula and coordinates alone round
+  ---
+  duration_ms: 0.3795
+  type: 'test'
+  ...
+# Subtest: regression: overlapping safe circles must exclude shades from their entire union
+ok 23 - regression: overlapping safe circles must exclude shades from their entire union
+  ---
+  duration_ms: 0.4052
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1115.1775

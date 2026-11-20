@@ -1,0 +1,230 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 370B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 118B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/9] FROM docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32
+#5 resolve docker.io/library/node:22-alpine@sha256:c610fcdfb1d5b4740dd70c284ed3cb16bb857e0f7166196e36a5501df7a3aa32 0.1s done
+#5 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 24.32kB 0.0s done
+#4 DONE 0.0s
+
+#6 [2/9] WORKDIR /game
+#6 CACHED
+
+#7 [3/9] COPY package.json package-lock.json ./
+#7 CACHED
+
+#8 [4/9] RUN npm ci --ignore-scripts
+#8 CACHED
+
+#9 [5/9] COPY src ./src
+#9 DONE 0.1s
+
+#10 [6/9] COPY scripts ./scripts
+#10 DONE 0.1s
+
+#11 [7/9] COPY tests ./tests
+#11 DONE 0.2s
+
+#12 [8/9] COPY index.html game.contract.json ./
+#12 DONE 0.2s
+
+#13 [9/9] RUN npm test && npm run build
+#13 0.881 
+#13 0.881 > dao-den-long@0.1.0 test
+#13 0.881 > node --test tests/*.test.mjs
+#13 0.881 
+#13 1.013 TAP version 13
+#13 1.767 # Subtest: CLI N steps, snapshot zero + interval, exactly one end; two processes identical
+#13 1.769 ok 1 - CLI N steps, snapshot zero + interval, exactly one end; two processes identical
+#13 1.769   ---
+#13 1.769   duration_ms: 210.92914
+#13 1.769   type: 'test'
+#13 1.769   ...
+#13 1.770 # Subtest: tick 0 run and input k -> event k+1; inputs persist
+#13 1.771 ok 2 - tick 0 run and input k -> event k+1; inputs persist
+#13 1.771   ---
+#13 1.771   duration_ms: 172.020356
+#13 1.771   type: 'test'
+#13 1.771   ...
+#13 1.772 # Subtest: invalid JSON/schema/CLI return nonzero, data errors 2 and stderr
+#13 1.781 ok 3 - invalid JSON/schema/CLI return nonzero, data errors 2 and stderr
+#13 1.781   ---
+#13 1.781   duration_ms: 326.371035
+#13 1.781   type: 'test'
+#13 1.781   ...
+#13 1.805 # Subtest: tick zero, scenario has no score/events; lantern patch preserves five
+#13 1.805 ok 4 - tick zero, scenario has no score/events; lantern patch preserves five
+#13 1.805   ---
+#13 1.805   duration_ms: 4.927783
+#13 1.805   type: 'test'
+#13 1.805   ...
+#13 1.805 # Subtest: movement camera yaw, diagonal normalization and held input
+#13 1.805 ok 5 - movement camera yaw, diagonal normalization and held input
+#13 1.806   ---
+#13 1.806   duration_ms: 3.17758
+#13 1.806   type: 'test'
+#13 1.806   ...
+#13 1.806 # Subtest: jump rising edge only, lands, release allows next jump
+#13 1.806 ok 6 - jump rising edge only, lands, release allows next jump
+#13 1.806   ---
+#13 1.806   duration_ms: 2.588701
+#13 1.806   type: 'test'
+#13 1.806   ...
+#13 1.806 # Subtest: island edge blocks without hit
+#13 1.806 ok 7 - island edge blocks without hit
+#13 1.807   ---
+#13 1.807   duration_ms: 5.109751
+#13 1.807   type: 'test'
+#13 1.807   ...
+#13 1.807 # Subtest: pickup exactly at radius; full bag leaves motes; horizontal distance while jumping
+#13 1.807 ok 8 - pickup exactly at radius; full bag leaves motes; horizontal distance while jumping
+#13 1.807   ---
+#13 1.807   duration_ms: 4.107148
+#13 1.807   type: 'test'
+#13 1.807   ...
+#13 1.808 # Subtest: partial deposit retained, hold interact does not retrigger, lit once
+#13 1.808 ok 9 - partial deposit retained, hold interact does not retrigger, lit once
+#13 1.808   ---
+#13 1.808   duration_ms: 0.806417
+#13 1.808   type: 'test'
+#13 1.808   ...
+#13 1.809 # Subtest: shades chase, contact hit once per immunity and keep motes
+#13 1.810 ok 10 - shades chase, contact hit once per immunity and keep motes
+#13 1.810   ---
+#13 1.810   duration_ms: 2.348696
+#13 1.810   type: 'test'
+#13 1.810   ...
+#13 1.811 # Subtest: safe light blocks shade movement including shade placed inside safety
+#13 1.811 ok 11 - safe light blocks shade movement including shade placed inside safety
+#13 1.811   ---
+#13 1.811   duration_ms: 1.456326
+#13 1.811   type: 'test'
+#13 1.811   ...
+#13 1.812 # Subtest: pulse consumes exact cost, stuns/pushes, no retrigger while held, cooldown
+#13 1.812 ok 12 - pulse consumes exact cost, stuns/pushes, no retrigger while held, cooldown
+#13 1.812   ---
+#13 1.812   duration_ms: 3.571434
+#13 1.812   type: 'test'
+#13 1.812   ...
+#13 1.813 # Subtest: pulse insufficient and outside radius leave enemy unaffected; zero direction finite
+#13 1.813 ok 13 - pulse insufficient and outside radius leave enemy unaffected; zero direction finite
+#13 1.814   ---
+#13 1.814   duration_ms: 2.000422
+#13 1.814   type: 'test'
+#13 1.814   ...
+#13 1.814 # Subtest: win bonus exact once, terminal freezes; all_lit wins at deadline
+#13 1.815 ok 14 - win bonus exact once, terminal freezes; all_lit wins at deadline
+#13 1.816   ---
+#13 1.816   duration_ms: 1.193594
+#13 1.816   type: 'test'
+#13 1.816   ...
+#13 1.816 # Subtest: no_flames and dawn losses
+#13 1.817 ok 15 - no_flames and dawn losses
+#13 1.817   ---
+#13 1.817   duration_ms: 0.871705
+#13 1.817   type: 'test'
+#13 1.817   ...
+#13 1.817 # Subtest: seed replay and reset create identical snapshots
+#13 1.818 ok 16 - seed replay and reset create identical snapshots
+#13 1.818   ---
+#13 1.818   duration_ms: 25.929756
+#13 1.818   type: 'test'
+#13 1.818   ...
+#13 1.818 # Subtest: input/schema rejects invalid types, duplicate ticks, NaN, unknown lanterns
+#13 1.818 ok 17 - input/schema rejects invalid types, duplicate ticks, NaN, unknown lanterns
+#13 1.819   ---
+#13 1.819   duration_ms: 1.63529
+#13 1.819   type: 'test'
+#13 1.819   ...
+#13 1.819 # Subtest: deposit outside radius fails, tie chooses L1, full scenario deposit becomes lit
+#13 1.819 ok 18 - deposit outside radius fails, tie chooses L1, full scenario deposit becomes lit
+#13 1.819   ---
+#13 1.819   duration_ms: 0.828209
+#13 1.819   type: 'test'
+#13 1.819   ...
+#13 1.819 # Subtest: pulse inclusive radius and positive cooldown boundary
+#13 1.819 ok 19 - pulse inclusive radius and positive cooldown boundary
+#13 1.819   ---
+#13 1.819   duration_ms: 1.023401
+#13 1.819   type: 'test'
+#13 1.819   ...
+#13 1.820 # Subtest: safe-radius inclusive protects player; just outside can be hit
+#13 1.820 ok 20 - safe-radius inclusive protects player; just outside can be hit
+#13 1.820   ---
+#13 1.820   duration_ms: 0.66726
+#13 1.820   type: 'test'
+#13 1.820   ...
+#13 1.820 # Subtest: random spawn flags and generated IDs stay deterministic without collisions
+#13 1.822 ok 21 - random spawn flags and generated IDs stay deterministic without collisions
+#13 1.822   ---
+#13 1.822   duration_ms: 23.812288
+#13 1.822   type: 'test'
+#13 1.822   ...
+#13 1.822 # Subtest: scenario time override follows exact elapsed formula and coordinates alone round
+#13 1.822 ok 22 - scenario time override follows exact elapsed formula and coordinates alone round
+#13 1.822   ---
+#13 1.822   duration_ms: 0.453933
+#13 1.822   type: 'test'
+#13 1.822   ...
+#13 1.822 # Subtest: regression: overlapping safe circles must exclude shades from their entire union
+#13 1.822 ok 23 - regression: overlapping safe circles must exclude shades from their entire union
+#13 1.822   ---
+#13 1.822   duration_ms: 0.480991
+#13 1.822   type: 'test'
+#13 1.822   ...
+#13 1.823 # Subtest: regression: A projects left and D projects right for camera yaw 0/90/180/270
+#13 1.823 ok 24 - regression: A projects left and D projects right for camera yaw 0/90/180/270
+#13 1.823   ---
+#13 1.823   duration_ms: 13.229642
+#13 1.823   type: 'test'
+#13 1.823   ...
+#13 1.823 # Subtest: W/S follow camera depth, arrows match keys and opposing keys cancel
+#13 1.823 ok 25 - W/S follow camera depth, arrows match keys and opposing keys cancel
+#13 1.823   ---
+#13 1.823   duration_ms: 18.811983
+#13 1.823   type: 'test'
+#13 1.823   ...
+#13 1.823 1..25
+#13 1.823 # tests 25
+#13 1.823 # suites 0
+#13 1.823 # pass 25
+#13 1.823 # fail 0
+#13 1.824 # cancelled 0
+#13 1.824 # skipped 0
+#13 1.824 # todo 0
+#13 1.824 # duration_ms 877.880039
+#13 2.094 
+#13 2.094 > dao-den-long@0.1.0 build
+#13 2.094 > node scripts/build.mjs
+#13 2.094 
+#13 2.218 Built self-contained static game in dist/
+#13 DONE 2.3s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 0.7s done
+#14 exporting manifest sha256:56a769a54abe968a6799dd7fc623eb13c24a752a2dfb457c43e6dfea60c97258 0.0s done
+#14 exporting config sha256:ed471418a8c1489a16048e04c0d59d9151da8dc439cd69ee8ab652cd797f8b1d 0.0s done
+#14 exporting attestation manifest sha256:d9153e518e93bc641a9f7872176af70976159e2d186e869a50c13c81ff00a115
+#14 exporting attestation manifest sha256:d9153e518e93bc641a9f7872176af70976159e2d186e869a50c13c81ff00a115 0.1s done
+#14 exporting manifest list sha256:5c99002c84f8143772fc0568db8b502a4bc8a7d73adae44ac661575b03ccf2e6 0.0s done
+#14 naming to docker.io/library/dao-den-long:phase-1
+#14 naming to docker.io/library/dao-den-long:phase-1 done
+#14 unpacking to docker.io/library/dao-den-long:phase-1
+#14 unpacking to docker.io/library/dao-den-long:phase-1 0.3s done
+#14 DONE 1.3s

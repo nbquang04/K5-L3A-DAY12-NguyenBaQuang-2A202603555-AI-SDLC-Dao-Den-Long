@@ -1,0 +1,9214 @@
+{
+  "frames": [
+    {
+      "tick": 0,
+      "move": [
+        0.9714599986441954,
+        0.2372034380741979
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 1,
+      "move": [
+        0.9714599986441954,
+        0.2372034380741979
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 2,
+      "move": [
+        0.9714599986441955,
+        0.23720343807419791
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 3,
+      "move": [
+        0.9714599986441953,
+        0.23720343807419786
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 4,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419786
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 5,
+      "move": [
+        0.9714599986441954,
+        0.2372034380741979
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 6,
+      "move": [
+        0.9714599986441955,
+        0.2372034380741979
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 7,
+      "move": [
+        0.9714599986441953,
+        0.2372034380741979
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 8,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419786
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 9,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419786
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 10,
+      "move": [
+        0.9714599986441955,
+        0.2372034380741979
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 11,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419791
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 12,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419791
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 13,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419794
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 14,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419791
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 15,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419794
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 16,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419794
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 17,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419797
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 18,
+      "move": [
+        0.9714599986441954,
+        0.23720343807419797
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 19,
+      "move": [
+        0.13870777552464164,
+        -0.9903333544867636
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 20,
+      "move": [
+        0.1387077755246416,
+        -0.9903333544867636
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 21,
+      "move": [
+        0.13870777552464156,
+        -0.9903333544867635
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 22,
+      "move": [
+        0.13870777552464153,
+        -0.9903333544867636
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 23,
+      "move": [
+        0.1387077755246415,
+        -0.9903333544867636
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 24,
+      "move": [
+        0.13870777552464145,
+        -0.9903333544867635
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 25,
+      "move": [
+        0.1387077755246414,
+        -0.9903333544867635
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 26,
+      "move": [
+        0.13870777552464136,
+        -0.9903333544867636
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 27,
+      "move": [
+        0.13870777552464128,
+        -0.9903333544867635
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 28,
+      "move": [
+        0.13870777552464136,
+        -0.9903333544867636
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 29,
+      "move": [
+        0.13870777552464128,
+        -0.9903333544867636
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 30,
+      "move": [
+        0.13870777552464134,
+        -0.9903333544867635
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 31,
+      "move": [
+        0.13870777552464142,
+        -0.9903333544867636
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 32,
+      "move": [
+        0.1387077755246415,
+        -0.9903333544867635
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 33,
+      "move": [
+        0.2164746881720866,
+        -0.9762882306884569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 34,
+      "move": [
+        0.21647468817208657,
+        -0.9762882306884569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 35,
+      "move": [
+        0.2164746881720865,
+        -0.9762882306884569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 36,
+      "move": [
+        0.21647468817208645,
+        -0.9762882306884569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 37,
+      "move": [
+        0.2164746881720864,
+        -0.9762882306884569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 38,
+      "move": [
+        0.21647468817208634,
+        -0.9762882306884569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 39,
+      "move": [
+        0.2164746881720863,
+        -0.9762882306884569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 40,
+      "move": [
+        0.2164746881720862,
+        -0.9762882306884569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 41,
+      "move": [
+        0.21647468817208618,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 42,
+      "move": [
+        0.2164746881720861,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 43,
+      "move": [
+        0.216474688172086,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 44,
+      "move": [
+        0.21647468817208593,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 45,
+      "move": [
+        0.21647468817208582,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 46,
+      "move": [
+        0.2164746881720857,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 47,
+      "move": [
+        0.21647468817208584,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 48,
+      "move": [
+        0.2164746881720857,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 49,
+      "move": [
+        0.21647468817208587,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 50,
+      "move": [
+        0.2164746881720857,
+        -0.9762882306884572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 51,
+      "move": [
+        0.3797038903025766,
+        -0.9251080778423075
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 52,
+      "move": [
+        0.3797038903025767,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 53,
+      "move": [
+        0.3797038903025766,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 54,
+      "move": [
+        0.3797038903025765,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 55,
+      "move": [
+        0.37970389030257645,
+        -0.9251080778423075
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 56,
+      "move": [
+        0.37970389030257645,
+        -0.9251080778423078
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 57,
+      "move": [
+        0.3797038903025764,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 58,
+      "move": [
+        0.37970389030257634,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 59,
+      "move": [
+        0.37970389030257623,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 60,
+      "move": [
+        0.3797038903025762,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 61,
+      "move": [
+        0.37970389030257634,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 62,
+      "move": [
+        0.3797038903025763,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 63,
+      "move": [
+        0.3797038903025762,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 64,
+      "move": [
+        0.3797038903025763,
+        -0.9251080778423075
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 65,
+      "move": [
+        0.37970389030257623,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 66,
+      "move": [
+        0.3797038903025761,
+        -0.9251080778423076
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 67,
+      "move": [
+        0.3797038903025762,
+        -0.9251080778423075
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 68,
+      "move": [
+        0.589256218328125,
+        -0.8079462291276797
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 69,
+      "move": [
+        0.589256218328125,
+        -0.8079462291276797
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 70,
+      "move": [
+        0.5892562183281249,
+        -0.8079462291276797
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 71,
+      "move": [
+        0.5892562183281249,
+        -0.8079462291276798
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 72,
+      "move": [
+        0.5892562183281249,
+        -0.8079462291276798
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 73,
+      "move": [
+        0.5892562183281249,
+        -0.8079462291276798
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 74,
+      "move": [
+        0.5892562183281248,
+        -0.8079462291276798
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 75,
+      "move": [
+        0.5892562183281248,
+        -0.8079462291276798
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 76,
+      "move": [
+        0.5892562183281248,
+        -0.8079462291276798
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 77,
+      "move": [
+        0.5892562183281248,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 78,
+      "move": [
+        0.5892562183281248,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 79,
+      "move": [
+        0.5892562183281247,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 80,
+      "move": [
+        0.5892562183281247,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 81,
+      "move": [
+        0.5892562183281247,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 82,
+      "move": [
+        0.5892562183281247,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 83,
+      "move": [
+        0.5892562183281246,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 84,
+      "move": [
+        0.5892562183281246,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 85,
+      "move": [
+        0.5892562183281246,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 86,
+      "move": [
+        0.5892562183281246,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 87,
+      "move": [
+        0.5892562183281246,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 88,
+      "move": [
+        0.5892562183281246,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 89,
+      "move": [
+        0.5892562183281246,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 90,
+      "move": [
+        0.5892562183281246,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 91,
+      "move": [
+        0.5892562183281246,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 92,
+      "move": [
+        0.5892562183281246,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 93,
+      "move": [
+        0.5892562183281246,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 94,
+      "move": [
+        0.5892562183281246,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 95,
+      "move": [
+        0.5892562183281246,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 96,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 97,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 98,
+      "move": [
+        0.5892562183281245,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 99,
+      "move": [
+        0.5892562183281245,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 100,
+      "move": [
+        0.5892562183281245,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 101,
+      "move": [
+        0.5892562183281245,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 102,
+      "move": [
+        0.5892562183281245,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 103,
+      "move": [
+        0.5892562183281245,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 104,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 105,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 106,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276799
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 107,
+      "move": [
+        0.5892562183281245,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 108,
+      "move": [
+        0.5892562183281245,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 109,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 110,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 111,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 112,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 113,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 114,
+      "move": [
+        0.5892562183281245,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 115,
+      "move": [
+        0.5892562183281245,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 116,
+      "move": [
+        0.5892562183281244,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 117,
+      "move": [
+        0.5892562183281244,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 118,
+      "move": [
+        0.5892562183281244,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 119,
+      "move": [
+        0.5892562183281244,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 120,
+      "move": [
+        0.5892562183281244,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 121,
+      "move": [
+        0.5892562183281242,
+        -0.80794622912768
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 122,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 123,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 124,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 125,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276801
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 126,
+      "move": [
+        0.5892562183281244,
+        -0.8079462291276803
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 127,
+      "move": [
+        0.5892562183281244,
+        -0.8079462291276803
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 128,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276802
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 129,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276802
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 130,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276802
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 131,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276802
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 132,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276803
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 133,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276803
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 134,
+      "move": [
+        0.5892562183281242,
+        -0.8079462291276803
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 135,
+      "move": [
+        0.5892562183281241,
+        -0.8079462291276802
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 136,
+      "move": [
+        0.589256218328124,
+        -0.8079462291276802
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 137,
+      "move": [
+        0.589256218328124,
+        -0.8079462291276802
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 138,
+      "move": [
+        0.589256218328124,
+        -0.8079462291276803
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 139,
+      "move": [
+        0.5892562183281241,
+        -0.8079462291276804
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 140,
+      "move": [
+        0.5892562183281241,
+        -0.8079462291276804
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 141,
+      "move": [
+        0.589256218328124,
+        -0.8079462291276803
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 142,
+      "move": [
+        0.589256218328124,
+        -0.8079462291276804
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 143,
+      "move": [
+        0.589256218328124,
+        -0.8079462291276805
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 144,
+      "move": [
+        0.5892562183281239,
+        -0.8079462291276805
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 145,
+      "move": [
+        0.5892562183281239,
+        -0.8079462291276805
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 146,
+      "move": [
+        0.5892562183281239,
+        -0.8079462291276805
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 147,
+      "move": [
+        0.5892562183281238,
+        -0.8079462291276805
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 148,
+      "move": [
+        0.5892562183281238,
+        -0.8079462291276807
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 149,
+      "move": [
+        0.5892562183281237,
+        -0.8079462291276807
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 150,
+      "move": [
+        0.5892562183281237,
+        -0.8079462291276807
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 151,
+      "move": [
+        0.5892562183281236,
+        -0.8079462291276807
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 152,
+      "move": [
+        0.5892562183281234,
+        -0.807946229127681
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 153,
+      "move": [
+        0.589256218328123,
+        -0.8079462291276812
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 154,
+      "move": [
+        0.5892562183281226,
+        -0.8079462291276813
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 155,
+      "move": [
+        0.5892562183281222,
+        -0.8079462291276818
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 156,
+      "move": [
+        0.5892562183281224,
+        -0.8079462291276815
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 157,
+      "move": [
+        -0.9964954989459206,
+        -0.08364640207755997
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 158,
+      "move": [
+        -0.9964954989459206,
+        -0.08364640207755998
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 159,
+      "move": [
+        -0.9964954989459206,
+        -0.08364640207756002
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 160,
+      "move": [
+        -0.9964954989459206,
+        -0.08364640207756005
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 161,
+      "move": [
+        -0.9964954989459206,
+        -0.08364640207756006
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 162,
+      "move": [
+        -0.9964954989459206,
+        -0.0836464020775601
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 163,
+      "move": [
+        -0.9964954989459206,
+        -0.08364640207756015
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 164,
+      "move": [
+        -0.9964954989459206,
+        -0.08364640207756016
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 165,
+      "move": [
+        -0.9964954989459206,
+        -0.0836464020775602
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 166,
+      "move": [
+        -0.9964954989459207,
+        -0.08364640207756023
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 167,
+      "move": [
+        -0.9964954989459207,
+        -0.08364640207756027
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 168,
+      "move": [
+        -0.9964954989459207,
+        -0.08364640207756031
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 169,
+      "move": [
+        -0.9964954989459207,
+        -0.08364640207756033
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 170,
+      "move": [
+        -0.9964954989459205,
+        -0.08364640207756036
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 171,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756037
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 172,
+      "move": [
+        -0.9964954989459203,
+        -0.0836464020775604
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 173,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756044
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 174,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756047
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 175,
+      "move": [
+        -0.9964954989459205,
+        -0.08364640207756052
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 176,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756055
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 177,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756058
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 178,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756062
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 179,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756066
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 180,
+      "move": [
+        -0.9964954989459204,
+        -0.0836464020775607
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 181,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756073
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 182,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756077
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 183,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756081
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 184,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756086
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 185,
+      "move": [
+        -0.9964954989459205,
+        -0.0836464020775609
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 186,
+      "move": [
+        -0.9964954989459205,
+        -0.08364640207756094
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 187,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756098
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 188,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756101
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 189,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756105
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 190,
+      "move": [
+        -0.9964954989459204,
+        -0.0836464020775611
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 191,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756115
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 192,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756119
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 193,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756123
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 194,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756129
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 195,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756134
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 196,
+      "move": [
+        -0.9964954989459205,
+        -0.08364640207756138
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 197,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756141
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 198,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756147
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 199,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756152
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 200,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756156
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 201,
+      "move": [
+        -0.9964954989459204,
+        -0.0836464020775616
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 202,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756167
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 203,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756172
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 204,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756177
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 205,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756181
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 206,
+      "move": [
+        -0.9964954989459205,
+        -0.08364640207756187
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 207,
+      "move": [
+        -0.9964954989459205,
+        -0.08364640207756192
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 208,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 209,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756202
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 210,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756208
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 211,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756213
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 212,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756219
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 213,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756224
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 214,
+      "move": [
+        -0.9964954989459204,
+        -0.0836464020775623
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 215,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756237
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 216,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756242
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 217,
+      "move": [
+        -0.9964954989459205,
+        -0.08364640207756249
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 218,
+      "move": [
+        -0.9964954989459205,
+        -0.08364640207756256
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 219,
+      "move": [
+        -0.9964954989459204,
+        -0.0836464020775626
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 220,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756267
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 221,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756273
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 222,
+      "move": [
+        -0.9964954989459204,
+        -0.0836464020775628
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 223,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756288
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 224,
+      "move": [
+        -0.9964954989459204,
+        -0.08364640207756295
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 225,
+      "move": [
+        -0.99649549894592,
+        -0.08364640207756299
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 226,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756308
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 227,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756315
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 228,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756321
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 229,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756328
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 230,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756337
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 231,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756345
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 232,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756353
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 233,
+      "move": [
+        -0.9964954989459202,
+        -0.0836464020775636
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 234,
+      "move": [
+        -0.9964954989459203,
+        -0.0836464020775637
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 235,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756378
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 236,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756387
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 237,
+      "move": [
+        -0.99649549894592,
+        -0.08364640207756395
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 238,
+      "move": [
+        -0.99649549894592,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 239,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756395
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 240,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 241,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756395
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 242,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 243,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756395
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 244,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 245,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756396
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 246,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756406
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 247,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756395
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 248,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 249,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756396
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 250,
+      "move": [
+        -0.99649549894592,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 251,
+      "move": [
+        -0.99649549894592,
+        -0.08364640207756394
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 252,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756403
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 253,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756395
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 254,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 255,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756394
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 256,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 257,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756394
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 258,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756406
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 259,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756392
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 260,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 261,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756394
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 262,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 263,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756392
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 264,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 265,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756392
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 266,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 267,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756391
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 268,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 269,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756392
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 270,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 271,
+      "move": [
+        -0.9964954989459202,
+        -0.0836464020775639
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 272,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 273,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756391
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 274,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 275,
+      "move": [
+        -0.9964954989459202,
+        -0.0836464020775639
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 276,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 277,
+      "move": [
+        -0.9964954989459202,
+        -0.0836464020775639
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 278,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 279,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756388
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 280,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 281,
+      "move": [
+        -0.9964954989459202,
+        -0.0836464020775639
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 282,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756406
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 283,
+      "move": [
+        -0.99649549894592,
+        -0.08364640207756388
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 284,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756406
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 285,
+      "move": [
+        -0.9964954989459202,
+        -0.0836464020775639
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 286,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756409
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 287,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756391
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 288,
+      "move": [
+        -0.9964954989459203,
+        -0.0836464020775641
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 289,
+      "move": [
+        -0.99649549894592,
+        -0.08364640207756391
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 290,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756412
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 291,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756392
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 292,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756414
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 293,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756394
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 294,
+      "move": [
+        -0.9964954989459203,
+        -0.08364640207756417
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 295,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756395
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 296,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756419
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 297,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756396
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 298,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756421
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 299,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756398
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 300,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756424
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 301,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756399
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 302,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756428
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 303,
+      "move": [
+        -0.9964954989459202,
+        -0.083646402077564
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 304,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756431
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 305,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 306,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756374
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 307,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756406
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 308,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756376
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 309,
+      "move": [
+        -0.99649549894592,
+        -0.08364640207756409
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 310,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756374
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 311,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756413
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 312,
+      "move": [
+        -0.99649549894592,
+        -0.08364640207756374
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 313,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756416
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 314,
+      "move": [
+        -0.9964954989459202,
+        -0.08364640207756377
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 315,
+      "move": [
+        -0.8654866809505631,
+        0.5009319365913677
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 316,
+      "move": [
+        -0.8654866809505632,
+        0.5009319365913676
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 317,
+      "move": [
+        -0.8654866809505634,
+        0.5009319365913674
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 318,
+      "move": [
+        -0.8654866809505636,
+        0.5009319365913673
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 319,
+      "move": [
+        -0.8654866809505636,
+        0.5009319365913669
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 320,
+      "move": [
+        -0.8654866809505638,
+        0.5009319365913666
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 321,
+      "move": [
+        -0.8654866809505639,
+        0.5009319365913664
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 322,
+      "move": [
+        -0.8654866809505639,
+        0.5009319365913663
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 323,
+      "move": [
+        0.31699508780415964,
+        0.9484271792330885
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 324,
+      "move": [
+        0.31699508780415914,
+        0.9484271792330887
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 325,
+      "move": [
+        0.3169950878041586,
+        0.948427179233089
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 326,
+      "move": [
+        0.31699508780415797,
+        0.9484271792330892
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 327,
+      "move": [
+        0.3169950878041578,
+        0.9484271792330892
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 328,
+      "move": [
+        -0.7855787283334369,
+        -0.618761716325453
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 329,
+      "move": [
+        -0.7855787283334367,
+        -0.6187617163254531
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 330,
+      "move": [
+        -0.7855787283334366,
+        -0.6187617163254533
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 331,
+      "move": [
+        -0.7855787283334364,
+        -0.6187617163254534
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 332,
+      "move": [
+        -0.7855787283334366,
+        -0.6187617163254531
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 333,
+      "move": [
+        -0.7855787283334364,
+        -0.6187617163254533
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 334,
+      "move": [
+        -0.7855787283334369,
+        -0.618761716325453
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 335,
+      "move": [
+        -0.7855787283334366,
+        -0.6187617163254531
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 336,
+      "move": [
+        -0.7855787283334366,
+        -0.6187617163254534
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 337,
+      "move": [
+        -0.7855787283334361,
+        -0.6187617163254536
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 338,
+      "move": [
+        -0.7855787283334367,
+        -0.6187617163254532
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 339,
+      "move": [
+        -0.7855787283334363,
+        -0.6187617163254535
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 340,
+      "move": [
+        -0.33790487452975554,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 341,
+      "move": [
+        -0.33790487452975554,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 342,
+      "move": [
+        -0.3379048745297555,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 343,
+      "move": [
+        -0.3379048745297555,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 344,
+      "move": [
+        -0.3379048745297555,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 345,
+      "move": [
+        -0.33790487452975554,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 346,
+      "move": [
+        -0.3379048745297555,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 347,
+      "move": [
+        -0.33790487452975543,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 348,
+      "move": [
+        -0.3379048745297555,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 349,
+      "move": [
+        -0.3379048745297555,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 350,
+      "move": [
+        -0.3379048745297555,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 351,
+      "move": [
+        -0.33790487452975543,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 352,
+      "move": [
+        -0.33790487452975543,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 353,
+      "move": [
+        -0.3379048745297555,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 354,
+      "move": [
+        -0.33790487452975543,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 355,
+      "move": [
+        -0.3379048745297554,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 356,
+      "move": [
+        -0.33790487452975543,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 357,
+      "move": [
+        -0.33790487452975543,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 358,
+      "move": [
+        -0.33790487452975543,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 359,
+      "move": [
+        -0.3379048745297554,
+        0.9411802674137564
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 360,
+      "move": [
+        -0.33790487452975543,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 361,
+      "move": [
+        -0.3379048745297554,
+        0.9411802674137564
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 362,
+      "move": [
+        -0.3379048745297554,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 363,
+      "move": [
+        -0.3379048745297554,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 364,
+      "move": [
+        -0.3379048745297554,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 365,
+      "move": [
+        -0.3379048745297553,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 366,
+      "move": [
+        -0.3379048745297554,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 367,
+      "move": [
+        -0.3379048745297554,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 368,
+      "move": [
+        -0.3379048745297554,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 369,
+      "move": [
+        -0.3379048745297553,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 370,
+      "move": [
+        -0.3379048745297553,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 371,
+      "move": [
+        -0.3379048745297553,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 372,
+      "move": [
+        -0.3379048745297553,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 373,
+      "move": [
+        -0.33790487452975526,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 374,
+      "move": [
+        -0.33790487452975526,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 375,
+      "move": [
+        -0.33790487452975526,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 376,
+      "move": [
+        -0.33790487452975526,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 377,
+      "move": [
+        -0.33790487452975526,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 378,
+      "move": [
+        -0.3379048745297552,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 379,
+      "move": [
+        -0.3379048745297552,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 380,
+      "move": [
+        -0.3379048745297552,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 381,
+      "move": [
+        -0.3379048745297552,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 382,
+      "move": [
+        -0.3379048745297552,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 383,
+      "move": [
+        -0.3379048745297552,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 384,
+      "move": [
+        -0.3379048745297552,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 385,
+      "move": [
+        -0.33790487452975515,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 386,
+      "move": [
+        -0.33790487452975515,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 387,
+      "move": [
+        -0.33790487452975515,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 388,
+      "move": [
+        -0.33790487452975515,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 389,
+      "move": [
+        -0.33790487452975515,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 390,
+      "move": [
+        -0.33790487452975515,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 391,
+      "move": [
+        -0.3379048745297551,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 392,
+      "move": [
+        -0.3379048745297551,
+        0.9411802674137565
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 393,
+      "move": [
+        -0.3379048745297551,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 394,
+      "move": [
+        -0.3379048745297551,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 395,
+      "move": [
+        -0.3379048745297551,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 396,
+      "move": [
+        -0.33790487452975504,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 397,
+      "move": [
+        -0.33790487452975504,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 398,
+      "move": [
+        -0.33790487452975504,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 399,
+      "move": [
+        -0.3379048745297551,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 400,
+      "move": [
+        -0.33790487452975504,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 401,
+      "move": [
+        -0.33790487452975504,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 402,
+      "move": [
+        -0.33790487452975504,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 403,
+      "move": [
+        -0.33790487452975504,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 404,
+      "move": [
+        -0.33790487452975504,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 405,
+      "move": [
+        -0.337904874529755,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 406,
+      "move": [
+        -0.337904874529755,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 407,
+      "move": [
+        -0.337904874529755,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 408,
+      "move": [
+        -0.337904874529755,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 409,
+      "move": [
+        -0.337904874529755,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 410,
+      "move": [
+        -0.33790487452975493,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 411,
+      "move": [
+        -0.33790487452975493,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 412,
+      "move": [
+        -0.3379048745297549,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 413,
+      "move": [
+        -0.3379048745297549,
+        0.9411802674137566
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 414,
+      "move": [
+        -0.3379048745297548,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 415,
+      "move": [
+        -0.3379048745297548,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 416,
+      "move": [
+        -0.3379048745297548,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 417,
+      "move": [
+        -0.3379048745297548,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 418,
+      "move": [
+        -0.33790487452975476,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 419,
+      "move": [
+        -0.33790487452975476,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 420,
+      "move": [
+        -0.33790487452975476,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 421,
+      "move": [
+        -0.3379048745297547,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 422,
+      "move": [
+        -0.3379048745297547,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 423,
+      "move": [
+        -0.3379048745297547,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 424,
+      "move": [
+        -0.3379048745297547,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 425,
+      "move": [
+        -0.33790487452975465,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 426,
+      "move": [
+        -0.33790487452975465,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 427,
+      "move": [
+        -0.33790487452975465,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 428,
+      "move": [
+        -0.3379048745297546,
+        0.9411802674137567
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 429,
+      "move": [
+        -0.3379048745297546,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 430,
+      "move": [
+        -0.3379048745297546,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 431,
+      "move": [
+        -0.33790487452975454,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 432,
+      "move": [
+        -0.3379048745297546,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 433,
+      "move": [
+        -0.3379048745297546,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 434,
+      "move": [
+        -0.33790487452975454,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 435,
+      "move": [
+        -0.3379048745297546,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 436,
+      "move": [
+        -0.3379048745297546,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 437,
+      "move": [
+        -0.3379048745297545,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 438,
+      "move": [
+        -0.33790487452975454,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 439,
+      "move": [
+        -0.33790487452975454,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 440,
+      "move": [
+        -0.3379048745297545,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 441,
+      "move": [
+        -0.33790487452975454,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 442,
+      "move": [
+        -0.33790487452975454,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 443,
+      "move": [
+        -0.3379048745297545,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 444,
+      "move": [
+        -0.3379048745297545,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 445,
+      "move": [
+        -0.33790487452975454,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 446,
+      "move": [
+        -0.3379048745297545,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 447,
+      "move": [
+        -0.3379048745297545,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 448,
+      "move": [
+        -0.33790487452975443,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 449,
+      "move": [
+        -0.3379048745297545,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 450,
+      "move": [
+        -0.3379048745297545,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 451,
+      "move": [
+        -0.33790487452975443,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 452,
+      "move": [
+        -0.33790487452975443,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 453,
+      "move": [
+        -0.33790487452975443,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 454,
+      "move": [
+        -0.33790487452975443,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 455,
+      "move": [
+        -0.3379048745297544,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 456,
+      "move": [
+        -0.3379048745297543,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 457,
+      "move": [
+        -0.3379048745297544,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 458,
+      "move": [
+        -0.3379048745297544,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 459,
+      "move": [
+        -0.3379048745297543,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 460,
+      "move": [
+        -0.3379048745297543,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 461,
+      "move": [
+        -0.3379048745297543,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 462,
+      "move": [
+        -0.3379048745297543,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 463,
+      "move": [
+        -0.3379048745297543,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 464,
+      "move": [
+        -0.33790487452975426,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 465,
+      "move": [
+        -0.33790487452975426,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 466,
+      "move": [
+        -0.3379048745297543,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 467,
+      "move": [
+        -0.3379048745297542,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 468,
+      "move": [
+        -0.33790487452975415,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 469,
+      "move": [
+        -0.3379048745297542,
+        0.9411802674137568
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 470,
+      "move": [
+        -0.3379048745297542,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 471,
+      "move": [
+        -0.33790487452975415,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 472,
+      "move": [
+        -0.3379048745297541,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 473,
+      "move": [
+        -0.3379048745297541,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 474,
+      "move": [
+        -0.3379048745297541,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 475,
+      "move": [
+        -0.3379048745297541,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 476,
+      "move": [
+        -0.33790487452975404,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 477,
+      "move": [
+        -0.33790487452975404,
+        0.9411802674137569
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 478,
+      "move": [
+        -0.33790487452975404,
+        0.9411802674137572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 479,
+      "move": [
+        -0.3379048745297541,
+        0.9411802674137572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 480,
+      "move": [
+        -0.337904874529754,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 481,
+      "move": [
+        -0.337904874529754,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 482,
+      "move": [
+        -0.337904874529754,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 483,
+      "move": [
+        -0.33790487452975393,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 484,
+      "move": [
+        -0.3379048745297539,
+        0.9411802674137572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 485,
+      "move": [
+        -0.3379048745297539,
+        0.9411802674137572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 486,
+      "move": [
+        -0.3379048745297538,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 487,
+      "move": [
+        -0.3379048745297538,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 488,
+      "move": [
+        -0.33790487452975376,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 489,
+      "move": [
+        -0.3379048745297537,
+        0.9411802674137572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 490,
+      "move": [
+        -0.3379048745297537,
+        0.9411802674137572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 491,
+      "move": [
+        -0.33790487452975365,
+        0.9411802674137572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 492,
+      "move": [
+        -0.3379048745297536,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 493,
+      "move": [
+        -0.33790487452975354,
+        0.941180267413757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 494,
+      "move": [
+        -0.33790487452975354,
+        0.9411802674137573
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 495,
+      "move": [
+        -0.3379048745297535,
+        0.9411802674137573
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 496,
+      "move": [
+        -0.33790487452975343,
+        0.9411802674137573
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 497,
+      "move": [
+        -0.3379048745297534,
+        0.9411802674137574
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 498,
+      "move": [
+        -0.3379048745297533,
+        0.9411802674137573
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 499,
+      "move": [
+        -0.3379048745297532,
+        0.9411802674137573
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 500,
+      "move": [
+        -0.33790487452975315,
+        0.9411802674137574
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 501,
+      "move": [
+        -0.3379048745297531,
+        0.9411802674137574
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 502,
+      "move": [
+        -0.33790487452975304,
+        0.9411802674137574
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 503,
+      "move": [
+        -0.33790487452975293,
+        0.9411802674137575
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 504,
+      "move": [
+        -0.3379048745297529,
+        0.9411802674137575
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 505,
+      "move": [
+        -0.33790487452975276,
+        0.9411802674137576
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 506,
+      "move": [
+        -0.3379048745297526,
+        0.9411802674137575
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 507,
+      "move": [
+        0.22696309075495677,
+        0.9739033604187621
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 508,
+      "move": [
+        0.22696309075495683,
+        0.9739033604187622
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 509,
+      "move": [
+        -0.7043513899187448,
+        0.7098514770848423
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 510,
+      "move": [
+        -0.7043513899187449,
+        0.709851477084842
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 511,
+      "move": [
+        -0.7043513899187452,
+        0.7098514770848419
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 512,
+      "move": [
+        -0.7043513899187455,
+        0.7098514770848418
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 513,
+      "move": [
+        -0.7043513899187456,
+        0.7098514770848415
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 514,
+      "move": [
+        -0.7043513899187458,
+        0.7098514770848413
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 515,
+      "move": [
+        -0.7043513899187459,
+        0.7098514770848411
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 516,
+      "move": [
+        -0.7043513899187462,
+        0.7098514770848409
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 517,
+      "move": [
+        -0.7043513899187464,
+        0.7098514770848405
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 518,
+      "move": [
+        0.9910889582530868,
+        0.13320163973769616
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 519,
+      "move": [
+        0.9910889582530868,
+        0.13320163973769622
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 520,
+      "move": [
+        0.9910889582530868,
+        0.13320163973769628
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 521,
+      "move": [
+        0.9910889582530868,
+        0.13320163973769633
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 522,
+      "move": [
+        0.9910889582530868,
+        0.1332016397376964
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 523,
+      "move": [
+        0.9910889582530867,
+        0.13320163973769644
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 524,
+      "move": [
+        0.9910889582530867,
+        0.13320163973769653
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 525,
+      "move": [
+        0.9910889582530867,
+        0.1332016397376966
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 526,
+      "move": [
+        0.9910889582530867,
+        0.1332016397376967
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 527,
+      "move": [
+        0.9910889582530868,
+        0.13320163973769655
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 528,
+      "move": [
+        0.9910889582530868,
+        0.1332016397376964
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 529,
+      "move": [
+        0.9910889582530868,
+        0.1332016397376962
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 530,
+      "move": [
+        0.9910889582530868,
+        0.13320163973769597
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 531,
+      "move": [
+        0.991088958253087,
+        0.13320163973769572
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 532,
+      "move": [
+        0.991088958253087,
+        0.13320163973769544
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 533,
+      "move": [
+        0.9505122711444175,
+        -0.31068701679323746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 534,
+      "move": [
+        0.9505122711444174,
+        -0.31068701679323746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 535,
+      "move": [
+        0.9505122711444174,
+        -0.31068701679323757
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 536,
+      "move": [
+        0.9505122711444175,
+        -0.3106870167932376
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 537,
+      "move": [
+        0.9505122711444174,
+        -0.3106870167932377
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 538,
+      "move": [
+        0.9505122711444172,
+        -0.3106870167932377
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 539,
+      "move": [
+        0.9505122711444172,
+        -0.3106870167932378
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 540,
+      "move": [
+        0.9505122711444173,
+        -0.3106870167932379
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 541,
+      "move": [
+        0.9505122711444173,
+        -0.310687016793238
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 542,
+      "move": [
+        0.9505122711444172,
+        -0.3106870167932381
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 543,
+      "move": [
+        0.9505122711444173,
+        -0.3106870167932383
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 544,
+      "move": [
+        0.9505122711444173,
+        -0.31068701679323846
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 545,
+      "move": [
+        0.950512271144417,
+        -0.31068701679323857
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 546,
+      "move": [
+        0.950512271144417,
+        -0.3106870167932388
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 547,
+      "move": [
+        0.9505122711444169,
+        -0.31068701679323896
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 548,
+      "move": [
+        0.950512271144417,
+        -0.3106870167932388
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 549,
+      "move": [
+        0.699399430991829,
+        0.7147310234824747
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 550,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824747
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 551,
+      "move": [
+        0.699399430991829,
+        0.7147310234824747
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 552,
+      "move": [
+        0.6993994309918289,
+        0.7147310234824747
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 553,
+      "move": [
+        0.699399430991829,
+        0.7147310234824747
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 554,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824747
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 555,
+      "move": [
+        0.699399430991829,
+        0.7147310234824747
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 556,
+      "move": [
+        0.699399430991829,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 557,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 558,
+      "move": [
+        0.699399430991829,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 559,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 560,
+      "move": [
+        0.699399430991829,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 561,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 562,
+      "move": [
+        0.6993994309918292,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 563,
+      "move": [
+        0.699399430991829,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 564,
+      "move": [
+        0.699399430991829,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 565,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 566,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 567,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 568,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 569,
+      "move": [
+        0.6993994309918292,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 570,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824744
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 571,
+      "move": [
+        0.6993994309918292,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 572,
+      "move": [
+        0.6993994309918292,
+        0.7147310234824746
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 573,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 574,
+      "move": [
+        0.6993994309918292,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 575,
+      "move": [
+        0.6993994309918291,
+        0.7147310234824744
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 576,
+      "move": [
+        0.6993994309918292,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 577,
+      "move": [
+        0.6993994309918292,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 578,
+      "move": [
+        0.6993994309918293,
+        0.7147310234824744
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 579,
+      "move": [
+        0.6993994309918293,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 580,
+      "move": [
+        0.6993994309918292,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 581,
+      "move": [
+        0.6993994309918293,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 582,
+      "move": [
+        0.6993994309918292,
+        0.7147310234824743
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 583,
+      "move": [
+        0.6993994309918293,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 584,
+      "move": [
+        0.6993994309918293,
+        0.7147310234824745
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 585,
+      "move": [
+        0.6993994309918293,
+        0.7147310234824744
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 586,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824744
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 587,
+      "move": [
+        0.6993994309918293,
+        0.7147310234824743
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 588,
+      "move": [
+        0.6993994309918293,
+        0.7147310234824744
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 589,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824744
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 590,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824743
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 591,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824744
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 592,
+      "move": [
+        0.6993994309918293,
+        0.7147310234824743
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 593,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824743
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 594,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824743
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 595,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824743
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 596,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824743
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 597,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 598,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 599,
+      "move": [
+        0.6993994309918294,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 600,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824743
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 601,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 602,
+      "move": [
+        0.6993994309918297,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 603,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 604,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 605,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824741
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 606,
+      "move": [
+        0.6993994309918297,
+        0.714731023482474
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 607,
+      "move": [
+        0.6993994309918297,
+        0.7147310234824741
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 608,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 609,
+      "move": [
+        0.6993994309918297,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 610,
+      "move": [
+        0.6993994309918297,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 611,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824741
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 612,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 613,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 614,
+      "move": [
+        0.6993994309918297,
+        0.7147310234824742
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 615,
+      "move": [
+        0.6993994309918296,
+        0.7147310234824741
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 616,
+      "move": [
+        0.6993994309918296,
+        0.714731023482474
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 617,
+      "move": [
+        0.6993994309918296,
+        0.714731023482474
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 618,
+      "move": [
+        0.6993994309918297,
+        0.7147310234824741
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 619,
+      "move": [
+        0.6993994309918297,
+        0.7147310234824741
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 620,
+      "move": [
+        0.6993994309918298,
+        0.7147310234824741
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 621,
+      "move": [
+        0.6993994309918298,
+        0.7147310234824741
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 622,
+      "move": [
+        0.6993994309918298,
+        0.714731023482474
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 623,
+      "move": [
+        0.6993994309918297,
+        0.7147310234824739
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 624,
+      "move": [
+        0.6993994309918298,
+        0.7147310234824739
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 625,
+      "move": [
+        0.6993994309918298,
+        0.7147310234824739
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 626,
+      "move": [
+        0.6993994309918299,
+        0.714731023482474
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 627,
+      "move": [
+        0.6993994309918299,
+        0.714731023482474
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 628,
+      "move": [
+        0.69939943099183,
+        0.714731023482474
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 629,
+      "move": [
+        0.6993994309918299,
+        0.7147310234824739
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 630,
+      "move": [
+        0.69939943099183,
+        0.7147310234824739
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 631,
+      "move": [
+        0.6993994309918299,
+        0.7147310234824737
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 632,
+      "move": [
+        0.69939943099183,
+        0.7147310234824737
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 633,
+      "move": [
+        0.69939943099183,
+        0.7147310234824737
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 634,
+      "move": [
+        0.69939943099183,
+        0.7147310234824736
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 635,
+      "move": [
+        0.69939943099183,
+        0.7147310234824737
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 636,
+      "move": [
+        0.6993994309918301,
+        0.7147310234824737
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 637,
+      "move": [
+        0.69939943099183,
+        0.7147310234824736
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 638,
+      "move": [
+        0.6993994309918301,
+        0.7147310234824736
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 639,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824736
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 640,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824736
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 641,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824736
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 642,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824735
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 643,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 644,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824735
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 645,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 646,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824735
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 647,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 648,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 649,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 650,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 651,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824735
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 652,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 653,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 654,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 655,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 656,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 657,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 658,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 659,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 660,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 661,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 662,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 663,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 664,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 665,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 666,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 667,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 668,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824732
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 669,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 670,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824732
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 671,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 672,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 673,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 674,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 675,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 676,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824732
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 677,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 678,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824735
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 679,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 680,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 681,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 682,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824732
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 683,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 684,
+      "move": [
+        0.6993994309918307,
+        0.7147310234824732
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 685,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 686,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 687,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 688,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 689,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824731
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 690,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 691,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 692,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824736
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 693,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 694,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824732
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 695,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 696,
+      "move": [
+        0.6993994309918302,
+        0.7147310234824735
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 697,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 698,
+      "move": [
+        0.6993994309918307,
+        0.7147310234824732
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 699,
+      "move": [
+        0.6993994309918304,
+        0.7147310234824734
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 700,
+      "move": [
+        0.6993994309918307,
+        0.7147310234824732
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 701,
+      "move": [
+        0.6993994309918303,
+        0.7147310234824733
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 702,
+      "move": [
+        0.6993994309918306,
+        0.7147310234824731
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 703,
+      "move": [
+        0.9838270269974484,
+        0.17912113484835318
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 704,
+      "move": [
+        0.9838270269974484,
+        0.1791211348483535
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 705,
+      "move": [
+        0.9838270269974484,
+        0.17912113484835393
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 706,
+      "move": [
+        0.9838270269974482,
+        0.17912113484835435
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 707,
+      "move": [
+        0.30358604756349056,
+        -0.9528040258756142
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 708,
+      "move": [
+        0.3035860475634907,
+        -0.9528040258756142
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 709,
+      "move": [
+        0.3035860475634908,
+        -0.952804025875614
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 710,
+      "move": [
+        0.30358604756349095,
+        -0.952804025875614
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 711,
+      "move": [
+        0.24462083792405637,
+        0.9696188146139351
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 712,
+      "move": [
+        0.2446208379240563,
+        0.9696188146139352
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 713,
+      "move": [
+        0.24462083792405626,
+        0.9696188146139352
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 714,
+      "move": [
+        0.24462083792405614,
+        0.9696188146139351
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 715,
+      "move": [
+        0.2446208379240561,
+        0.9696188146139351
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 716,
+      "move": [
+        0.244620837924056,
+        0.9696188146139352
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 717,
+      "move": [
+        0.24462083792405595,
+        0.9696188146139351
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 718,
+      "move": [
+        0.24462083792405592,
+        0.9696188146139352
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 719,
+      "move": [
+        0.24462083792405587,
+        0.9696188146139351
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 720,
+      "move": [
+        0.2446208379240558,
+        0.9696188146139352
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 721,
+      "move": [
+        0.24462083792405573,
+        0.9696188146139351
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 722,
+      "move": [
+        0.24462083792405573,
+        0.9696188146139353
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 723,
+      "move": [
+        0.0027240949116799657,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 724,
+      "move": [
+        0.0027240949116799553,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 725,
+      "move": [
+        0.002724094911679944,
+        0.999996289646573
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 726,
+      "move": [
+        0.0027240949116799315,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 727,
+      "move": [
+        0.0027240949116799184,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 728,
+      "move": [
+        0.0027240949116799037,
+        0.9999962896465727
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 729,
+      "move": [
+        0.002724094911679888,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 730,
+      "move": [
+        0.0027240949116798707,
+        0.999996289646573
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 731,
+      "move": [
+        0.0027240949116798517,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 732,
+      "move": [
+        0.0027240949116798304,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 733,
+      "move": [
+        0.0027240949116798074,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 734,
+      "move": [
+        0.0027240949116797814,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 735,
+      "move": [
+        0.0027240949116797523,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 736,
+      "move": [
+        0.0027240949116797194,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 737,
+      "move": [
+        0.0027240949116796817,
+        0.9999962896465727
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 738,
+      "move": [
+        0.0027240949116797224,
+        0.999996289646573
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 739,
+      "move": [
+        0.002724094911679679,
+        0.9999962896465728
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 740,
+      "move": [
+        0.7901246755002737,
+        -0.612946161718619
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 741,
+      "move": [
+        0.7901246755002735,
+        -0.612946161718619
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 742,
+      "move": [
+        0.7901246755002735,
+        -0.6129461617186192
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 743,
+      "move": [
+        0.7901246755002733,
+        -0.612946161718619
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 744,
+      "move": [
+        0.7901246755002733,
+        -0.6129461617186192
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 745,
+      "move": [
+        0.7901246755002733,
+        -0.6129461617186192
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 746,
+      "move": [
+        0.7901246755002733,
+        -0.6129461617186193
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 747,
+      "move": [
+        0.7901246755002734,
+        -0.6129461617186194
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 748,
+      "move": [
+        0.7901246755002732,
+        -0.6129461617186193
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 749,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186193
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 750,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186195
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 751,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186195
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 752,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186196
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 753,
+      "move": [
+        0.7901246755002732,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 754,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 755,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 756,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 757,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 758,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 759,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 760,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 761,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 762,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 763,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 764,
+      "move": [
+        0.7901246755002729,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 765,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 766,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 767,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 768,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 769,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 770,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 771,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 772,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 773,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 774,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 775,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 776,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 777,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 778,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 779,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 780,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 781,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 782,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 783,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 784,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 785,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 786,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 787,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 788,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 789,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 790,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 791,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 792,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 793,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 794,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 795,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 796,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 797,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186196
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 798,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186196
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 799,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186196
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 800,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186196
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 801,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186196
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 802,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186196
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 803,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 804,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186196
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 805,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 806,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186196
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 807,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 808,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 809,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 810,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 811,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 812,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 813,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 814,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 815,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 816,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 817,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 818,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 819,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 820,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 821,
+      "move": [
+        0.7901246755002731,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 822,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 823,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 824,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 825,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 826,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 827,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 828,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 829,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 830,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 831,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 832,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 833,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 834,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 835,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 836,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 837,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 838,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 839,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 840,
+      "move": [
+        0.790124675500273,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 841,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 842,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 843,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186197
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 844,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 845,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 846,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 847,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 848,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 849,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 850,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 851,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 852,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186198
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 853,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 854,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 855,
+      "move": [
+        0.7901246755002729,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 856,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 857,
+      "move": [
+        0.7901246755002729,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 858,
+      "move": [
+        0.7901246755002728,
+        -0.6129461617186199
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 859,
+      "move": [
+        0.7901246755002729,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 860,
+      "move": [
+        0.7901246755002728,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 861,
+      "move": [
+        0.7901246755002728,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 862,
+      "move": [
+        0.7901246755002728,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 863,
+      "move": [
+        0.7901246755002728,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 864,
+      "move": [
+        0.7901246755002728,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 865,
+      "move": [
+        0.7901246755002728,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 866,
+      "move": [
+        0.7901246755002728,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 867,
+      "move": [
+        0.7901246755002727,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 868,
+      "move": [
+        0.7901246755002727,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 869,
+      "move": [
+        0.7901246755002727,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 870,
+      "move": [
+        0.7901246755002727,
+        -0.61294616171862
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 871,
+      "move": [
+        0.7901246755002727,
+        -0.6129461617186202
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 872,
+      "move": [
+        0.7901246755002727,
+        -0.6129461617186202
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 873,
+      "move": [
+        0.7901246755002727,
+        -0.6129461617186202
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 874,
+      "move": [
+        0.7901246755002727,
+        -0.6129461617186202
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 875,
+      "move": [
+        0.7901246755002727,
+        -0.6129461617186203
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 876,
+      "move": [
+        0.7901246755002727,
+        -0.6129461617186203
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 877,
+      "move": [
+        0.7901246755002727,
+        -0.6129461617186203
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 878,
+      "move": [
+        0.7901246755002727,
+        -0.6129461617186203
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 879,
+      "move": [
+        0.7901246755002725,
+        -0.6129461617186203
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 880,
+      "move": [
+        0.7901246755002725,
+        -0.6129461617186203
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 881,
+      "move": [
+        0.7901246755002725,
+        -0.6129461617186203
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 882,
+      "move": [
+        0.7901246755002725,
+        -0.6129461617186204
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 883,
+      "move": [
+        0.7901246755002725,
+        -0.6129461617186204
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 884,
+      "move": [
+        0.7901246755002725,
+        -0.6129461617186204
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 885,
+      "move": [
+        0.7901246755002725,
+        -0.6129461617186205
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 886,
+      "move": [
+        0.7901246755002725,
+        -0.6129461617186205
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 887,
+      "move": [
+        0.7901246755002724,
+        -0.6129461617186205
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 888,
+      "move": [
+        0.7901246755002724,
+        -0.6129461617186205
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 889,
+      "move": [
+        0.7901246755002724,
+        -0.6129461617186205
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 890,
+      "move": [
+        0.7901246755002724,
+        -0.6129461617186206
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 891,
+      "move": [
+        0.7901246755002724,
+        -0.6129461617186206
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 892,
+      "move": [
+        0.7901246755002724,
+        -0.6129461617186207
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 893,
+      "move": [
+        0.7901246755002723,
+        -0.6129461617186206
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 894,
+      "move": [
+        0.7901246755002723,
+        -0.6129461617186206
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 895,
+      "move": [
+        0.7901246755002723,
+        -0.6129461617186207
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 896,
+      "move": [
+        0.7901246755002721,
+        -0.6129461617186206
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 897,
+      "move": [
+        0.7901246755002721,
+        -0.6129461617186207
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 898,
+      "move": [
+        0.7901246755002721,
+        -0.6129461617186207
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 899,
+      "move": [
+        0.7901246755002721,
+        -0.6129461617186208
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 900,
+      "move": [
+        0.7901246755002722,
+        -0.6129461617186209
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 901,
+      "move": [
+        0.7901246755002721,
+        -0.612946161718621
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 902,
+      "move": [
+        0.7901246755002721,
+        -0.612946161718621
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 903,
+      "move": [
+        0.790124675500272,
+        -0.6129461617186209
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 904,
+      "move": [
+        0.7901246755002719,
+        -0.612946161718621
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 905,
+      "move": [
+        0.790124675500272,
+        -0.6129461617186213
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 906,
+      "move": [
+        0.7901246755002718,
+        -0.6129461617186212
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 907,
+      "move": [
+        0.7901246755002719,
+        -0.6129461617186213
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 908,
+      "move": [
+        0.7901246755002718,
+        -0.6129461617186214
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 909,
+      "move": [
+        0.7901246755002718,
+        -0.6129461617186214
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 910,
+      "move": [
+        0.7901246755002715,
+        -0.6129461617186215
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 911,
+      "move": [
+        0.7901246755002715,
+        -0.6129461617186215
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 912,
+      "move": [
+        0.7901246755002715,
+        -0.6129461617186217
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 913,
+      "move": [
+        0.7901246755002713,
+        -0.6129461617186217
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 914,
+      "move": [
+        0.7901246755002713,
+        -0.6129461617186218
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 915,
+      "move": [
+        0.7901246755002713,
+        -0.6129461617186219
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 916,
+      "move": [
+        0.7901246755002712,
+        -0.6129461617186222
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 917,
+      "move": [
+        0.790124675500271,
+        -0.6129461617186222
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 918,
+      "move": [
+        0.790124675500271,
+        -0.6129461617186224
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    },
+    {
+      "tick": 919,
+      "move": [
+        0.7901246755002709,
+        -0.6129461617186225
+      ],
+      "cam_yaw_deg": 0,
+      "interact": false,
+      "pulse": false
+    },
+    {
+      "tick": 920,
+      "move": [
+        0.7901246755002707,
+        -0.6129461617186227
+      ],
+      "cam_yaw_deg": 0,
+      "interact": true,
+      "pulse": false
+    }
+  ]
+}

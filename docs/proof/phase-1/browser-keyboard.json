@@ -1,0 +1,11 @@
+﻿{
+    "id":  "5192ef98-948c-47db-a7d4-7f88b5aa8b80",
+    "ok":  true,
+    "result":  {
+                   "result":  "{\"carried\":3,\"pos\":[0,0,6.6],\"render\":{\"calls\":168,\"frame\":1352,\"lines\":0,\"points\":380,\"triangles\":8056},\"test\":\"keyboard-forward\",\"tick\":66}",
+                   "origin":  "http://localhost:4173/?labtest=1"
+               },
+    "_meta":  {
+                  "runtimeId":  "18ea352d-b264-4dbf-97d6-03c1a517b1e3"
+              }
+}

@@ -51,3 +51,5 @@ Mỗi phase bổ sung: yêu cầu đạt/chưa đạt, lệnh/bằng chứng và
   node:test sẵn có, một dependency và tập trung Phase 1; không đoán phase sau.
 - Review kỹ thuật không thay nghiệm thu cảm giác chơi của người dùng. Chưa chạy hidden
   tests giảng viên; không tuyên bố tương thích các yêu cầu chưa được công bố.
+
+- User-reported A/D reversal fixed in keyboard adapter. Four-yaw regression and browser passed; final Verify: 25/25 Windows/Linux, browser 8/8.

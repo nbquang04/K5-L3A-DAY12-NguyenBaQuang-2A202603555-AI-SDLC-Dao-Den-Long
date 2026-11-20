@@ -1,0 +1,11 @@
+﻿{
+    "id":  "ca6b795a-f0a9-41da-b7b4-b963ca57924c",
+    "ok":  true,
+    "result":  {
+                   "result":  "{\"pass\":true,\"pos\":[-3,0,5.196],\"test\":\"drag-camera-and-keyboard-relative-motion\"}",
+                   "origin":  "http://localhost:4173/?labtest=1"
+               },
+    "_meta":  {
+                  "runtimeId":  "18ea352d-b264-4dbf-97d6-03c1a517b1e3"
+              }
+}

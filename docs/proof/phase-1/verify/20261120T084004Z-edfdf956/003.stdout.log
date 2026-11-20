@@ -1,0 +1,28 @@
+[
+  {
+    "scenario": "win",
+    "status": "PASS",
+    "reason": "all_lit",
+    "score": 608
+  },
+  {
+    "scenario": "hit",
+    "status": "PASS",
+    "reason": "no_flames",
+    "score": 0
+  },
+  {
+    "scenario": "dawn",
+    "status": "PASS",
+    "reason": "dawn",
+    "score": 0
+  },
+  {
+    "scenario": "default-play-and-replay",
+    "status": "PASS",
+    "tick": 921,
+    "score": 1188,
+    "flames": 3,
+    "sha256": "48dda7568d451d05846126601b845b965efc380ef15439f10beb363f9aefa38d"
+  }
+]

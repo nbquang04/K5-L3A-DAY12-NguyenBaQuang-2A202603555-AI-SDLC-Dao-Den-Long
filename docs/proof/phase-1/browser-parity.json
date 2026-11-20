@@ -1,0 +1,11 @@
+﻿{
+    "id":  "e39fe152-575e-41a9-a6eb-c5a74b87e76e",
+    "ok":  true,
+    "result":  {
+                   "result":  "{\"flames\":3,\"lit\":5,\"pass\":true,\"renderer\":{\"calls\":462,\"frame\":42,\"lines\":0,\"points\":380,\"triangles\":20148},\"score\":1188,\"state\":\"won\",\"test\":\"full-default-play-browser-cli-parity\",\"ticks\":921}",
+                   "origin":  "http://localhost:4173/?labtest=1"
+               },
+    "_meta":  {
+                  "runtimeId":  "18ea352d-b264-4dbf-97d6-03c1a517b1e3"
+              }
+}

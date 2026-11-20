@@ -1,0 +1,11 @@
+﻿{
+    "id":  "2d8cacb0-acad-4b21-9dd7-5af81566a14a",
+    "ok":  true,
+    "result":  {
+                   "result":  "{\"renderer\":{\"calls\":115,\"frame\":1146,\"lines\":0,\"points\":380,\"triangles\":5056},\"results\":[{\"name\":\"KeyA-camera-side-regression\",\"pass\":true,\"pos\":[3,0,0]},{\"name\":\"KeyD-camera-side-regression\",\"pass\":true,\"pos\":[-3,0,0]},{\"carried\":3,\"name\":\"keyboard-forward-pickup\",\"pass\":true,\"pos\":[0,0,6]},{\"name\":\"jump-and-land\",\"pass\":true},{\"name\":\"hit-loss-ui-and-restart\",\"pass\":true},{\"name\":\"dawn-loss-ui-and-restart\",\"pass\":true},{\"name\":\"pulse-render-state\",\"pass\":true},{\"lit\":5,\"name\":\"default-play-win-cli-parity\",\"pass\":true,\"score\":1188,\"tick\":921}],\"status\":\"PASS\",\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.7871.250 Safari/537.36\",\"viewport\":[1280,800]}",
+                   "origin":  "http://localhost:4173/?labtest=1"
+               },
+    "_meta":  {
+                  "runtimeId":  "18ea352d-b264-4dbf-97d6-03c1a517b1e3"
+              }
+}
