@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { createGame, step, snapshot, HZ } from '../core/simulation.mjs';
+import { keyboardInput } from './input.mjs';
 
 const $ = id => document.getElementById(id);
 const canvas = $('world'); const keys = new Set();
@@ -188,9 +189,7 @@ function finish() {
 function pause() { if (mode === 'playing') { mode = 'paused'; keys.clear(); accumulator = 0; $('paused').hidden = false; } }
 function resume() { if (mode === 'paused') { mode = 'playing'; accumulator = 0; lastTime = performance.now(); $('paused').hidden = true; canvas.focus(); } }
 function input() {
-  return { move: [(keys.has('KeyD') || keys.has('ArrowRight') ? 1 : 0) - (keys.has('KeyA') || keys.has('ArrowLeft') ? 1 : 0),
-    (keys.has('KeyW') || keys.has('ArrowUp') ? 1 : 0) - (keys.has('KeyS') || keys.has('ArrowDown') ? 1 : 0)],
-    cam_yaw_deg: yaw, jump: keys.has('Space'), interact: keys.has('KeyE'), pulse: keys.has('KeyQ') };
+  return keyboardInput(keys, yaw);
 }
 function animate(now) {
   requestAnimationFrame(animate);
@@ -215,7 +214,7 @@ function animate(now) {
   if (mode === 'intro') { camera.position.set(38, 29, -40); camera.lookAt(3, 0, 2); }
   else {
     const a = yaw * Math.PI / 180; const desired = new THREE.Vector3(g.player.pos[0] - Math.sin(a) * 11, g.player.pos[1] + 8, g.player.pos[2] - Math.cos(a) * 11);
-    camera.position.lerp(desired, 1 - Math.exp(-7 * Math.min(dt, 0.1))); camera.lookAt(g.player.pos[0], g.player.pos[1] + 0.7, g.player.pos[2] + 1);
+    camera.position.lerp(desired, 1 - Math.exp(-7 * Math.min(dt, 0.1))); camera.lookAt(g.player.pos[0], g.player.pos[1] + 0.7, g.player.pos[2]);
   }
   if (mode !== 'intro') hud(); renderer.render(scene, camera);
 }

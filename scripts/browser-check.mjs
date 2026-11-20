@@ -4,6 +4,16 @@
   const assert = (condition, message) => { if (!condition) throw new Error(message); };
   const fixture = async name => (await fetch(`/validation/${name}.json`)).json();
   const empty = { random_motes: false, random_shades: false, motes: [], shades: [] };
+  for (const [code, sign] of [['KeyA', 1], ['KeyD', -1]]) {
+    window.__lab.start(empty);
+    window.dispatchEvent(new KeyboardEvent('keydown', { code }));
+    await new Promise(resolve => setTimeout(resolve, 500));
+    window.dispatchEvent(new KeyboardEvent('keyup', { code }));
+    window.__lab.pause();
+    const pos = window.__lab.snapshot().player.pos;
+    assert(pos[0] * sign > 1.5, `${code} moved to the wrong camera side`);
+    results.push({ name: `${code}-camera-side-regression`, pass: true, pos });
+  }
   window.__lab.start();
   window.dispatchEvent(new KeyboardEvent('keydown', { code: 'KeyW' }));
   await new Promise(resolve => setTimeout(resolve, 1000));
