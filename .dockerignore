@@ -1,0 +1,9 @@
+.git
+.tools
+.agents
+node_modules
+dist
+artifacts
+verification/runs
+.env*
+*.log

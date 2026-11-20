@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101f2b"><title>Đảo Đèn Lồng · Đêm 1</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='10' y='7' width='20' height='27' rx='9' fill='%23ffc66b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/web/style.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+</head>
+<body>
+  <canvas id="world" aria-label="Đảo Bến 3D, điều khiển bằng WASD, Space, E và Q" tabindex="0"></canvas>
+  <div id="hit-flash" aria-hidden="true"></div>
+  <header class="topbar"><div class="brand"><span class="brand-mark">◈</span><div>ĐẢO ĐÈN LỒNG<small>ĐÊM 01 <span>—</span> ĐẢO BẾN</small></div></div><span class="edition">MỘT ĐỐM SÁNG. MỘT NIỀM HY VỌNG.</span></header>
+  <main>
+    <section id="welcome" class="panel intro" aria-labelledby="title">
+      <p class="eyebrow">CHUYỆN KỂ GIỮA BIỂN MÂY</p>
+      <h1 id="title">Giữ một<br>đốm <em>sáng.</em></h1>
+      <p class="story">Sương đen đã phủ xuống Đảo Bến. Theo chân Mây, gom những chú đom đóm và thắp lại năm ngọn đèn trước bình minh.</p>
+      <div class="mission"><span>01</span><p>Gom đom đóm. Thắp đèn.<br><strong>Đừng để bóng tối bắt kịp.</strong></p></div>
+      <button id="start" class="primary">Bắt đầu đêm nay <span>↗</span></button>
+      <p class="intro-foot">3 LỬA <i>·</i> 5 NGỌN ĐÈN <i>·</i> 180 GIÂY</p>
+    </section>
+    <section id="hud" hidden aria-label="Thông tin lượt chơi">
+      <div class="hud-top"><div class="hud-stat flames"><small>LỬA CỦA MÂY</small><strong id="flames">● ● ●</strong></div><div class="hud-stat"><small>ĐOM ĐÓM</small><strong><span id="carried">0</span><b>/ 8</b></strong></div><div class="hud-stat"><small>ĐÈN ĐÃ THẮP</small><strong><span id="lit">0</span><b>/ 5</b></strong></div><div class="hud-stat time"><small>TRƯỚC BÌNH MINH</small><strong id="timer">03:00</strong></div></div>
+      <div class="progress" id="lantern-progress" aria-label="Tiến độ năm đèn"></div>
+      <div class="score"><small>ĐIỂM ÁNH SÁNG</small><strong id="score">0</strong></div>
+      <div id="prompt" class="prompt" role="status"></div>
+      <div id="toast" class="toast" role="status"></div>
+      <button id="pause" class="pause-button" aria-label="Tạm dừng">Ⅱ</button>
+    </section>
+    <section id="paused" class="panel result" hidden><p class="eyebrow">ĐÊM VẪN CÒN Ở ĐÂY</p><h2>Một chút<br><em>nghỉ chân.</em></h2><p>Ánh sáng sẽ đợi bạn.</p><button id="resume" class="primary">Tiếp tục <span>→</span></button></section>
+    <section id="result" class="panel result" hidden aria-labelledby="result-title"><p class="eyebrow" id="result-kicker"></p><h2 id="result-title"></h2><p id="result-story"></p><div class="result-score"><small>ĐIỂM ÁNH SÁNG</small><strong id="final-score"></strong></div><button id="restart" class="primary">Thắp một đêm mới <span>↻</span></button></section>
+    <section id="error" class="panel result" hidden><h2>Chưa mở được đảo</h2><p id="error-text"></p><button onclick="location.reload()" class="primary">Thử lại</button></section>
+  </main>
+  <footer class="controls"><span><kbd>W A S D</kbd> Di chuyển</span><span><kbd>SPACE</kbd> Nhảy</span><span><kbd>E</kbd> Nạp đèn</span><span><kbd>Q</kbd> Tỏa sáng <b>−2</b></span><span class="camera-help">KÉO CHUỘT ĐỂ XOAY GÓC NHÌN</span></footer>
+  <script type="module" src="/src/web/main.mjs"></script>
+</body>
+</html>

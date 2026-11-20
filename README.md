@@ -1,3 +1,105 @@
+# Đảo Đèn Lồng — Phase 1
+
+Game 3D góc nhìn thứ ba: dẫn Mây gom đom đóm, thắp năm ngọn đèn trên Đảo Bến và
+tránh Bóng Mực. Cảnh procedural, bản web và CLI headless dùng cùng core fixed 60 Hz.
+
+[Bằng chứng và báo cáo](docs/proof/phase-1/report.md) · [Đặc tả](specs/001-night-one/spec.md) · [Quy trình Verify](docs/VERIFICATION.md)
+
+## Chạy game
+
+Yêu cầu Node.js >=22 và npm. Sau clone, từ thư mục repo chạy tối đa ba lệnh:
+
+```sh
+npm ci
+npm run build
+npm start
+```
+
+Mở **http://localhost:4173** trong browser desktop có WebGL2. Bản build dist/
+không cần mạng/CDN sau cài đặt; có thể phục vụ bằng static server bất kỳ.
+Windows đã thử Node 22.17.0; Linux đã thử bằng Docker. Nếu môi trường doanh nghiệp
+có CA riêng, dùng cấu hình CA hệ thống phù hợp, không tắt kiểm tra TLS.
+
+## Điều khiển và luật
+
+| Điều khiển | Hành động |
+|---|---|
+| WASD hoặc mũi tên | Di chuyển theo camera |
+| Kéo chuột trên cảnh | Xoay camera |
+| Space | Nhảy, cần nhả để nhảy tiếp |
+| E | Nạp đèn gần trong 2 m; mỗi đèn cần 4 |
+| Q | Tỏa sáng, tốn 2 đom đóm, cooldown 1 giây |
+| Esc hoặc nút Ⅱ | Tạm dừng/tiếp tục bản chơi |
+
+Mây có 3 lửa, mang tối đa 8 đom đóm, chạy 6 m/s. Đêm dài 180 giây.
+Bóng Mực đuổi 3 m/s; chạm trong 0,8 m làm mất một lửa, miễn nhiễm 2 giây.
+Không rơi khỏi đảo, không đánh rơi đom đóm khi hit (`fall_enabled=false`, `hit_drop_ratio=0`).
+Đèn sáng tạo vùng an toàn 3 m mà Bóng Mực không vào được. Pulse bán kính 5 m,
+choáng 3 giây, đẩy 2 m. Nhặt/nạp/pulse đều dùng khoảng cách XZ, kể cả khi nhảy.
+
+Thắp năm đèn để thắng; hết lửa hoặc hết giờ thì thua. Chơi lại tạo session mới.
+Mất focus/tab ẩn tự tạm dừng bản chơi, headless không có pause trong Phase 1.
+
+### Điểm
+
++10 mỗi đom đóm, +100 mỗi đèn, +20 mỗi địch bị pulse làm choáng.
+Khi thắng: +2 × floor(số giây còn lại) +50 × lửa còn lại. Dựng scenario không cộng điểm.
+Nguồn cấu hình duy nhất: [game.contract.json](game.contract.json).
+
+## Test và headless
+
+```sh
+npm test
+npm run verify
+node src/headless/cli.mjs --seed 42 --night 1 --ticks 600 --out artifacts/run.jsonl
+node src/headless/cli.mjs --seed 42 --night 1 --scenario tests/scenarios/win.json --inputs tests/scenarios/interact.json --ticks 60 --snapshot-every 1 --out artifacts/win.jsonl
+```
+
+CLI ghi JSONL vào --out, snapshot mặc định mỗi 10 tick từ tick 0; input tick k tạo
+state/event k+1. Thành công exit 0; inputs/scenario sai định dạng exit 2 và stderr.
+Tất cả cờ/schema: [headless contract](specs/001-night-one/contracts/headless.md).
+
+`npm run verify` assert ba kết quả và tạo input chơi trọn lượt mặc định, chạy hai
+CLI rồi so từng byte. Đây là route tự động thực hiện luật bình thường, không phải
+output viết tay. Bản chơi đã kiểm tra riêng trong browser, gồm parity với core/CLI.
+
+Toàn bộ Verify tự động, cần thêm Python >=3.10 và Docker Linux:
+
+```sh
+python scripts/verify.py --config verification/checks.json
+```
+
+Runner trả nonzero nếu test/build/scenario/Linux thất bại. Report có raw log và
+trạng thái; không thay thế việc review ảnh/camera/HUD. Xem [ma trận](specs/001-night-one/verification.md).
+
+## Docker Linux
+
+```sh
+docker build -t dao-den-long:phase-1 .
+docker run --rm -p 4173:4173 dao-den-long:phase-1
+```
+
+CLI: `docker run --rm -v "${PWD}/artifacts:/out" dao-den-long:phase-1 node src/headless/cli.mjs --seed 42 --night 1 --ticks 600 --out /out/run.jsonl`.
+Tạo thư mục artifacts trước khi bind mount nếu Docker yêu cầu. Base image pin digest trong Dockerfile.
+
+## Sáng tạo của tôi
+
+Đường đá và đom đóm dẫn ra năm hướng, đảo nổi giữa mây, ánh đèn ấm dần và lời kể
+ngắn cho Mây. Tất cả mesh tự sinh; trang trí không dùng RNG gameplay và không thêm
+thực thể vào output headless. [Ảnh bắt đầu](docs/proof/phase-1/intro.png) và
+[ảnh thắng](docs/proof/phase-1/won.png); replay/core tests chứng minh luật vẫn đúng.
+
+## Tài liệu và giới hạn
+
+[AGENTS](AGENTS.md), [ARCHITECTURE](ARCHITECTURE.md), [constitution](.specify/memory/constitution.md),
+[Spec Kit](docs/SPECKIT.md), [STATUS](docs/STATUS.md), [CREDITS](CREDITS.md), [LICENSE](LICENSE).
+Phase 1 chưa có âm thanh, lưu game hoặc hỗ trợ touch/mobile; các phần đó không nằm trong PRD.
+Video demo và Release v1.0.0 là bàn giao cuối Phase 4, chưa tạo ở Phase 1.
+Tuning và quyết định đồng thời là lựa chọn của dự án, được ghi ở spec/assumptions.
+
+<details>
+<summary>Hướng dẫn lab gốc (giữ để tham khảo)</summary>
+
 # Day 12 — AI SDLC: Đảo Đèn Lồng
 
 > **Cá nhân** (1 người / 1 MSSV) · Áp dụng SDLC cùng AI để xây một **game 3D** qua **4 phase**, từ yêu cầu ban đầu tới bản phát hành.
@@ -101,3 +203,5 @@ Không commit API key, token hay `.env`. Gửi link repo theo hướng dẫn c�
 - Dùng AI thoải mái; không sao chép repo của người khác.
 - Bằng chứng phải thật: test luôn đạt hay output sửa tay là vi phạm.
 - Nhân vật, bối cảnh là bản gốc của lab; asset bên ngoài chỉ dùng loại CC0/CC-BY/MIT hoặc tự tạo, ghi nguồn trong `CREDITS.md`.
+
+</details>

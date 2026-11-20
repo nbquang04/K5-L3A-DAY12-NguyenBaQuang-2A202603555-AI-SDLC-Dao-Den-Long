@@ -1,0 +1,16 @@
+import { cp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const output = resolve('dist');
+const expected = fileURLToPath(new URL('../dist', import.meta.url));
+if (output !== expected) throw new Error('Build must run from the project root');
+await rm(output, { recursive: true, force: true });
+await mkdir('dist/vendor', { recursive: true });
+await cp('src/core', 'dist/src/core', { recursive: true });
+await cp('src/web', 'dist/src/web', { recursive: true });
+await cp('index.html', 'dist/index.html'); await cp('game.contract.json', 'dist/game.contract.json');
+for (const file of ['three.module.js', 'three.core.js']) await cp(`node_modules/three/build/${file}`, `dist/vendor/${file}`);
+await cp('node_modules/three/LICENSE', 'dist/vendor/THREE-LICENSE.txt');
+const { version } = JSON.parse(await readFile('package.json', 'utf8'));
+await writeFile('dist/build.json', JSON.stringify({ version, renderer: 'three@0.181.2' }) + '\n');
+console.log('Built self-contained static game in dist/');
