@@ -9,7 +9,12 @@ import { DEFAULT_BINDINGS, bindKey, pressed } from '../src/web/settings.mjs';
 import { createBenchmark, stepBenchmark } from '../src/core/benchmark.mjs';
 import { loadBoard, saveEntry } from '../scripts/leaderboard-store.mjs';
 import { inputGenerator } from '../scripts/soak-input.mjs';
+import { edgeIndicator } from '../src/shared/edge-indicator.mjs';
 const tuning=JSON.parse(await readFile('game.contract.json','utf8')).tuning;
+test('edge indicator preserves pixel direction on non-square viewport and behind camera',()=>{
+ const p=edgeIndicator(1,-1,1280,720);assert.equal(p.y,685);assert.ok(Math.abs((p.x-640)/(p.y-360)-1280/720)<1e-9);
+ const b=edgeIndicator(1,-1,1280,720,true);assert.equal(b.y,35);assert.ok(b.x<640);
+});
 test('metrics use all samples, worst ceil 1%, nearest-rank p95',()=>{
  const m=frameMetrics([...Array(99).fill(10),100]);
  assert.equal(m.frames,100);assert.equal(m.avg_fps,100000/1090);assert.equal(m.p1_low_fps,10);assert.equal(m.frame_ms_p95,10);

@@ -1,5 +1,6 @@
 import { DEFAULT_BINDINGS, bindKey, normalizeBindings } from './settings.mjs';
 import * as THREE from 'three';
+import { edgeIndicator } from '../shared/edge-indicator.mjs';
 export function installReleaseUI({settings,getState,getScores,getMode,menu}){
  const $=id=>document.getElementById(id);settings.bindings=normalizeBindings(settings.bindings);
  settings.reducedMotion=settings.reducedMotion===true;settings.largeText=settings.largeText===true;
@@ -31,8 +32,8 @@ export function installReleaseUI({settings,getState,getScores,getMode,menu}){
    if(g.wind.warning)messages.push('⚠ Gió mạnh sắp đến');if(g.time_left_s<=10)messages.push(`⚠ Còn ${Math.ceil(g.time_left_s)} giây`);
    const low=g.lanterns.filter(l=>l.lit&&l.fuelUnits<1800);if(low.length)messages.push(`⚠ Đèn ít dầu: ${low.map(l=>l.id).join(', ')}`);
    if(spawn&&performance.now()<spawn.until){const v=new THREE.Vector3(...spawn.pos);v.y+=1;v.applyMatrix4(camera.matrixWorldInverse);const behind=v.z>0;
-    const projected=new THREE.Vector3(spawn.pos[0],spawn.pos[1]+1,spawn.pos[2]).project(camera);let x=projected.x*(behind?-1:1),y=-projected.y*(behind?-1:1);if(Math.hypot(x,y)<.001)y=1;
-    const rx=innerWidth/2-35,ry=innerHeight/2-35,scale=1/Math.max(Math.abs(x)/rx,Math.abs(y)/ry);x*=scale;y*=scale;arrow.hidden=false;arrow.style.left=`${innerWidth/2+x}px`;arrow.style.top=`${innerHeight/2+y}px`;arrow.style.transform=`translate(-50%,-50%) rotate(${Math.atan2(y,x)}rad)`;messages.push('⚠ Bóng Mực vừa xuất hiện');}captions.textContent=messages.join(' · ');
+    const projected=new THREE.Vector3(spawn.pos[0],spawn.pos[1]+1,spawn.pos[2]).project(camera),edge=edgeIndicator(projected.x,projected.y,innerWidth,innerHeight,behind);
+    arrow.hidden=false;arrow.style.left=`${edge.x}px`;arrow.style.top=`${edge.y}px`;arrow.style.transform=`translate(-50%,-50%) rotate(${edge.angle}rad)`;messages.push('⚠ Bóng Mực vừa xuất hiện');}captions.textContent=messages.join(' · ');
   }
  };
 }
