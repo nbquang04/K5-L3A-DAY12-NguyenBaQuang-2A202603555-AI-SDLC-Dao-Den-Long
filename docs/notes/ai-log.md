@@ -76,3 +76,22 @@ Token/cost not measured; no hidden-test or full-human-playthrough claim.
 
 ## Phase4 - 2026-11-20
 Codex implemented released Ticket04 via SpecKit specify/plan/tasks/analyze/implement and dao-verify. Research/review agent read-only found soak-results schema and edge-arrow placement/aspect defects, fixed and retested. Failed FPS/RSS/default-runtime trials disclosed. Final61tests/22replays/32retained+6release browsergroups PASS, actual bench/soak, ZIP smoke and62.48s MP4. Tokens/cost: chua do; no billing estimate available.
+
+## Đối soát token sau phát hành — 2026-11-20
+
+Đã tìm thấy usage trong log phiên chính và review agent. Các dòng “chưa đo” phía trên
+là trạng thái lúc viết, được bổ sung bằng số liệu có nguồn dưới đây; không sửa tag cũ.
+
+| Phase | Token phân bổ theo thời gian |
+|---|---:|
+| Phase1 | 23.560.412 |
+| Phase2 | 10.045.534 |
+| Phase3 | 11.035.378 |
+| Phase4 | 13.829.784 |
+| Tổng bốn phase | **58.471.108** |
+
+Đa số là context cached:57.199.488; input chưa cache1.020.290, output251.330.
+Đã loại trùng response và không cộng lại số tích lũy/reasoning. Chuẩn bị và rà soát nộp
+được tách riêng. [Phương pháp và giới hạn](AI-USAGE.md), [dữ liệu](ai-usage.json).
+Chi phí tiền chưa có giá/hóa đơn để xác minh. Không coi cached token là miễn phí hoặc
+dùng giá model khác. Bổ sung ghi chép theo yêu cầu người dùng; không thay runtime/Release.

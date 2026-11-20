@@ -39,7 +39,11 @@ baseline hoặc thay RSS bằng heap. Lệnh soak công khai dùng V8 jitless, v
 
 ## Chi phí và điều làm lại
 
-Tổng token/chi phí AI: **chưa đo**, không có số liệu billing đáng tin để ước lượng.
+Đối soát log sau phát hành: **58.471.108token cho bốn phase**, gồm57.199.488cached input,
+1.020.290input chưa cache và251.330output; phân bổ theo phase là ước tính theo timestamp.
+Chuẩn bị riêng4.875.959token; rà soát nộp bài948.281token. Chưa có đơn giá/hóa đơn xác minh
+để quy tiền; không bịa chi phí. Bảng từng phase/cách tính/dữ liệu đã lọc tại
+[AI-USAGE.md](notes/AI-USAGE.md). Context lớn/cache cao không đồng nghĩa dùng token tối ưu.
 Tiết kiệm ngữ cảnh bằng đọc ticket hiện hành, dùng STATUS/bảng truy vết, chia tài liệu
 theo phase và chạy nhóm test liên quan trước toàn bộ hồi quy. Không tải lại toàn bộ
 artifact ở mỗi bước, không sao chép tuning sang renderer và không viết test cho từng
