@@ -1,0 +1,764 @@
+﻿      - main
+        - heading "TICKET-02 — \"Ba hòn đảo\" (Phase 2)" [level=1, ref=e57]
+        - blockquote
+          - paragraph
+            - StaticText "Loại: Feature + chuẩn hóa · Ưu tiên: Cao · Tag nộp: "
+            - code
+              - StaticText "phase-2"
+            - StaticText " · Contract: "
+            - strong
+              - StaticText "v1.1"
+        - heading "Bối cảnh" [level=2, ref=e58]
+        - paragraph
+          - StaticText "Đêm 1 đã chạy được. Nhà sản xuất chơi thử bản của các bạn và thấy mỗi bản cho cảm giác điều khiển rất khác nhau. Ticket này có hai việc: "
+          - strong
+            - StaticText "(1) đồng bộ số liệu chuẩn"
+          - StaticText " để mọi bản cho cảm giác giống nhau, và "
+          - strong
+            - StaticText "(2) mở rộng game thành 3 Đêm"
+          - StaticText " cùng các tính năng mới."
+        - separator
+        - blockquote
+          - paragraph
+            - strong
+              - StaticText "Về sáng tạo:"
+            - StaticText " những gì bạn đã sáng tạo thêm ở Phase 1 vẫn được giữ và bạn vẫn được thêm ý riêng, kể cả "
+            - strong
+              - StaticText "nhân vật mới và kẻ địch mới"
+            - StaticText " (ngoài Bóng Mực và Gió Lạc), miễn là "
+            - strong
+              - StaticText "số liệu chuẩn, bản đồ chuẩn và Test Contract dưới đây không bị đổi"
+            - StaticText " và phần thêm không làm đổi đầu ra headless (ví dụ tắt khi chạy headless)."
+        - heading "Phần 1 — Số liệu chuẩn (bắt buộc, thay mọi giá trị bạn tự chọn)" [level=2, ref=e59]
+        - paragraph
+          - StaticText "Logic chạy 60 tick/giây. Đơn vị: mét, giây. Trục Y hướng lên."
+        - table
+          - rowgroup
+            - row
+              - columnheader "NHÓM" [ref=e135]
+              - columnheader "HẰNG SỐ" [ref=e136]
+              - columnheader "GIÁ TRỊ" [ref=e137]
+          - row
+            - cell "Di chuyển" [ref=e68]
+            - cell "Tốc độ chạy" [ref=e69]
+            - cell "6.0 m/s; tăng tốc/dừng trong ≤ 0.1 s; điều khiển trên không đầy đủ" [ref=e70]
+          - row
+            - cell
+            - cell "Nhảy" [ref=e71]
+            - cell "Vận tốc 7.0 m/s, trọng lực −20 m/s², chỉ nhảy khi chạm đất" [ref=e72]
+          - row
+            - cell "Lướt (mới)" [ref=e73]
+            - cell "Tốc độ / thời gian / hồi chiêu" [ref=e74]
+            - cell "14 m/s / 0.2 s / 1.5 s (tính từ lúc bắt đầu lướt)" [ref=e75]
+          - row
+            - cell
+            - cell "Hướng" [ref=e76]
+            - cell "Hướng đang di chuyển; nếu đứng yên thì hướng nhân vật đang quay mặt. Lướt trên không giữ nguyên độ cao. Không bất tử khi lướt" [ref=e77]
+          - row
+            - cell "Đom đóm" [ref=e78]
+            - cell "Sức chứa" [ref=e79]
+            - cell "10" [ref=e80]
+          - row
+            - cell
+            - cell "Nhặt" [ref=e81]
+            - cell "Tự động khi khoảng cách XZ ≤ 1.0 m và chênh cao giữa chân Mây và mặt đất nơi đặt đom đóm ≤ 1.5 m" [ref=e82]
+              - StaticText "Tự động khi khoảng cách XZ ≤ 1.0 m "
+              - strong
+                - StaticText "và"
+              - StaticText " chênh cao giữa chân Mây và mặt đất nơi đặt đom đóm ≤ 1.5 m"
+          - row
+            - cell
+            - cell "Số lượng" [ref=e83]
+            - cell "20 lúc bắt đầu tại 20 điểm khác nhau; trần 30; tại các tick 240, 480, … sinh thêm 1 ở một điểm trống nếu dưới 30; hết điểm trống thì bỏ lượt" [ref=e84]
+          - row
+            - cell "Đèn lồng" [ref=e85]
+            - cell "Chi phí thắp" [ref=e86]
+            - cell "10 đom đóm, nạp nhiều lần được, đèn nhớ tiến độ" [ref=e87]
+          - row
+            - cell
+            - cell "Tương tác" [ref=e88]
+            - cell "Trong bán kính 2.0 m; mỗi lần bấm nạp min(đang mang, còn thiếu) vào một đèn. Chỉ xét đèn chưa sáng; chọn đèn gần nhất, bằng nhau thì id nhỏ hơn" [ref=e89]
+              - StaticText "Trong bán kính 2.0 m; mỗi lần bấm nạp "
+              - code
+                - StaticText "min(đang mang, còn thiếu)"
+              - StaticText " vào "
+              - strong
+                - StaticText "một"
+              - StaticText " đèn. Chỉ xét đèn chưa sáng; chọn đèn gần nhất, bằng nhau thì id nhỏ hơn"
+          - row
+            - cell
+            - cell "Vùng an toàn" [ref=e90]
+            - cell "Đèn đã sáng tạo vùng bán kính 6 m: Bóng Mực ở ngoài bị chặn ở mép 6 m. Bóng đang ở trong lúc đèn vừa thắp bị đẩy ra mép trong tối đa 30 tick và không gây sát thương trong lúc đó" [ref=e91]
+              - StaticText "Đèn "
+              - strong
+                - StaticText "đã sáng"
+              - StaticText " tạo vùng bán kính 6 m: Bóng Mực ở ngoài bị chặn ở mép 6 m. Bóng đang ở trong lúc đèn vừa thắp bị đẩy ra mép trong tối đa 30 tick và không gây sát thương trong lúc đó"
+          - row
+            - cell "Tỏa Sáng" [ref=e92]
+            - cell "Chi phí / bán kính / hồi chiêu" [ref=e93]
+            - cell "3 đom đóm / 5 m / 3 s" [ref=e94]
+          - row
+            - cell
+            - cell "Hiệu ứng" [ref=e95]
+            - cell "Tâm = chân Mây + 0.8 m. Mục tiêu chốt ngay tick kích hoạt (khoảng cách 3D tới tâm Bóng Mực ≤ 5 m). Bóng Mực choáng 120 tick, trong 15 tick đầu bị đẩy lùi tổng 4 m theo phương ngang (dừng nếu gặp vật cản; trùng vị trí thì đẩy theo +X). Pulse lại làm mới choáng và đẩy lùi. Không chết. Không đủ 3 đom đóm thì không kích hoạt" [ref=e96]
+          - row
+            - cell "Bóng Mực" [ref=e97]
+            - cell "Tốc độ" [ref=e98]
+            - cell "4.0 m/s (Đêm 3: 4.5 m/s)" [ref=e99]
+          - row
+            - cell
+            - cell "Phát hiện / bỏ đuổi" [ref=e100]
+            - cell "12 m / 18 m" [ref=e101]
+          - row
+            - cell
+            - cell "Chạm" [ref=e102]
+            - cell "Khoảng cách XZ ≤ 1.0 m và chênh cao ≤ 1.5 m. Tối đa 1 lần mất Ngọn Lửa mỗi tick. Bóng gây hit lùi 2 m trong 60 tick (recoil); bóng chạm lúc Mây bất tử không làm gì" [ref=e103]
+              - StaticText "Khoảng cách XZ ≤ 1.0 m và chênh cao ≤ 1.5 m. Tối đa "
+              - strong
+                - StaticText "1"
+              - StaticText " lần mất Ngọn Lửa mỗi tick. Bóng gây hit lùi 2 m trong 60 tick ("
+              - code
+                - StaticText "recoil"
+              - StaticText "); bóng chạm lúc Mây bất tử không làm gì"
+          - row
+            - cell
+            - cell "Lịch sinh" [ref=e104]
+            - cell "2 con tại tick 300, sau đó 1 con mỗi khoảng sinh (tick 300 + 480k ở Đêm 1); hết điểm hợp lệ thì bỏ lượt. Id S1, S2, … theo thứ tự sinh" [ref=e105]
+              - StaticText "2 con tại tick 300, sau đó 1 con mỗi "
+              - code
+                - StaticText "khoảng sinh"
+              - StaticText " (tick 300 + 480k ở Đêm 1); hết điểm hợp lệ thì bỏ lượt. Id "
+              - code
+                - StaticText "S1"
+              - StaticText ", "
+              - code
+                - StaticText "S2"
+              - StaticText ", … theo thứ tự sinh"
+          - row
+            - cell "Bị đánh" [ref=e106]
+            - cell "Hậu quả" [ref=e107]
+            - cell "−1 Ngọn Lửa; rơi floor(đang mang / 2) đom đóm ra vành 1.5–2.5 m quanh Mây (tồn tại 480 tick, nhặt lại được từ tick sau); bất tử 90 tick" [ref=e108]
+              - StaticText "−1 Ngọn Lửa; rơi "
+              - code
+                - StaticText "floor(đang mang / 2)"
+              - StaticText " đom đóm ra vành 1.5–2.5 m quanh Mây (tồn tại 480 tick, nhặt lại được từ tick sau); bất tử 90 tick"
+          - row
+            - cell
+            - cell "Rơi khỏi đảo (Y < −10)" [ref=e109]
+            - cell "Xảy ra đúng 1 lần, bỏ qua bất tử: −1 Ngọn Lửa, mất toàn bộ đom đóm. Chờ 60 tick (không nhặt, không bị chạm), rồi hồi sinh ở điểm xuất phát, vận tốc 0, bất tử 90 tick. Hết Ngọn Lửa thì thua ngay, không hồi sinh" [ref=e110]
+              - StaticText "Xảy ra "
+              - strong
+                - StaticText "đúng 1 lần, bỏ qua bất tử"
+              - StaticText ": −1 Ngọn Lửa, mất toàn bộ đom đóm. Chờ 60 tick (không nhặt, không bị chạm), rồi hồi sinh ở điểm xuất phát, vận tốc 0, bất tử 90 tick. Hết Ngọn Lửa thì thua ngay, không hồi sinh"
+          - row
+            - cell "Máu" [ref=e111]
+            - cell "Ngọn Lửa" [ref=e112]
+            - cell "3, hồi đầy đầu mỗi Đêm" [ref=e113]
+          - row
+            - cell "Thời gian" [ref=e114]
+            - cell "Đêm 1 / 2 / 3" [ref=e115]
+            - cell "300 / 330 / 360 s" [ref=e116]
+          - row
+            - cell "Thắng / thua" [ref=e117]
+            - cell
+            - cell "Sau mỗi tick: hết Ngọn Lửa → luôn thua (no_flames); còn sống và tất cả đèn sáng → thắng (kể cả đúng tick hết giờ); còn lại mà hết giờ → thua (dawn)" [ref=e118]
+              - StaticText "Sau mỗi tick: hết Ngọn Lửa → "
+              - strong
+                - StaticText "luôn thua"
+              - StaticText " ("
+              - code
+                - StaticText "no_flames"
+              - StaticText "); còn sống và tất cả đèn sáng → thắng (kể cả đúng tick hết giờ); còn lại mà hết giờ → thua ("
+              - code
+                - StaticText "dawn"
+              - StaticText ")"
+        - paragraph
+          - strong
+            - StaticText "Điểm (chuẩn hóa):"
+          - StaticText " +10 mỗi đom đóm nạp · +100 mỗi đèn thắp · +5 mỗi Bóng Mực trúng Tỏa Sáng (mỗi con mỗi lần, kể cả con đang choáng) · khi thắng: + "
+          - code
+            - StaticText "floor(giây còn lại) × 2"
+          - StaticText " + 50 × Ngọn Lửa còn lại. Tổng điểm game là tổng điểm các Đêm đã thắng."
+        - heading "Thứ tự xử lý trong một tick (bắt buộc)" [level=3, ref=e60]
+        - list
+          - listitem [level=1]
+            - ListMarker "1. "
+            - StaticText "Đọc input (xử lý "
+            - code
+              - StaticText "pause"
+            - StaticText " trước; nếu vừa tạm dừng thì dừng bước ở đây)."
+          - listitem [level=1]
+            - ListMarker "2. "
+            - StaticText "Giảm các bộ đếm: thời gian, hồi chiêu, bất tử, choáng, bùa, TTL đom đóm rơi, hồi bùa."
+          - listitem [level=1]
+            - ListMarker "3. "
+            - StaticText "Di chuyển Mây (nhảy, lướt, bục nhảy, gió) rồi kiểm tra rơi khỏi đảo."
+          - listitem [level=1]
+            - ListMarker "4. "
+            - StaticText "Nhặt đom đóm và bùa."
+          - listitem [level=1]
+            - ListMarker "5. "
+            - StaticText "Tương tác với đèn."
+          - listitem [level=1]
+            - ListMarker "6. "
+            - StaticText "Cập nhật vùng an toàn."
+          - listitem [level=1]
+            - ListMarker "7. "
+            - StaticText "Tỏa Sáng."
+          - listitem [level=1]
+            - ListMarker "8. "
+            - StaticText "Di chuyển Bóng Mực và Gió Lạc."
+          - listitem [level=1]
+            - ListMarker "9. "
+            - StaticText "Chạm: Gió Lạc cướp trước, rồi Bóng Mực gây hit (xét theo id tăng dần)."
+          - listitem [level=1]
+            - ListMarker "10. "
+            - StaticText "Sinh đom đóm, Bóng Mực, Gió Lạc theo lịch (thực thể mới chỉ tương tác được từ tick sau)."
+          - listitem [level=1]
+            - ListMarker "11. "
+            - StaticText "Xét thắng/thua."
+          - listitem [level=1]
+            - ListMarker "12. "
+            - StaticText "Ghi snapshot nếu tới lượt."
+        - paragraph
+          - StaticText "Khi đang tạm dừng: "
+          - code
+            - StaticText "tick"
+          - StaticText " vẫn tăng nhưng "
+          - code
+            - StaticText "sim_tick"
+          - StaticText ", thời gian, hồi chiêu, spawn, TTL đều đứng yên; snapshot ghi "
+          - code
+            - StaticText "state: \"paused\""
+          - StaticText "."
+        - heading "Phần 2 — Bản đồ chuẩn" [level=2, ref=e61]
+        - paragraph
+          - StaticText "Góc đo từ trục +X, ngược chiều kim đồng hồ khi nhìn từ trên xuống, trên mặt phẳng XZ."
+        - heading "Đêm 1 — Đảo Bến (chuẩn hóa lại)" [level=3, ref=e62]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Đảo tròn tâm (0,0,0), bán kính 40 m. Ngoài 40 m là biển mây (rơi)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Xuất phát (0,0,0), quay mặt về +Z."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Đèn: L1 (0,0,25) · L2 (23.8,0,7.7) · L3 (14.7,0,−20.2) · L4 (−14.7,0,−20.2) · L5 (−23.8,0,7.7)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Điểm sinh đom đóm: 8 điểm trên bán kính 12 m (mỗi 45°) và 16 điểm trên bán kính 33 m (mỗi 22.5°)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Bóng Mực sinh trên 12 điểm bán kính 37 m (15°, 45°, …), cách người chơi ≥ 15 m; 2 con lúc giây thứ 5, sau đó mỗi 8 s; tối đa 6."
+        - heading "Đêm 2 — Đảo Cau (mới)" [level=3, ref=e63]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Hai đảo tròn bán kính 28 m, tâm A (0,0,0) và B (70,0,0), nối bằng "
+            - strong
+              - StaticText "cầu tre"
+            - StaticText " x ∈ [26, 44], z ∈ [−2, 2], không lan can."
+          - listitem [level=1]
+            - ListMarker "• "
+            - strong
+              - StaticText "Bục nhảy"
+            - StaticText " hình tròn bán kính 1 m tại (20,0,18) và (50,0,−18): chân Mây chạm bục thì được bắn lên với vận tốc Y 14 m/s và vận tốc ngang "
+            - strong
+              - StaticText "24 m/s hướng về tâm đảo kia"
+            - StaticText ". Vận tốc phóng giữ nguyên tới khi chạm đất (phím di chuyển không ghi đè; vẫn được lướt). Bay khoảng 1.4 s, đáp trong đảo đích."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Điểm sinh đom đóm mỗi đảo: 4 điểm trên bán kính 10 m (0°, 90°, 180°, 270°) và 8 điểm trên bán kính 22 m (mỗi 45°). Bóng Mực sinh trên 8 điểm bán kính 26 m mỗi đảo (22.5°, 67.5°, …)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Đèn: (0,0,20), (17,0,−10), (−17,0,−10), (70,0,20), (87,0,−10), (53,0,−10), id L1…L6 theo thứ tự này."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Bóng Mực: sinh mỗi 7 s, tối đa 8."
+        - heading "Đêm 3 — Đảo Chuông (mới)" [level=3, ref=e64]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Đảo tròn bán kính 45 m, có "
+            - strong
+              - StaticText "3 tầng"
+            - StaticText ": tầng 0 (Y=0) toàn đảo; tầng 1 (Y=3) là vành khăn bán kính 12–24 m ở nửa có z > 0; tầng 2 (Y=6) là đĩa bán kính 8 m ở tâm."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Mép các tầng là vách đứng (không đi lên được; bước ra thì rơi xuống tầng dưới)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "2 dốc thẳng rộng 3 m dọc theo bán kính ở góc 30° và 150°: chân dốc ở bán kính 30 m (Y=0), đỉnh dốc ở bán kính 24 m (Y=3)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Bục nhảy bán kính 1 m tại "
+            - strong
+              - StaticText "(0,3,13)"
+            - StaticText ": vận tốc Y 12 m/s và vận tốc ngang 8 m/s hướng −Z, giữ tới khi chạm đất → đáp lên tầng 2."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Tháp chuông cao 8 m ở tâm tầng 2, hình trụ bán kính 2 m, không leo được."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Điểm sinh đom đóm (30): tầng 0 có 18 điểm bán kính 34 m (mỗi 20° từ 0°); tầng 1 có 8 điểm bán kính 18 m (20°, 40°, …, 160°); tầng 2 có 4 điểm bán kính 5 m (45°, 135°, 225°, 315°). Bóng Mực sinh trên 16 điểm bán kính 43 m (mỗi 22.5°)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Đèn (L1…L7): (0,6,6), (18,3,10), (−18,3,10), (35,0,−10), (−35,0,−10), (20,0,−35), (−20,0,−35)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - strong
+              - StaticText "Gió mạnh:"
+            - StaticText " mỗi 30 s có một cơn gió kéo dài 5 s theo hướng ngẫu nhiên, đẩy người chơi 2 m/s; báo trước 2 s bằng lá bay và âm thanh."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Bóng Mực: sinh mỗi 6 s, tối đa 10."
+        - heading "Phần 3 — Tính năng mới" [level=2, ref=e65]
+        - list
+          - listitem [level=1]
+            - ListMarker "1. "
+            - strong
+              - StaticText "Gió Lạc"
+            - StaticText " (Đêm 2 và 3): dải lụa xám xanh bay nhanh (7 m/s), tối đa 2 con, sinh tại tick 1200, 2400, … trên điểm sương ngẫu nhiên, id "
+            - code
+              - StaticText "D1"
+            - StaticText ", "
+            - code
+              - StaticText "D2"
+            - StaticText ", …"
+            - list
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "Trạng thái: "
+                - code
+                  - StaticText "idle"
+                - StaticText " (lượn chậm 2 m/s) → "
+                - code
+                  - StaticText "chase"
+                - StaticText " → "
+                - code
+                  - StaticText "flee"
+                - StaticText " → "
+                - code
+                  - StaticText "removed"
+                - StaticText "."
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - code
+                  - StaticText "idle → chase"
+                - StaticText " khi Mây mang "
+                - strong
+                  - StaticText "≥ 5 đom đóm"
+                - StaticText " và cách ≤ 15 m (kiểm tra mỗi tick); điều kiện mất thì về "
+                - code
+                  - StaticText "idle"
+                - StaticText "."
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "Chạm (XZ ≤ 1.2 m): "
+                - strong
+                  - StaticText "cướp "
+                  - code
+                    - StaticText "min(3, đang mang)"
+                  - StaticText " đom đóm"
+                - StaticText ", chuyển "
+                - code
+                  - StaticText "flee"
+                - StaticText " (bay ra xa Mây 7 m/s trong 240 tick rồi biến mất cùng số đã cướp). Mỗi con chỉ cướp 1 lần."
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "Tỏa Sáng trúng Gió Lạc đang "
+                - code
+                  - StaticText "chase"
+                - StaticText " → nó chuyển "
+                - code
+                  - StaticText "flee"
+                - StaticText " không cướp; trúng lúc "
+                - code
+                  - StaticText "flee"
+                - StaticText " có mang đồ → thả lại toàn bộ đom đóm đã cướp tại chỗ (thành đom đóm rơi), biến mất sau 120 tick."
+              - listitem [level=2]
+                - ListMarker "◦ "
+                - StaticText "Không làm mất Ngọn Lửa; vùng an toàn của đèn không chặn Gió Lạc; bất tử của Mây không ngăn bị cướp."
+          - listitem [level=1]
+            - ListMarker "2. "
+            - strong
+              - StaticText "Bùa Gió"
+            - StaticText ": lá bùa đỏ viền vàng, id "
+            - code
+              - StaticText "C1"
+            - StaticText ", "
+            - code
+              - StaticText "C2"
+            - StaticText ". Nhặt theo luật như đom đóm. Hiệu lực 600 tick (nhặt lại thì làm mới): tốc độ chạy "
+            - strong
+              - StaticText "7.2 m/s"
+            - StaticText " và Lướt không hồi chiêu (vẫn cần nhấn lại nút; nhấn khi đang lướt bị bỏ qua; lướt vẫn 14 m/s trong 12 tick). Bùa xuất hiện lại sau 2700 tick. Vị trí: Đêm 2 (35,0,0); Đêm 3 (30,0,25) và (−30,0,25)."
+          - listitem [level=1]
+            - ListMarker "3. "
+            - strong
+              - StaticText "Chuỗi 3 Đêm"
+            - StaticText ": Menu chính → giới thiệu Đêm (tên đảo, lời Ông Đăng) → chơi → kết quả → Đêm kế tiếp. Thắng Đêm 3 thì hiện màn hình "
+            - strong
+              - StaticText "Bình Minh"
+            - StaticText " với tổng điểm. Thua thì được chơi lại Đêm đó."
+          - listitem [level=1]
+            - ListMarker "4. "
+            - strong
+              - StaticText "Tạm dừng"
+            - StaticText " (Esc/P): logic dừng hoàn toàn. Có Tiếp tục / Chơi lại Đêm / Cài đặt / Về menu."
+          - listitem [level=1]
+            - ListMarker "5. "
+            - strong
+              - StaticText "Cài đặt"
+            - StaticText ": âm lượng và độ nhạy chuột, "
+            - strong
+              - StaticText "được lưu"
+            - StaticText " giữa các lần mở game."
+          - listitem [level=1]
+            - ListMarker "6. "
+            - strong
+              - StaticText "Âm thanh"
+            - StaticText ": nhạc nền đêm và hiệu ứng cho: nhặt, thắp đèn, tỏa sáng, bị đánh, nhảy, lướt, thắng, thua, Bóng Mực xuất hiện, đếm ngược 10 s cuối."
+          - listitem [level=1]
+            - ListMarker "7. "
+            - strong
+              - StaticText "HUD đầy đủ"
+            - StaticText ": Ngọn Lửa (trên trái), đồng hồ "
+            - code
+              - StaticText "mm:ss"
+            - StaticText " (trên giữa, đổi màu đỏ và nhấp nháy khi ≤ 30 s), đèn "
+            - code
+              - StaticText "k/n"
+            - StaticText " và điểm (trên phải), thanh đom đóm 10 ô (dưới giữa), biểu tượng hồi chiêu Lướt và Tỏa Sáng (dưới phải), nhắc \"E — Nạp ánh sáng (x/10)\" khi đứng gần đèn, mũi tên chỉ tới đèn chưa sáng gần nhất khi nó ở ngoài màn hình."
+          - listitem [level=1]
+            - ListMarker "8. "
+            - strong
+              - StaticText "Bảng màu chuẩn"
+            - StaticText " (sai lệch tối đa 10% mỗi kênh RGB; áp dụng cho các thành phần liệt kê, màu cho chi tiết khác do bạn tự chọn):"
+        - table
+          - rowgroup
+            - row
+              - columnheader "DÙNG CHO" [ref=e138]
+              - columnheader "HEX" [ref=e139]
+          - row
+            - cell "Trời đêm / sương" [ref=e119]
+            - cell "#0E1430 / #1B2350" [ref=e120]
+              - code
+                - StaticText "#0E1430"
+              - StaticText " / "
+              - code
+                - StaticText "#1B2350"
+          - row
+            - cell "Cỏ / cát / gỗ / biển mây" [ref=e121]
+            - cell "#2F5D50 / #C9B48A / #6B4A2F / #12384A" [ref=e122]
+              - code
+                - StaticText "#2F5D50"
+              - StaticText " / "
+              - code
+                - StaticText "#C9B48A"
+              - StaticText " / "
+              - code
+                - StaticText "#6B4A2F"
+              - StaticText " / "
+              - code
+                - StaticText "#12384A"
+          - row
+            - cell "Đèn sáng / lõi / đèn tắt" [ref=e123]
+            - cell "#FFB347 / #FFE9B0 / #5B5F6E" [ref=e124]
+              - code
+                - StaticText "#FFB347"
+              - StaticText " / "
+              - code
+                - StaticText "#FFE9B0"
+              - StaticText " / "
+              - code
+                - StaticText "#5B5F6E"
+          - row
+            - cell "Đom đóm lõi / quầng" [ref=e125]
+            - cell "#FFF6C2 / #FFE58A" [ref=e126]
+              - code
+                - StaticText "#FFF6C2"
+              - StaticText " / "
+              - code
+                - StaticText "#FFE58A"
+          - row
+            - cell "Bóng Mực thân / viền / bị choáng" [ref=e127]
+            - cell "#120A1A / #7A3CFF / #3A3450" [ref=e128]
+              - code
+                - StaticText "#120A1A"
+              - StaticText " / "
+              - code
+                - StaticText "#7A3CFF"
+              - StaticText " / "
+              - code
+                - StaticText "#3A3450"
+          - row
+            - cell "Áo Mây / khăn Mây và Bùa Gió" [ref=e129]
+            - cell "#E8E2D0 / #C8102E" [ref=e130]
+              - code
+                - StaticText "#E8E2D0"
+              - StaticText " / "
+              - code
+                - StaticText "#C8102E"
+          - row
+            - cell "Viền vàng, điểm số / Gió Lạc" [ref=e131]
+            - cell "#F2C14E / #8FA3B8" [ref=e132]
+              - code
+                - StaticText "#F2C14E"
+              - StaticText " / "
+              - code
+                - StaticText "#8FA3B8"
+          - row
+            - cell "UI nguy hiểm / chữ UI" [ref=e133]
+            - cell "#FF5A5F / #F5F1E6" [ref=e134]
+              - code
+                - StaticText "#FF5A5F"
+              - StaticText " / "
+              - code
+                - StaticText "#F5F1E6"
+        - paragraph
+          - StaticText "Ánh sáng môi trường tăng theo tiến độ: cường độ = "
+          - code
+            - StaticText "0.15 + 0.55 × (đèn sáng / tổng đèn)"
+          - StaticText "."
+        - heading "Phần 4 — Test Contract v1.1 (thay đổi so với v1.0)" [level=2, ref=e66]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - code
+              - StaticText "contract_version: \"1.1\""
+            - StaticText "; "
+            - code
+              - StaticText "tuning"
+            - StaticText " phải "
+            - strong
+              - StaticText "khớp số chuẩn"
+            - StaticText " ở Phần 1, thêm các khóa "
+            - code
+              - StaticText "dash_speed"
+            - StaticText ", "
+            - code
+              - StaticText "dash_duration_s"
+            - StaticText ", "
+            - code
+              - StaticText "dash_cooldown_s"
+            - StaticText ", "
+            - code
+              - StaticText "night2_duration_s"
+            - StaticText ", "
+            - code
+              - StaticText "night3_duration_s"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - code
+              - StaticText "--night"
+            - StaticText " nhận 1, 2, 3."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Snapshot gốc thêm "
+            - code
+              - StaticText "night"
+            - StaticText ", "
+            - code
+              - StaticText "wind {active, dir_deg}"
+            - StaticText ". "
+            - code
+              - StaticText "player"
+            - StaticText " thêm "
+            - code
+              - StaticText "vel"
+            - StaticText ", "
+            - code
+              - StaticText "grounded"
+            - StaticText ", "
+            - code
+              - StaticText "invuln"
+            - StaticText ", "
+            - code
+              - StaticText "dash_cd_s"
+            - StaticText ", "
+            - code
+              - StaticText "pulse_cd_s"
+            - StaticText ", "
+            - code
+              - StaticText "charm_s"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Snapshot thêm các mảng "
+            - strong
+              - StaticText "bắt buộc"
+            - StaticText ": "
+            - code
+              - StaticText "motes"
+            - StaticText " ("
+            - code
+              - StaticText "id"
+            - StaticText ", "
+            - code
+              - StaticText "pos"
+            - StaticText ", "
+            - code
+              - StaticText "kind"
+            - StaticText " = "
+            - code
+              - StaticText "random"
+            - StaticText "/"
+            - code
+              - StaticText "dropped"
+            - StaticText ", "
+            - code
+              - StaticText "ttl_s"
+            - StaticText "), "
+            - code
+              - StaticText "drifters"
+            - StaticText " ("
+            - code
+              - StaticText "id"
+            - StaticText ", "
+            - code
+              - StaticText "pos"
+            - StaticText ", "
+            - code
+              - StaticText "state"
+            - StaticText ", "
+            - code
+              - StaticText "stolen"
+            - StaticText "), "
+            - code
+              - StaticText "charms"
+            - StaticText " ("
+            - code
+              - StaticText "id"
+            - StaticText ", "
+            - code
+              - StaticText "available"
+            - StaticText ", "
+            - code
+              - StaticText "respawn_s"
+            - StaticText ")."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Scenario thêm "
+            - code
+              - StaticText "player.{invuln_ticks, dash_cd_ticks, pulse_cd_ticks, charm_ticks}"
+            - StaticText ", "
+            - code
+              - StaticText "shades[].{state, state_ticks_left}"
+            - StaticText ", "
+            - code
+              - StaticText "drifters"
+            - StaticText ", "
+            - code
+              - StaticText "charms"
+            - StaticText ", cờ "
+            - code
+              - StaticText "random_drifters"
+            - StaticText ", "
+            - code
+              - StaticText "wind_enabled"
+            - StaticText ". Các mảng "
+            - code
+              - StaticText "drifters"
+            - StaticText ", "
+            - code
+              - StaticText "charms"
+            - StaticText " thay thế danh sách mặc định."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Input thêm "
+            - code
+              - StaticText "dash"
+            - StaticText " và "
+            - code
+              - StaticText "pause"
+            - StaticText " (đều kích hoạt khi chuyển false → true)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Sự kiện mới: "
+            - code
+              - StaticText "dash {}"
+            - StaticText ", "
+            - code
+              - StaticText "charm_picked {charm_id, charm_ticks}"
+            - StaticText ", "
+            - code
+              - StaticText "drifter_steal {drifter_id, amount, carried}"
+            - StaticText ", "
+            - code
+              - StaticText "drifter_drop {drifter_id, amount}"
+            - StaticText ", "
+            - code
+              - StaticText "night_start {night}"
+            - StaticText ", "
+            - code
+              - StaticText "paused {}"
+            - StaticText ", "
+            - code
+              - StaticText "resumed {}"
+            - StaticText ". "
+            - code
+              - StaticText "player_hit"
+            - StaticText " do rơi thêm trường "
+            - code
+              - StaticText "lost"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Từ v1.1, trạng thái Bóng Mực phải dùng đúng tên: "
+            - code
+              - StaticText "spawning"
+            - StaticText ", "
+            - code
+              - StaticText "wander"
+            - StaticText ", "
+            - code
+              - StaticText "chase"
+            - StaticText ", "
+            - code
+              - StaticText "recoil"
+            - StaticText ", "
+            - code
+              - StaticText "stunned"
+            - StaticText "."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Chạy headless một Đêm đầy đủ (tối đa 21.600 tick) phải xong trong "
+            - strong
+              - StaticText "≤ 30 giây"
+            - StaticText "."
+        - heading "Định nghĩa hoàn thành (DoD)" [level=2, ref=e67]
+        - list
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Có bằng chứng game chạy đúng các yêu cầu của phase (định dạng tự chọn)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Mọi test ẩn Phase 1 vẫn đạt khi chạy với số chuẩn (regression)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Tài liệu spec của bạn (tên và vị trí tự chọn) có acceptance criteria cho từng mục ở Phần 3."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "File hướng dẫn agent (AGENTS.md hoặc tương đương) và các skill được cập nhật cho phạm vi mới (lịch sử git phải thể hiện)."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Test của bạn có ít nhất 1 scenario headless cho mỗi tính năng mới."
+          - listitem [level=1]
+            - ListMarker "• "
+            - StaticText "Bản thường đạt ≥ 30 FPS trung bình ở 1280×720."
+      - button "Hỏi trợ giảng" [ref=e15]
+      - contentinfo
+        - StaticText "Đảo Đèn Lồng · Day 12 AI SDLC Lab. Các phase mới xuất hiện ở thanh trên khi giảng viên phát hành."
+  - generic
+    - alert
+    - alert
+    - status
+  - status
+  - status
+  - status
+  - status
+  - status
+  - status
