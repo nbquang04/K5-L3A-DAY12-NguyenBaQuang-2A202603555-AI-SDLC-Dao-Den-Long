@@ -24,7 +24,7 @@ test('jump rising edge only, lands, release allows next jump', () => {
   run(g, 120); assert.equal(g.player.pos[1], 0);
   step(g, { jump: false }); step(g, { jump: true }); assert.ok(g.player.pos[1] > 0);
 });
-test('island edge blocks without hit', () => {
+test('standing exactly on canonical edge is supported', () => {
   const g = game(); run(g, 400, { move: [1, 0] }); near(g.player.pos[0], t.island_radius);
   assert.equal(g.player.flames, t.flames);
 });
@@ -32,23 +32,23 @@ test('pickup exactly at radius; full bag leaves motes; horizontal distance while
   const g = game({ motes: [[t.pickup_radius, 0, 0], [t.pickup_radius + 0.001, 0, 0]] });
   const ev = step(g, { jump: true }); assert.equal(g.player.carried, 1); assert.equal(g.motes.length, 1);
   assert.deepEqual(ev.filter(e => e.name === 'mote_picked')[0].data, { carried: 1 });
-  const full = game({ player: { carried: 8 }, motes: [[0, 0, 0]] }); step(full); assert.equal(full.motes.length, 1);
+  const full = game({ player: { carried: 10 }, motes: [[0, 0, 0]] }); step(full); assert.equal(full.motes.length, 1);
 });
 test('partial deposit retained, hold interact does not retrigger, lit once', () => {
   const g = game({ player: { carried: 2 }, lanterns: [{ id: 'L1', pos: [0, 0, 2] }] });
   step(g, { interact: true }); assert.equal(g.lanterns[0].deposited, 2); assert.equal(g.player.carried, 0);
-  g.player.carried = 5; step(g); assert.equal(g.lanterns[0].deposited, 2);
+  g.player.carried = 10; step(g); assert.equal(g.lanterns[0].deposited, 2);
   step(g, { interact: false }); const ev = step(g, { interact: true });
   assert.deepEqual(ev.map(e => e.name), ['deposit', 'lantern_lit']);
-  assert.equal(g.player.carried, 3); assert.equal(g.score, 100);
+  assert.equal(g.player.carried, 2); assert.equal(g.score, 200);
   step(g, { interact: false }); assert.equal(step(g, { interact: true }).length, 0);
 });
-test('shades chase, contact hit once per immunity and keep motes', () => {
+test('shades chase, contact hit once per immunity and drop half the motes', () => {
   const g = game({ player: { carried: 3 }, shades: [{ id: 'S1', pos: [0, 0, 0] }, { pos: [0, 0, 0] }] });
   const ev = step(g); assert.equal(ev.filter(e => e.name === 'player_hit').length, 1);
-  assert.equal(g.player.flames, 2); assert.equal(g.player.carried, 3);
-  run(g, 119); assert.equal(g.player.flames, 2); step(g); assert.equal(g.player.flames, 1);
-  const chase = game({ shades: [{ pos: [10, 0, 0] }] }); step(chase); near(chase.shades[0].pos[0], 9.95);
+  assert.equal(g.player.flames, 2); assert.equal(g.player.carried, 2);
+  run(g, 89); assert.equal(g.player.flames, 2); step(g); assert.equal(g.player.flames, 1);
+  const chase = game({ shades: [{ pos: [10, 0, 0] }] }); step(chase); near(chase.shades[0].pos[0], 10 - 4/60);
 });
 test('safe light blocks shade movement including shade placed inside safety', () => {
   const g = game({ lanterns: [{ id: 'L1', pos: [0, 0, 0], lit: true }], shades: [{ pos: [0, 0, 0] }] });
@@ -57,23 +57,23 @@ test('safe light blocks shade movement including shade placed inside safety', ()
 });
 test('pulse consumes exact cost, stuns/pushes, no retrigger while held, cooldown', () => {
   const g = game({ player: { carried: 8 }, shades: [{ id: 'ink', pos: [2, 0, 0] }] });
-  const ev = step(g, { pulse: true }); assert.equal(g.player.carried, 6);
+  const ev = step(g, { pulse: true }); assert.equal(g.player.carried, 5);
   assert.deepEqual(ev.find(e => e.name === 'pulse').data, { stunned_ids: ['ink'] });
-  assert.equal(g.shades[0].state, 'stunned'); near(g.shades[0].pos[0], 4); assert.equal(g.score, 20);
-  step(g, { pulse: false }); step(g, { pulse: true }); assert.equal(g.player.carried, 6);
+  assert.equal(g.shades[0].state, 'stunned'); near(g.shades[0].pos[0], 2 + 4/15); assert.equal(g.score, 5);
+  step(g, { pulse: false }); step(g, { pulse: true }); assert.equal(g.player.carried, 5);
   run(g, 180); assert.equal(g.shades[0].state, 'chase');
 });
 test('pulse insufficient and outside radius leave enemy unaffected; zero direction finite', () => {
   const g = game({ player: { carried: 1 }, shades: [{ pos: [2, 0, 0] }] });
   assert.equal(step(g, { pulse: true }).some(e => e.name === 'pulse'), false); assert.equal(g.player.carried, 1);
-  const z = game({ player: { carried: 2 }, shades: [{ pos: [0, 0, 0] }, { pos: [6, 0, 0] }] });
+  const z = game({ player: { carried: 3 }, shades: [{ pos: [0, 0, 0] }, { pos: [6, 0, 0] }] });
   step(z, { pulse: true }); assert.ok(z.shades[0].pos.every(Number.isFinite)); assert.equal(z.shades[1].state, 'chase');
 });
 test('win bonus exact once, terminal freezes; all_lit wins at deadline', () => {
-  const g = game({ player: { carried: 4 }, time_left_s: 1 / 60, lanterns: Array.from({ length: 5 }, (_, i) => ({ id: `L${i + 1}`, lit: i > 0, pos: [0, 0, 0] })) });
-  const ev = step(g, { interact: true }); assert.equal(g.state, 'won'); assert.equal(g.score, 250);
+  const g = game({ player: { carried: 10 }, time_left_s: 1 / 60, lanterns: Array.from({ length: 5 }, (_, i) => ({ id: `L${i + 1}`, lit: i > 0, pos: [0, 0, 0] })) });
+  const ev = step(g, { interact: true }); assert.equal(g.state, 'won'); assert.equal(g.score, 350);
   assert.deepEqual(ev.at(-1).data, { result: 'won', reason: 'all_lit' });
-  assert.equal(step(g).length, 0); assert.equal(g.tick, 1); assert.equal(g.score, 250);
+  assert.equal(step(g).length, 0); assert.equal(g.tick, 1); assert.equal(g.score, 350);
 });
 test('no_flames and dawn losses', () => {
   const g = game({ player: { flames: 1 }, shades: [{ pos: [0, 0, 0] }] });
@@ -87,33 +87,33 @@ test('seed replay and reset create identical snapshots', () => {
 });
 test('input/schema rejects invalid types, duplicate ticks, NaN, unknown lanterns', () => {
   for (const value of [{ frames: [{ tick: 0, move: [2, 0] }] }, { frames: [{ tick: 1 }, { tick: 1 }] }, { frames: [{ tick: 0, jump: 1 }] }, { frames: [{ tick: -1 }] }]) assert.throws(() => validateInputs(value, t));
-  for (const value of [{ player: { pos: [NaN, 0, 0] } }, { lanterns: [{ id: 'L6' }] }, { player: { carried: 9 } }, { shades: [{ id: 'S1', pos: [0, 0, 0] }, { id: 'S1', pos: [0, 0, 0] }] }]) assert.throws(() => validateScenario(value, t));
+  for (const value of [{ player: { pos: [NaN, 0, 0] } }, { lanterns: [{ id: 'L6' }] }, { player: { carried: 11 } }, { shades: [{ id: 'S1', pos: [0, 0, 0] }, { id: 'S1', pos: [0, 0, 0] }] }]) assert.throws(() => validateScenario(value, t));
   assert.doesNotThrow(() => validateInputs({ frames: [{ tick: 0, jump: true }, { tick: 1, jump: false }] }, t));
 });
 test('deposit outside radius fails, tie chooses L1, full scenario deposit becomes lit', () => {
   const g = game({ player: { carried: 8 }, lanterns: [{ id: 'L1', pos: [0, 0, 2.001] }] });
   step(g, { interact: true }); assert.equal(g.player.carried, 8);
-  const tie = game({ player: { carried: 8 }, lanterns: [{ id: 'L1', pos: [1, 0, 0] }, { id: 'L2', pos: [-1, 0, 0] }] });
+  const tie = game({ player: { carried: 10 }, lanterns: [{ id: 'L1', pos: [1, 0, 0] }, { id: 'L2', pos: [-1, 0, 0] }] });
   step(tie, { interact: true }); assert.equal(tie.lanterns[0].lit, true); assert.equal(tie.lanterns[1].lit, false);
-  assert.equal(game({ lanterns: [{ id: 'L1', deposited: 4 }] }).lanterns[0].lit, true);
+  assert.equal(game({ lanterns: [{ id: 'L1', deposited: 10 }] }).lanterns[0].lit, true);
 });
 test('pulse inclusive radius and positive cooldown boundary', () => {
-  const g = game({ player: { carried: 8 }, shades: [{ id: 'edge', pos: [5, 0, 0] }, { id: 'outside', pos: [5.001, 0, 0] }] });
+  const g = game({ player: { carried: 8, invuln_ticks:1000 }, shades: [{ id: 'edge', pos: [5, 0, 0] }, { id: 'outside', pos: [5.001, 0, 0] }] });
   const ev = step(g, { pulse: true }); assert.deepEqual(ev.find(e => e.name === 'pulse').data.stunned_ids, ['edge']);
-  step(g, { pulse: false }); run(g, 58); const later = step(g, { pulse: true });
-  assert.equal(later.some(e => e.name === 'pulse'), true); assert.equal(g.player.carried, 4);
+  step(g, { pulse: false }); run(g, 178); const later = step(g, { pulse: true });
+  assert.equal(later.some(e => e.name === 'pulse'), true); assert.equal(g.player.carried, 2);
 });
 test('safe-radius inclusive protects player; just outside can be hit', () => {
-  const safe = game({ player: { pos: [3, 0, 0] }, lanterns: [{ id: 'L1', lit: true, pos: [0, 0, 0] }], shades: [{ pos: [3.1, 0, 0] }] });
+  const safe = game({ player: { pos: [6, 0, 0] }, lanterns: [{ id: 'L1', lit: true, pos: [0, 0, 0] }], shades: [{ pos: [6.1, 0, 0] }] });
   step(safe); assert.equal(safe.player.flames, 3);
-  const unsafe = game({ player: { pos: [3.001, 0, 0] }, lanterns: [{ id: 'L1', lit: true, pos: [0, 0, 0] }], shades: [{ pos: [3.1, 0, 0] }] });
+  const unsafe = game({ player: { pos: [6.001, 0, 0] }, lanterns: [{ id: 'L1', lit: true, pos: [0, 0, 0] }], shades: [{ pos: [6.1, 0, 0] }] });
   step(unsafe); assert.equal(unsafe.player.flames, 2);
 });
 test('random spawn flags and generated IDs stay deterministic without collisions', () => {
   const off = game(); run(off, 1081); assert.equal(off.motes.length, 0); assert.equal(off.shades.length, 0);
   const on = createGame(t, 9, { random_motes: true, random_shades: true, motes: [], shades: [{ id: 'S1', pos: [25, 0, 0] }], player: { pos: [0, 0, 0] }, lanterns: [{ id: 'L1', lit: true, pos: [0, 0, 0] }] });
-  const ev = run(on, 1080); assert.ok(on.motes.length > 0); assert.equal(on.shades.length, 2);
-  assert.equal(new Set(on.shades.map(s => s.id)).size, 2); assert.ok(ev.some(e => e.name === 'shade_spawned'));
+  const ev = run(on, 1080); assert.ok(on.motes.length > 0); assert.equal(on.shades.length, 4);
+  assert.equal(new Set(on.shades.map(s => s.id)).size, 4); assert.ok(ev.some(e => e.name === 'shade_spawned'));
 });
 test('scenario time override follows exact elapsed formula and coordinates alone round', () => {
   const g = game({ time_left_s: 300, player: { pos: [0.12345, 0, 0] } }); step(g);

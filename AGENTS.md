@@ -4,6 +4,7 @@
 - Nguồn yêu cầu: thông báo giảng viên và PRD/ticket đã phát hành trên lab board. Phân biệt yêu cầu gốc, bản người dùng cung cấp và giả định tự chọn. Không đoán nội dung ticket chưa phát hành.
 - Quy trình: constitution → specify → clarify nếu cần → plan → tasks → analyze → implement → kiểm chứng → đánh giá → tag. Mỗi phase là một thư mục specs riêng.
 - Phase 1 đã triển khai bằng Node ES modules + Three.js; đọc docs/STATUS.md và báo cáo Verify mới nhất trước khi kết luận. Không dùng trạng thái phiên cũ thay bằng chứng hiện tại.
+- Phase 2 dùng Ticket-02/contract 1.1 tại specs/002-three-islands: ba bản đồ chuẩn, lướt/rơi, Gió Lạc/Bùa Gió/gió, campaign/pause/settings/audio/HUD. Đọc requirements.md để biết luật/test bị thay; dùng skill dao-verify cho kiểm chứng, giữ nguyên proof/tag phase-1.
 - Spec Kit 1.4.3 đã cài cho dự án tại .agents/skills; gọi $speckit-specify, $speckit-plan… trong Codex. CLI riêng: `./scripts/speckit.ps1`. Xem docs/SPECKIT.md; không chạy lại init để bắt đầu mỗi phase.
 - Ghi lựa chọn kỹ thuật trong plan.md; giữ spec.md tập trung vào hành vi và nghiệm thu. Kiểm tra Test Contract gốc trước khi chốt schema hay CLI.
 - Logic mô phỏng dùng chung cho 3D và headless; không phụ thuộc renderer, DOM, cửa sổ hoặc GPU. Dùng tick cố định và bộ sinh ngẫu nhiên theo seed.

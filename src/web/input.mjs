@@ -6,5 +6,6 @@ export function keyboardInput(keys, yaw) {
       (keys.has('KeyW') || keys.has('ArrowUp') ? 1 : 0) - (keys.has('KeyS') || keys.has('ArrowDown') ? 1 : 0)],
     cam_yaw_deg: yaw,
     jump: keys.has('Space'), interact: keys.has('KeyE'), pulse: keys.has('KeyQ'),
+    dash: keys.has('ShiftLeft') || keys.has('ShiftRight'),
   };
 }

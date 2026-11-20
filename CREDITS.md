@@ -10,6 +10,7 @@
   các skill/template/script được giữ trong repo theo yêu cầu harness của lab.
 - Font: Georgia/Arial/Times New Roman có sẵn trong hệ thống, không đóng gói font.
 - Không có âm thanh trong Phase 1. Không sử dụng thương hiệu hoặc nhân vật game khác.
+- Phase 2: nhạc và hiệu ứng âm thanh được tổng hợp procedural bằng Web Audio trong src/web/audio.mjs, không dùng audio/nhạc bên ngoài. Gió Lạc, Bùa Gió và bản đồ ba Đêm theo Ticket-02 của lab.
 
 AI sử dụng: Codex để đặc tả, lập kế hoạch, viết code, test và tài liệu;
 agent runtime_research hỗ trợ nghiên cứu và rà thiết kế kỹ thuật. Nhật ký ở docs/notes/ai-log.md.

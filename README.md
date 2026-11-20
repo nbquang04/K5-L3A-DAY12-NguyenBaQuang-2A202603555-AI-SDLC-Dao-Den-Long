@@ -1,9 +1,9 @@
-# Đảo Đèn Lồng — Phase 1
+# Đảo Đèn Lồng — Phase 2 · Ba Đêm
 
-Game 3D góc nhìn thứ ba: dẫn Mây gom đom đóm, thắp năm ngọn đèn trên Đảo Bến và
-tránh Bóng Mực. Cảnh procedural, bản web và CLI headless dùng cùng core fixed 60 Hz.
+Game 3D góc nhìn thứ ba: dẫn Mây qua Đảo Bến, Đảo Cau và Đảo Chuông, thắp 18 ngọn đèn,
+tránh Bóng Mực và Gió Lạc. Cảnh/âm thanh procedural; bản web và CLI dùng chung core 60 Hz.
 
-[Bằng chứng và báo cáo](docs/proof/phase-1/report.md) · [Đặc tả](specs/001-night-one/spec.md) · [Quy trình Verify](docs/VERIFICATION.md)
+[Báo cáo Phase 2](docs/proof/phase-2/report.md) · [Đặc tả](specs/002-three-islands/spec.md) · [Verify](docs/VERIFICATION.md) · [Bản Phase 1](docs/proof/phase-1/report.md)
 
 ## Chạy game
 
@@ -27,22 +27,26 @@ có CA riêng, dùng cấu hình CA hệ thống phù hợp, không tắt kiểm
 | WASD hoặc mũi tên | Di chuyển theo camera |
 | Kéo chuột trên cảnh | Xoay camera |
 | Space | Nhảy, cần nhả để nhảy tiếp |
-| E | Nạp đèn gần trong 2 m; mỗi đèn cần 4 |
-| Q | Tỏa sáng, tốn 2 đom đóm, cooldown 1 giây |
-| Esc hoặc nút Ⅱ | Tạm dừng/tiếp tục bản chơi |
+| E | Nạp đèn gần trong 2 m; mỗi đèn cần 10 |
+| Q | Tỏa sáng, tốn 3 đom đóm, cooldown 3 giây |
+| Shift | Lướt 14 m/s trong 0,2 giây, hồi 1,5 giây |
+| Esc/P hoặc nút Ⅱ | Tạm dừng/tiếp tục; chơi lại/cài đặt/về menu |
 
-Mây có 3 lửa, mang tối đa 8 đom đóm, chạy 6 m/s. Đêm dài 180 giây.
-Bóng Mực đuổi 3 m/s; chạm trong 0,8 m làm mất một lửa, miễn nhiễm 2 giây.
-Không rơi khỏi đảo, không đánh rơi đom đóm khi hit (`fall_enabled=false`, `hit_drop_ratio=0`).
-Đèn sáng tạo vùng an toàn 3 m mà Bóng Mực không vào được. Pulse bán kính 5 m,
-choáng 3 giây, đẩy 2 m. Nhặt/nạp/pulse đều dùng khoảng cách XZ, kể cả khi nhảy.
+Mây có 3 lửa, mang tối đa 10 đom đóm, chạy 6 m/s. Ba Đêm dài 300/330/360 giây.
+Bóng Mực đuổi 4 m/s (Đêm 3: 4,5), hit làm rơi nửa túi và miễn nhiễm 90 tick.
+Ra ngoài nền sẽ rơi; dưới Y=-10 mất một lửa và toàn bộ đom đóm, hồi sinh sau 60 tick.
+Đèn sáng tạo vùng an toàn 6 m. Pulse bán kính 3D 5 m, choáng 120 tick, đẩy 4 m trong 15 tick.
+Nhặt trong XZ ≤1 m và chênh cao ≤1,5 m. Đảo Cau có cầu/bục nhảy; Đảo Chuông có tầng/dốc/gió.
+Bùa Gió tăng chạy lên 7,2 m/s và bỏ hồi lướt trong 10 giây. Gió Lạc cướp tối đa 3 đom đóm;
+pulse khi nó mang đồ để thu hồi. Cài đặt âm lượng/độ nhạy chuột được lưu trên trình duyệt.
 
-Thắp năm đèn để thắng; hết lửa hoặc hết giờ thì thua. Chơi lại tạo session mới.
-Mất focus/tab ẩn tự tạm dừng bản chơi, headless không có pause trong Phase 1.
+Thắp đủ 5/6/7 đèn để thắng từng Đêm rồi bấm Đêm kế tiếp; thắng Đêm 3 tới Bình Minh.
+Hết lửa ưu tiên thua; nếu còn sống, đủ đèn thắng kể cả đúng hạn. Tab ẩn tự pause.
+Headless hỗ trợ pause: tick vẫn tăng, sim_tick/thời gian/tất cả timer đứng yên.
 
 ### Điểm
 
-+10 mỗi đom đóm, +100 mỗi đèn, +20 mỗi địch bị pulse làm choáng.
++10 mỗi đom đóm **nạp**, +100 mỗi đèn, +5 mỗi địch trúng pulse.
 Khi thắng: +2 × floor(số giây còn lại) +50 × lửa còn lại. Dựng scenario không cộng điểm.
 Nguồn cấu hình duy nhất: [game.contract.json](game.contract.json).
 
@@ -52,16 +56,15 @@ Nguồn cấu hình duy nhất: [game.contract.json](game.contract.json).
 npm test
 npm run verify
 node src/headless/cli.mjs --seed 42 --night 1 --ticks 600 --out artifacts/run.jsonl
-node src/headless/cli.mjs --seed 42 --night 1 --scenario tests/scenarios/win.json --inputs tests/scenarios/interact.json --ticks 60 --snapshot-every 1 --out artifacts/win.jsonl
+node src/headless/cli.mjs --seed 42 --night 2 --scenario tests/scenarios/phase2/pad.json --ticks 90 --snapshot-every 1 --out artifacts/pad.jsonl
 ```
 
 CLI ghi JSONL vào --out, snapshot mặc định mỗi 10 tick từ tick 0; input tick k tạo
 state/event k+1. Thành công exit 0; inputs/scenario sai định dạng exit 2 và stderr.
-Tất cả cờ/schema: [headless contract](specs/001-night-one/contracts/headless.md).
+Tất cả cờ/schema: [headless contract 1.1](specs/002-three-islands/contracts/headless.md). --night nhận 1, 2, 3.
 
-`npm run verify` assert ba kết quả và tạo input chơi trọn lượt mặc định, chạy hai
-CLI rồi so từng byte. Đây là route tự động thực hiện luật bình thường, không phải
-output viết tay. Bản chơi đã kiểm tra riêng trong browser, gồm parity với core/CLI.
+`npm run verify` assert 10 scenario cho tính năng mới và kết quả ba Đêm, chạy hai
+CLI so từng byte và đo 21.600 tick. Browser được kiểm tra riêng, gồm parity core/CLI.
 
 Toàn bộ Verify tự động, cần thêm Python >=3.10 và Docker Linux:
 
@@ -70,7 +73,7 @@ python scripts/verify.py --config verification/checks.json
 ```
 
 Runner trả nonzero nếu test/build/scenario/Linux thất bại. Report có raw log và
-trạng thái; không thay thế việc review ảnh/camera/HUD. Xem [ma trận](specs/001-night-one/verification.md).
+trạng thái; không thay thế việc review ảnh/camera/HUD. Xem [ma trận](specs/002-three-islands/verification.md).
 
 ## Docker Linux
 

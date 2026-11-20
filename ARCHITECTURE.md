@@ -130,6 +130,8 @@ Xem [chiến lược Verify](docs/VERIFICATION.md) và [ma trận Phase 1](specs
 
 ## Mapping triển khai Phase 1
 
+Phase 2 mở rộng mapping: src/core/maps.mjs là nguồn hình học chung cho nền/dốc/vách/bục; simulation tách tick/sim_tick và thêm dash/fall/wind/drifter/charm. src/web/audio.mjs tạo âm thanh procedural, localStorage chỉ giữ volume/sensitivity. Campaign lưu tổng các Đêm thắng trong presentation; mỗi Đêm có core session mới. Contract1.1 không dùng luật renderer. Source/plan hiện hành tại specs/002-three-islands; test luật thay thế có bảng requirements.md. scripts/check-phase2.mjs/Linux/browser ghi proof/phase-2; không ghi đè proof/phase-1.
+
 - src/core/validation.mjs: schema inputs/scenario; DataError phân biệt lỗi dữ liệu.
 - src/core/simulation.mjs: createGame/step/snapshot, RNG, tick, luật và union safe circles.
 - src/headless/cli.mjs: cờ CLI, file I/O, JSONL và exit code; không import Three.js.

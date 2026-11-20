@@ -17,7 +17,7 @@ function parse(args) {
     if (raw === undefined || !/^-?\d+$/.test(String(raw)) || !Number.isSafeInteger(n)) throw new DataError(`${name} must be an integer`);
     result[name] = n;
   }
-  if (result.night !== 1 || result.ticks < 0 || result['snapshot-every'] <= 0 || !result.out) throw new DataError('Require --night 1 --ticks >=0 --out path; snapshot-every >0');
+  if (![1,2,3].includes(result.night) || result.ticks < 0 || result['snapshot-every'] <= 0 || !result.out) throw new DataError('Require --night 1/2/3 --ticks >=0 --out path; snapshot-every >0');
   return result;
 }
 async function json(path) {
@@ -27,11 +27,11 @@ async function json(path) {
 try {
   const args = parse(process.argv.slice(2));
   const { tuning } = await json(new URL('../../game.contract.json', import.meta.url));
-  const scenario = args.scenario ? validateScenario(await json(args.scenario), tuning) : {};
+  const scenario = args.scenario ? validateScenario(await json(args.scenario), tuning, args.night) : {};
   const inputs = args.inputs ? validateInputs(await json(args.inputs)) : { frames: [] };
-  const g = createGame(tuning, args.seed, scenario); const lines = [JSON.stringify(snapshot(g))];
+  const g = createGame(tuning, args.seed, scenario, args.night); const lines = [JSON.stringify(snapshot(g))];
   let cursor = 0;
-  for (let k = 0; k < args.ticks && g.state === 'playing'; k++) {
+  for (let k = 0; k < args.ticks && !['won','lost'].includes(g.state); k++) {
     let patch = {};
     if (inputs.frames[cursor]?.tick === k) { const { tick, ...frame } = inputs.frames[cursor++]; patch = frame; }
     for (const event of step(g, patch)) lines.push(JSON.stringify(event));

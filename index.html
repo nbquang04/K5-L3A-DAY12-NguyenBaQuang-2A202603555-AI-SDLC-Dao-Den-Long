@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#101f2b"><title>Đảo Đèn Lồng · Đêm 1</title>
+  <meta name="theme-color" content="#0e1430"><title>Đảo Đèn Lồng · Ba Đêm</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='10' y='7' width='20' height='27' rx='9' fill='%23ffc66b'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="/src/web/style.css">
   <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
@@ -10,29 +10,36 @@
 <body>
   <canvas id="world" aria-label="Đảo Bến 3D, điều khiển bằng WASD, Space, E và Q" tabindex="0"></canvas>
   <div id="hit-flash" aria-hidden="true"></div>
-  <header class="topbar"><div class="brand"><span class="brand-mark">◈</span><div>ĐẢO ĐÈN LỒNG<small>ĐÊM 01 <span>—</span> ĐẢO BẾN</small></div></div><span class="edition">MỘT ĐỐM SÁNG. MỘT NIỀM HY VỌNG.</span></header>
+  <header class="topbar"><div class="brand"><span class="brand-mark">◈</span><div>ĐẢO ĐÈN LỒNG<small id="night-label">BA ĐÊM · MỘT BÌNH MINH</small></div></div><span class="edition">MỘT ĐỐM SÁNG. MỘT NIỀM HY VỌNG.</span></header>
   <main>
     <section id="welcome" class="panel intro" aria-labelledby="title">
       <p class="eyebrow">CHUYỆN KỂ GIỮA BIỂN MÂY</p>
       <h1 id="title">Giữ một<br>đốm <em>sáng.</em></h1>
-      <p class="story">Sương đen đã phủ xuống Đảo Bến. Theo chân Mây, gom những chú đom đóm và thắp lại năm ngọn đèn trước bình minh.</p>
+      <p class="story">Sương đen phủ xuống biển mây. Theo chân Mây qua Đảo Bến, Đảo Cau và Đảo Chuông. Gom đom đóm, thắp những ngọn đèn và đưa bình minh trở lại.</p>
       <div class="mission"><span>01</span><p>Gom đom đóm. Thắp đèn.<br><strong>Đừng để bóng tối bắt kịp.</strong></p></div>
       <button id="start" class="primary">Bắt đầu đêm nay <span>↗</span></button>
-      <p class="intro-foot">3 LỬA <i>·</i> 5 NGỌN ĐÈN <i>·</i> 180 GIÂY</p>
+      <button id="menu-settings" class="secondary">Cài đặt</button>
+      <p class="intro-foot">3 ĐÊM <i>·</i> 18 NGỌN ĐÈN <i>·</i> MỘT HÀNH TRÌNH</p>
     </section>
     <section id="hud" hidden aria-label="Thông tin lượt chơi">
-      <div class="hud-top"><div class="hud-stat flames"><small>LỬA CỦA MÂY</small><strong id="flames">● ● ●</strong></div><div class="hud-stat"><small>ĐOM ĐÓM</small><strong><span id="carried">0</span><b>/ 8</b></strong></div><div class="hud-stat"><small>ĐÈN ĐÃ THẮP</small><strong><span id="lit">0</span><b>/ 5</b></strong></div><div class="hud-stat time"><small>TRƯỚC BÌNH MINH</small><strong id="timer">03:00</strong></div></div>
+      <div class="hud-top"><div class="hud-stat flames"><small>LỬA CỦA MÂY</small><strong id="flames">● ● ●</strong></div><div class="hud-stat bag"><small>ĐOM ĐÓM</small><strong><span id="carried">0</span><b>/ 10</b></strong></div><div class="hud-stat lamps"><small>ĐÈN ĐÃ THẮP</small><strong><span id="lit">0</span><b>/ <span id="lamp-total">5</span></b></strong></div><div class="hud-stat time"><small>TRƯỚC BÌNH MINH</small><strong id="timer">05:00</strong></div></div>
       <div class="progress" id="lantern-progress" aria-label="Tiến độ năm đèn"></div>
       <div class="score"><small>ĐIỂM ÁNH SÁNG</small><strong id="score">0</strong></div>
       <div id="prompt" class="prompt" role="status"></div>
       <div id="toast" class="toast" role="status"></div>
       <button id="pause" class="pause-button" aria-label="Tạm dừng">Ⅱ</button>
+      <div id="mote-slots" aria-label="Túi đom đóm 10 ô"></div>
+      <div class="cooldowns"><span>SHIFT · LƯỚT <b id="dash-cd"></b></span><span>Q · TỎA SÁNG <b id="pulse-cd"></b></span></div>
+      <div id="target-arrow" hidden aria-label="Hướng đèn gần nhất"></div><p id="wind-alert"></p>
     </section>
-    <section id="paused" class="panel result" hidden><p class="eyebrow">ĐÊM VẪN CÒN Ở ĐÂY</p><h2>Một chút<br><em>nghỉ chân.</em></h2><p>Ánh sáng sẽ đợi bạn.</p><button id="resume" class="primary">Tiếp tục <span>→</span></button></section>
-    <section id="result" class="panel result" hidden aria-labelledby="result-title"><p class="eyebrow" id="result-kicker"></p><h2 id="result-title"></h2><p id="result-story"></p><div class="result-score"><small>ĐIỂM ÁNH SÁNG</small><strong id="final-score"></strong></div><button id="restart" class="primary">Thắp một đêm mới <span>↻</span></button></section>
+    <section id="night-intro" class="panel result" hidden><p class="eyebrow">LỜI ÔNG ĐĂNG</p><h2 id="intro-name"></h2><p id="intro-story"></p><button id="enter-night" class="primary">Bước vào đêm <span>→</span></button></section>
+    <section id="paused" class="panel result" hidden><p class="eyebrow">ĐÊM VẪN CÒN Ở ĐÂY</p><h2>Một chút<br><em>nghỉ chân.</em></h2><p>Ánh sáng sẽ đợi bạn.</p><button id="resume" class="primary">Tiếp tục <span>→</span></button><button id="retry-night" class="secondary">Chơi lại Đêm</button><button id="pause-settings" class="secondary">Cài đặt</button><button id="to-menu" class="secondary">Về menu</button></section>
+    <section id="settings" class="panel result" hidden><p class="eyebrow">THEO CÁCH CỦA BẠN</p><h2>Cài <em>đặt.</em></h2><label>Âm lượng <input id="volume" type="range" min="0" max="1" step="0.05"></label><label>Độ nhạy chuột <input id="sensitivity" type="range" min="0.05" max="1" step="0.05"></label><button id="close-settings" class="primary">Xong <span>✓</span></button></section>
+    <section id="result" class="panel result" hidden aria-labelledby="result-title"><p class="eyebrow" id="result-kicker"></p><h2 id="result-title"></h2><p id="result-story"></p><div class="result-score"><small>ĐIỂM ÁNH SÁNG</small><strong id="final-score"></strong></div><button id="next-night" class="primary" hidden>Đêm kế tiếp <span>→</span></button><button id="restart" class="secondary">Chơi lại Đêm này</button></section>
     <section id="error" class="panel result" hidden><h2>Chưa mở được đảo</h2><p id="error-text"></p><button onclick="location.reload()" class="primary">Thử lại</button></section>
   </main>
-  <footer class="controls"><span><kbd>W A S D</kbd> Di chuyển</span><span><kbd>SPACE</kbd> Nhảy</span><span><kbd>E</kbd> Nạp đèn</span><span><kbd>Q</kbd> Tỏa sáng <b>−2</b></span><span class="camera-help">KÉO CHUỘT ĐỂ XOAY GÓC NHÌN</span></footer>
+  <div id="wind-leaves" hidden aria-hidden="true">❧　　❧　　　　❧　　❧　　　❧</div>
+  <footer class="controls"><span><kbd>W A S D</kbd> Di chuyển</span><span><kbd>SPACE</kbd> Nhảy</span><span><kbd>SHIFT</kbd> Lướt</span><span><kbd>E</kbd> Nạp đèn</span><span><kbd>Q</kbd> Tỏa sáng <b>−3</b></span><span class="camera-help">KÉO CHUỘT XOAY · ESC/P TẠM DỪNG</span></footer>
   <script type="module" src="/src/web/main.mjs"></script>
 </body>
 </html>

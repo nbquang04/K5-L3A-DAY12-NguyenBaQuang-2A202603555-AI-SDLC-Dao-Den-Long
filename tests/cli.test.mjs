@@ -38,5 +38,5 @@ test('invalid JSON/schema/CLI return nonzero, data errors 2 and stderr', () => f
   }
   writeFileSync(p, JSON.stringify({ lanterns: [{ id: 'invalid' }] }));
   assert.equal(execute(['--night', '1', '--ticks', '2', '--scenario', p, '--out', out]).status, 2);
-  assert.notEqual(execute(['--night', '2', '--ticks', '1', '--out', out]).status, 0);
+  assert.notEqual(execute(['--night', '4', '--ticks', '1', '--out', out]).status, 0);
 }));
