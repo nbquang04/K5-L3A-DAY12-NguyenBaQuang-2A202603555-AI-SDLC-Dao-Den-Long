@@ -5,7 +5,7 @@ import {spawnSync} from 'node:child_process';
 import {resolve} from 'node:path';
 import assert from 'node:assert/strict';
 const t=JSON.parse(readFileSync('game.contract.json')).tuning;
-const proof=resolve(process.env.PROOF_DIR??'docs/proof/phase-2');mkdirSync(proof,{recursive:true});
+const proof=resolve(process.env.PROOF_DIR??'docs/proof/phase-3/regression');mkdirSync(proof,{recursive:true});
 const dir=resolve('tests/scenarios/phase2');mkdirSync(dir,{recursive:true});
 const empty={random_motes:false,random_shades:false,random_drifters:false,wind_enabled:false,motes:[],shades:[],drifters:[],charms:[]};
 const cases=[
@@ -16,7 +16,7 @@ const cases=[
  {name:'charm',night:2,scenario:{...empty,charms:[{id:'C1',pos:[0,0,0]}]},frames:[{tick:1,move:[0,1]}],ticks:2,check:s=>{assert.equal(s.player.pos[2],.12);assert.equal(s.player.charm_s,599/60);}},
  {name:'wind',night:3,scenario:{...empty,wind_enabled:true},frames:[],ticks:1800,check:s=>assert.equal(s.wind.active,true)},
  {name:'pause',night:3,scenario:{...empty,player:{charm_ticks:600}},frames:[{tick:0,pause:true},{tick:10,pause:false},{tick:11,pause:true}],ticks:12,check:s=>{assert.equal(s.sim_tick,1);assert.equal(s.player.charm_s,599/60);}},
- ...[1,2,3].map(night=>({name:`win-night${night}`,night,scenario:{...empty,time_left_s:1/60,lanterns:mapFor(night).lanterns.map((p,i)=>({id:`L${i+1}`,lit:true}))},frames:[],ticks:1,check:s=>{assert.equal(s.state,'won');assert.equal(s.score,150);}})),
+ ...[1,2,3].map(night=>({name:`win-night${night}`,night,scenario:{...empty,time_left_s:1/60,lanterns:mapFor(night).lanterns.map((p,i)=>({id:`L${i+1}`,lit:true}))},frames:[],ticks:1,check:s=>{assert.equal(s.state,'won');assert.equal(s.score,(night+4)*149+150);}})),
 ];
 const results=[];
 for(const c of cases){const scenarioFile=`${dir}/${c.name}.json`,inputsFile=`${dir}/${c.name}.inputs.json`;writeFileSync(scenarioFile,JSON.stringify(c.scenario,null,2)+'\n');writeFileSync(inputsFile,JSON.stringify({frames:c.frames},null,2)+'\n');let bytes;

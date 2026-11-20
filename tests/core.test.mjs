@@ -40,8 +40,8 @@ test('partial deposit retained, hold interact does not retrigger, lit once', () 
   g.player.carried = 10; step(g); assert.equal(g.lanterns[0].deposited, 2);
   step(g, { interact: false }); const ev = step(g, { interact: true });
   assert.deepEqual(ev.map(e => e.name), ['deposit', 'lantern_lit']);
-  assert.equal(g.player.carried, 2); assert.equal(g.score, 200);
-  step(g, { interact: false }); assert.equal(step(g, { interact: true }).length, 0);
+  assert.equal(g.player.carried, 2); assert.equal(g.score, 150);
+  step(g, { interact: false }); assert.equal(step(g, { interact: true }).find(e=>e.name==='refuel').data.amount, 1);
 });
 test('shades chase, contact hit once per immunity and drop half the motes', () => {
   const g = game({ player: { carried: 3 }, shades: [{ id: 'S1', pos: [0, 0, 0] }, { pos: [0, 0, 0] }] });
@@ -69,11 +69,11 @@ test('pulse insufficient and outside radius leave enemy unaffected; zero directi
   const z = game({ player: { carried: 3 }, shades: [{ pos: [0, 0, 0] }, { pos: [6, 0, 0] }] });
   step(z, { pulse: true }); assert.ok(z.shades[0].pos.every(Number.isFinite)); assert.equal(z.shades[1].state, 'chase');
 });
-test('win bonus exact once, terminal freezes; all_lit wins at deadline', () => {
+test('dawn fuel bonus exact once, terminal freezes; enough lights at deadline', () => {
   const g = game({ player: { carried: 10 }, time_left_s: 1 / 60, lanterns: Array.from({ length: 5 }, (_, i) => ({ id: `L${i + 1}`, lit: i > 0, pos: [0, 0, 0] })) });
-  const ev = step(g, { interact: true }); assert.equal(g.state, 'won'); assert.equal(g.score, 350);
-  assert.deepEqual(ev.at(-1).data, { result: 'won', reason: 'all_lit' });
-  assert.equal(step(g).length, 0); assert.equal(g.tick, 1); assert.equal(g.score, 350);
+  const ev = step(g, { interact: true }); assert.equal(g.state, 'won'); assert.equal(g.score, 150 + 150 + 4*149 + 150);
+  assert.deepEqual(ev.at(-1).data, { result: 'won', reason: 'dawn_survived' });
+  assert.equal(step(g).length, 0); assert.equal(g.tick, 1); assert.equal(g.score, 150 + 150 + 4*149 + 150);
 });
 test('no_flames and dawn losses', () => {
   const g = game({ player: { flames: 1 }, shades: [{ pos: [0, 0, 0] }] });

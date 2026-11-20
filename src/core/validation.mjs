@@ -31,10 +31,11 @@ export function validateInputs(value) {
 export function validateScenario(s, t, night = 1) {
   keys(s, ['player', 'random_motes', 'random_shades', 'random_drifters', 'wind_enabled', 'motes', 'shades', 'lanterns', 'time_left_s', 'drifters', 'charms'], 'scenario');
   if ('player' in s) {
-    keys(s.player, ['pos', 'carried', 'flames', 'invuln_ticks', 'dash_cd_ticks', 'pulse_cd_ticks', 'charm_ticks'], 'player');
+    keys(s.player, ['pos', 'carried', 'flames', 'invuln_ticks', 'dash_cd_ticks', 'pulse_cd_ticks', 'charm_ticks', 'successful_lights'], 'player');
+    if ('successful_lights' in s.player) number(s.player.successful_lights,'successful_lights',0,Number.MAX_SAFE_INTEGER,true);
     for (const k of ['invuln_ticks', 'dash_cd_ticks', 'pulse_cd_ticks', 'charm_ticks']) if(k in s.player) number(s.player[k],k,0,Number.MAX_SAFE_INTEGER,true);
     if ('pos' in s.player) vector(s.player.pos, 3, 'player.pos');
-    if ('carried' in s.player) number(s.player.carried, 'player.carried', 0, t.carry_capacity, true);
+    if ('carried' in s.player) number(s.player.carried, 'player.carried', 0, Math.min(t.capacity_max,t.carry_capacity+2*(s.player.successful_lights??0)), true);
     if ('flames' in s.player) number(s.player.flames, 'player.flames', 0, t.flames, true);
   }
   for (const key of ['random_motes', 'random_shades', 'random_drifters', 'wind_enabled']) if (key in s) boolean(s[key], key);
@@ -43,8 +44,9 @@ export function validateScenario(s, t, night = 1) {
   if ('shades' in s) {
     array(s.shades, 'shades'); const ids = new Set();
     for (const shade of s.shades) {
-      keys(shade, ['id', 'pos', 'state', 'state_ticks_left'], 'shade'); vector(shade.pos, 3, 'shade.pos');
-      if('state' in shade && !['spawning','wander','chase','recoil','stunned'].includes(shade.state)) fail('invalid shade.state');
+      keys(shade, ['id', 'pos', 'state', 'state_ticks_left', 'target_lantern_id'], 'shade'); vector(shade.pos, 3, 'shade.pos');
+      if('state' in shade && !['spawning','wander','chase','recoil','stunned','drain'].includes(shade.state)) fail('invalid shade.state');
+      if('target_lantern_id' in shade && !Array.from({length:night+4},(_,i)=>`L${i+1}`).includes(shade.target_lantern_id)) fail('invalid shade.target_lantern_id');
       if('state_ticks_left' in shade) number(shade.state_ticks_left,'state_ticks_left',0,Number.MAX_SAFE_INTEGER,true);
       if ('id' in shade) {
         if (typeof shade.id !== 'string' || !shade.id.length || ids.has(shade.id)) fail('shade.id must be unique nonempty string');
@@ -55,12 +57,15 @@ export function validateScenario(s, t, night = 1) {
   if ('lanterns' in s) {
     array(s.lanterns, 'lanterns'); const ids = new Set();
     for (const l of s.lanterns) {
-      keys(l, ['id', 'pos', 'deposited', 'lit'], 'lantern');
+      keys(l, ['id', 'pos', 'deposited', 'lit', 'fuel', 'ever_lit'], 'lantern');
       if (!Array.from({length:night+4},(_,i)=>`L${i+1}`).includes(l.id) || ids.has(l.id)) fail('lantern.id must be unique and valid for night');
       ids.add(l.id);
       if ('pos' in l) vector(l.pos, 3, 'lantern.pos');
       if ('deposited' in l) number(l.deposited, 'lantern.deposited', 0, t.lantern_cost, true);
       if ('lit' in l) boolean(l.lit, 'lantern.lit');
+      if ('fuel' in l) number(l.fuel,'lantern.fuel',0,t.fuel_max);
+      if ('ever_lit' in l) boolean(l.ever_lit,'lantern.ever_lit');
+      if (!l.lit&&l.ever_lit&&'deposited' in l) number(l.deposited,'relight deposited',0,t.relight_cost,true);
     }
   }
   for(const name of ['drifters','charms']) if(name in s){

@@ -32,7 +32,7 @@ test('fall loses once, waits60, resets velocity and grants90 invulnerability',()
 test('pickup height/capacity, deposit scores rather than pickup, partial retained',()=>{
  const g=game({motes:[[0,0,0],[0,2,0]],lanterns:[{id:'L1',pos:[0,0,0],deposited:8}]});
  step(g);assert.equal(g.player.carried,1);assert.equal(g.score,0);step(g,{interact:true});
- assert.equal(g.lanterns[0].deposited,9);assert.equal(g.score,10);assert.equal(g.motes.length,1);
+ assert.equal(g.lanterns[0].deposited,9);assert.equal(g.score,5);assert.equal(g.motes.length,1);
 });
 test('pulse uses3D radius, stun120 push4 over15ticks and costs3',()=>{
  const g=game({player:{carried:3},shades:[{id:'S1',pos:[2,0,0]},{id:'S2',pos:[0,8,0]}]});

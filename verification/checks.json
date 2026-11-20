@@ -29,7 +29,8 @@
         "tests/core.test.mjs",
         "tests/cli.test.mjs",
         "tests/input.test.mjs",
-        "tests/phase2.test.mjs"
+        "tests/phase2.test.mjs",
+        "tests/phase3.test.mjs"
       ],
       "timeout_seconds": 120
     },
@@ -45,7 +46,7 @@
       ],
       "command": [
         "node",
-        "scripts/check-phase2.mjs"
+        "scripts/check-phase3.mjs"
       ],
       "timeout_seconds": 120
     },

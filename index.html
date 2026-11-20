@@ -15,14 +15,15 @@
     <section id="welcome" class="panel intro" aria-labelledby="title">
       <p class="eyebrow">CHUYỆN KỂ GIỮA BIỂN MÂY</p>
       <h1 id="title">Giữ một<br>đốm <em>sáng.</em></h1>
-      <p class="story">Sương đen phủ xuống biển mây. Theo chân Mây qua Đảo Bến, Đảo Cau và Đảo Chuông. Gom đom đóm, thắp những ngọn đèn và đưa bình minh trở lại.</p>
-      <div class="mission"><span>01</span><p>Gom đom đóm. Thắp đèn.<br><strong>Đừng để bóng tối bắt kịp.</strong></p></div>
+      <p class="story">Sương đen phủ xuống biển mây. Theo chân Mây qua ba hòn đảo, châm dầu cho những ngọn đèn và giữ đảo sáng đến bình minh.</p>
+      <div class="mission"><span>01</span><p>Gom đom đóm. Giữ đèn sáng.<br><strong>Đèn có thể cạn dầu. Bóng Mực đang đợi.</strong></p></div>
       <button id="start" class="primary">Bắt đầu đêm nay <span>↗</span></button>
       <button id="menu-settings" class="secondary">Cài đặt</button>
       <p class="intro-foot">3 ĐÊM <i>·</i> 18 NGỌN ĐÈN <i>·</i> MỘT HÀNH TRÌNH</p>
     </section>
     <section id="hud" hidden aria-label="Thông tin lượt chơi">
-      <div class="hud-top"><div class="hud-stat flames"><small>LỬA CỦA MÂY</small><strong id="flames">● ● ●</strong></div><div class="hud-stat bag"><small>ĐOM ĐÓM</small><strong><span id="carried">0</span><b>/ 10</b></strong></div><div class="hud-stat lamps"><small>ĐÈN ĐÃ THẮP</small><strong><span id="lit">0</span><b>/ <span id="lamp-total">5</span></b></strong></div><div class="hud-stat time"><small>TRƯỚC BÌNH MINH</small><strong id="timer">05:00</strong></div></div>
+      <div class="hud-top"><div class="hud-stat flames"><small>LỬA CỦA MÂY</small><strong id="flames">● ● ●</strong></div><div class="hud-stat bag"><small>ĐOM ĐÓM</small><strong><span id="carried">0</span><b>/ <span id="capacity">10</span></b></strong></div><div class="hud-stat lamps"><small>ĐÈN ĐANG SÁNG</small><strong><span id="lit">0</span><b>/ <span id="lamp-total">5</span></b></strong></div><div class="hud-stat time"><small>TRƯỚC BÌNH MINH</small><strong><span id="warning-symbol" hidden>⚠ </span><span id="timer">04:00</span></strong></div></div>
+      <p id="dawn-goal"></p>
       <div class="progress" id="lantern-progress" aria-label="Tiến độ năm đèn"></div>
       <div class="score"><small>ĐIỂM ÁNH SÁNG</small><strong id="score">0</strong></div>
       <div id="prompt" class="prompt" role="status"></div>
@@ -34,7 +35,7 @@
     </section>
     <section id="night-intro" class="panel result" hidden><p class="eyebrow">LỜI ÔNG ĐĂNG</p><h2 id="intro-name"></h2><p id="intro-story"></p><button id="enter-night" class="primary">Bước vào đêm <span>→</span></button></section>
     <section id="paused" class="panel result" hidden><p class="eyebrow">ĐÊM VẪN CÒN Ở ĐÂY</p><h2>Một chút<br><em>nghỉ chân.</em></h2><p>Ánh sáng sẽ đợi bạn.</p><button id="resume" class="primary">Tiếp tục <span>→</span></button><button id="retry-night" class="secondary">Chơi lại Đêm</button><button id="pause-settings" class="secondary">Cài đặt</button><button id="to-menu" class="secondary">Về menu</button></section>
-    <section id="settings" class="panel result" hidden><p class="eyebrow">THEO CÁCH CỦA BẠN</p><h2>Cài <em>đặt.</em></h2><label>Âm lượng <input id="volume" type="range" min="0" max="1" step="0.05"></label><label>Độ nhạy chuột <input id="sensitivity" type="range" min="0.05" max="1" step="0.05"></label><button id="close-settings" class="primary">Xong <span>✓</span></button></section>
+    <section id="settings" class="panel result" hidden><p class="eyebrow">THEO CÁCH CỦA BẠN</p><h2>Cài <em>đặt.</em></h2><label>Âm lượng <input id="volume" type="range" min="0" max="1" step="0.05"></label><label>Độ nhạy chuột <input id="sensitivity" type="range" min="0.05" max="1" step="0.05"></label><label class="palette-setting">Bảng màu dễ phân biệt <input id="colorblind" type="checkbox"></label><button id="close-settings" class="primary">Xong <span>✓</span></button></section>
     <section id="result" class="panel result" hidden aria-labelledby="result-title"><p class="eyebrow" id="result-kicker"></p><h2 id="result-title"></h2><p id="result-story"></p><div class="result-score"><small>ĐIỂM ÁNH SÁNG</small><strong id="final-score"></strong></div><button id="next-night" class="primary" hidden>Đêm kế tiếp <span>→</span></button><button id="restart" class="secondary">Chơi lại Đêm này</button></section>
     <section id="error" class="panel result" hidden><h2>Chưa mở được đảo</h2><p id="error-text"></p><button onclick="location.reload()" class="primary">Thử lại</button></section>
   </main>
