@@ -2,7 +2,7 @@ import { browserRuntime } from './browser-runtime.mjs';
 import { readFile, writeFile, mkdir, mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 const proof='docs/proof/phase-4';await mkdir('artifacts/demo',{recursive:true});await mkdir('dist/validation',{recursive:true});
 const bench=JSON.parse(await readFile('bench.json','utf8')),soak=JSON.parse(await readFile('soak.json','utf8')),browser=JSON.parse(await readFile(`${proof}/browser-results.json`,'utf8'));
 const tests=await readFile(`${proof}/tests.log`,'utf8'),replay=await readFile(`${proof}/replay.log`,'utf8');
@@ -19,6 +19,6 @@ try{
  await context.close();context=null;const input=await video.path();
  const ffmpeg=process.env.FFMPEG_PATH||execFileSync('python',['-c','import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())'],{encoding:'utf8'}).trim();
  execFileSync(ffmpeg,['-y','-i',input,'-c:v','libx264','-preset','fast','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart','artifacts/demo/demo.mp4'],{stdio:'pipe',maxBuffer:4*1024*1024});
- const probe=execFileSync(ffmpeg,['-i','artifacts/demo/demo.mp4','-f','null','-'],{encoding:'utf8',stdio:['ignore','pipe','pipe']});
- await writeFile(`${proof}/video.json`,JSON.stringify({path:'Release asset demo.mp4',source:'actual normal UI + real keyboard input; benchmark scene; actual proof files',recording:input,conversion:'FFmpeg libx264 CRF23 yuv420p',exit:0},null,2)+'\n');console.log('Recorded artifacts/demo/demo.mp4');
+ const probe=spawnSync(ffmpeg,['-i','artifacts/demo/demo.mp4','-f','null','-'],{encoding:'utf8',maxBuffer:4*1024*1024});if(probe.status!==0)throw new Error(probe.stderr);const match=/Duration: (\d+):(\d+):(\d+\.\d+)/.exec(probe.stderr);if(!match)throw new Error('No video duration');const seconds=Number(match[1])*3600+Number(match[2])*60+Number(match[3]);if(seconds>=300)throw new Error('Video too long');
+ await writeFile(`${proof}/video-probe.log`,probe.stderr);await writeFile(`${proof}/video.json`,JSON.stringify({path:'Release asset demo.mp4',duration_s:seconds,size:[1280,720],source:'actual normal UI + real keyboard input; benchmark scene; actual proof files',recording:input,conversion:'FFmpeg libx264 CRF23 yuv420p',exit:0},null,2)+'\n');console.log('Recorded artifacts/demo/demo.mp4');
 }finally{await context?.close();await runtime?.close();await rm(temp,{recursive:true,force:true});}
