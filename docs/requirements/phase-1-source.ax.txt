@@ -1,0 +1,619 @@
+Source: https://claude.ai/artifact/Q1RYyv1dxjUczzCbd2ZnoW#p1
+Captured: 2026-11-20; Phase 1 only; accessibility text, not source code.
+
+          - sectionheader
+            - StaticText "DAY 12 · AI SDLC LAB · PHASE 1"
+            - heading "PRD-0 · Đảo Đèn Lồng" [level=1, ref=e30]
+              - StaticText "PRD-0 · Đảo Đèn Lồng"
+            - paragraph
+              - StaticText "Bản mô tả đầu tiên từ khách hàng. Phần yêu cầu cố ý ở mức tổng quát. Phần "
+              - strong
+                - StaticText "Test Contract v1.0"
+              - StaticText " ở cuối là bắt buộc và chính xác, vì bài của các bạn sẽ được chạy và chấm tự động."
+            - StaticText "Tag nộp: phase-1"
+            - StaticText "Contract v1.0"
+            - StaticText "Khoảng 60 phút"
+            - StaticText "Đúng yêu cầu > phức tạp"
+          - heading "1Chúng tôi muốn gì" [level=2, ref=e23]
+            - StaticText "1Chúng tôi muốn gì"
+          - paragraph
+            - StaticText "Chúng tôi muốn một "
+            - strong
+              - StaticText "game 3D"
+            - StaticText " tên là "
+            - strong
+              - StaticText "Đảo Đèn Lồng"
+            - StaticText "."
+          - paragraph
+            - StaticText "Người chơi điều khiển "
+            - strong
+              - StaticText "Mây"
+            - StaticText ", người giữ đèn nhỏ tuổi của một hòn đảo giữa biển mây. Đêm nay sương đen đã nuốt hết ánh sáng của đảo. Mây phải chạy khắp đảo "
+            - strong
+              - StaticText "thu thập những đốm sáng (đom đóm)"
+            - StaticText " rồi mang về "
+            - strong
+              - StaticText "thắp lại các Đèn Lồng Lớn"
+            - StaticText "."
+          - paragraph
+            - StaticText "Trong bóng tối có "
+            - strong
+              - StaticText "Bóng Mực"
+            - StaticText ", những sinh vật bằng mực đen sống trong sương. Chúng đuổi theo Mây; bị chúng chạm vào thì "
+            - strong
+              - StaticText "mất máu"
+            - StaticText ". Mây có thể "
+            - strong
+              - StaticText "tỏa sáng"
+            - StaticText " để xua chúng đi, nhưng việc đó tốn ánh sáng. Bóng Mực "
+            - strong
+              - StaticText "sợ những chiếc đèn"
+            - StaticText "."
+          - paragraph
+            - StaticText "Thắp hết đèn thì "
+            - strong
+              - StaticText "thắng"
+            - StaticText ". Mất hết máu thì "
+            - strong
+              - StaticText "thua"
+            - StaticText ". Có "
+            - strong
+              - StaticText "điểm số"
+            - StaticText "."
+          - heading "2Phạm vi Phase 1" [level=2, ref=e24]
+            - StaticText "2Phạm vi Phase 1"
+          - list
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Một màn chơi: "
+              - strong
+                - StaticText "Đêm 1 – Đảo Bến"
+              - StaticText ", một hòn đảo tròn có "
+              - strong
+                - StaticText "5 Đèn Lồng Lớn"
+              - StaticText "."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Nhân vật đi lại, nhảy, camera 3D."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Đom đóm xuất hiện rải rác trên đảo, nhặt được."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Nạp ánh sáng vào đèn để thắp đèn."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Bóng Mực xuất hiện và đuổi người chơi."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Tỏa sáng để xua Bóng Mực."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Thắng, thua, điểm số, giao diện hiển thị thông tin cần thiết (HUD)."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Có thể chơi lại sau khi thắng hoặc thua."
+          - heading "3Cảm giác & phong cách" [level=2, ref=e25]
+            - StaticText "3Cảm giác & phong cách"
+          - StaticText "Không khí "
+          - StaticText "đêm, ấm áp, cổ tích"
+          - StaticText "Đảo "
+          - StaticText "sáng dần lên"
+          - StaticText " khi thắp đèn"
+          - StaticText "Ánh sáng "
+          - StaticText "vàng cam ấm"
+          - StaticText " là thứ tốt"
+          - StaticText "Màu "
+          - StaticText "tím đen"
+          - StaticText " là nguy hiểm"
+          - list
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Phong cách đồ họa "
+              - strong
+                - StaticText "đơn giản nhưng đẹp"
+              - StaticText ". Không cần đồ họa chân thực."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Mây đội "
+              - strong
+                - StaticText "nón lá có treo một chiếc đèn lồng nhỏ"
+              - StaticText "."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Không bạo lực, không máu me."
+          - heading "Tự do sáng tạo (khuyến khích)" [level=3, ref=e26]
+          - paragraph
+            - StaticText "PRD-0 chỉ là khung. Ngoài những gì đã nêu, bạn được "
+            - strong
+              - StaticText "tự do sáng tạo thêm"
+            - StaticText ": "
+            - strong
+              - StaticText "nhân vật mới, kẻ địch mới"
+            - StaticText " (ngoài Bóng Mực), nhân vật phụ, loại Bóng Mực hay đom đóm khác nhau, cơ chế nhỏ, sự kiện bất ngờ, câu chuyện, hiệu ứng, âm thanh, cách thể hiện ánh sáng, chi tiết trên đảo. Hãy làm cho game mang dấu ấn của bạn."
+          - list
+            - listitem [level=1]
+              - ListMarker "• "
+              - strong
+                - StaticText "Không phá những gì PRD-0 và Test Contract đã yêu cầu."
+              - StaticText " Phần thêm không được làm đổi đầu ra headless theo contract (ví dụ thực thể thêm nên tắt khi chạy headless)."
+            - listitem [level=1]
+              - ListMarker "• "
+              - strong
+                - StaticText "Nói rõ trong README"
+              - StaticText " (một mục ngắn \"Sáng tạo của tôi\") bạn đã thêm gì, và có bằng chứng ngắn rằng phần cũ vẫn đúng."
+            - listitem [level=1]
+              - ListMarker "• "
+              - strong
+                - StaticText "Làm lõi đúng trước, sáng tạo sau"
+              - StaticText ", và cân nhắc token: một ý sáng tạo nhỏ, gọn, chạy đúng hơn nhiều ý dở dang."
+          - heading "4Không bắt buộc công nghệ" [level=2, ref=e27]
+            - StaticText "4Không bắt buộc công nghệ"
+          - paragraph
+            - StaticText "Bạn được tự chọn engine, ngôn ngữ và framework. Game phải chạy được trên laptop (macOS hoặc Linux; nếu bạn dùng Windows thì phải có cách chạy trên macOS/Linux cho giảng viên, ví dụ Docker hoặc bản web)."
+          - heading "5Bàn giao Phase 1" [level=2, ref=e28]
+            - StaticText "5Bàn giao Phase 1"
+          - paragraph
+            - StaticText "Nộp bằng tag git "
+            - code
+              - StaticText "phase-1"
+            - StaticText " trên repo public."
+          - list
+            - listitem [level=1]
+              - StaticText "1"
+              - StaticText "Game chơi được Đêm 1 từ đầu tới thắng/thua."
+            - listitem [level=1]
+              - StaticText "2"
+              - code
+                - StaticText "README.md"
+              - StaticText ": cách cài đặt và chạy (tối đa 3 lệnh), điều khiển, cách tính điểm của bạn."
+            - listitem [level=1]
+              - StaticText "3"
+              - code
+                - StaticText "game.contract.json"
+              - StaticText " và chế độ headless theo "
+              - strong
+                - StaticText "Test Contract v1.0"
+              - StaticText " dưới đây."
+            - listitem [level=1]
+              - StaticText "4"
+              - StaticText "Bằng chứng game chạy đúng yêu cầu, cùng ghi chép ngắn (giả định, nhật ký dùng AI). Định dạng tự chọn."
+            - listitem [level=1]
+              - StaticText "5"
+              - StaticText "Harness AI bạn đã dùng ("
+              - code
+                - StaticText "AGENTS.md"
+              - StaticText " hoặc tương đương, skills, hooks…)."
+          - heading "6Lưu ý" [level=2, ref=e29]
+            - StaticText "6Lưu ý"
+          - list
+            - listitem [level=1]
+              - ListMarker "• "
+              - strong
+                - StaticText "Game tốt là game đúng yêu cầu của khách hàng"
+              - StaticText ", không phải game phức tạp hay đẹp nhất."
+            - listitem [level=1]
+              - ListMarker "• "
+              - strong
+                - StaticText "Cân nhắc kỹ quota token."
+              - StaticText " Đốt nhiều token không làm bài tốt hơn."
+            - listitem [level=1]
+              - ListMarker "• "
+              - strong
+                - StaticText "Không có bằng chứng thì chưa xong."
+              - StaticText " \"Agent bảo chạy rồi\" không phải bằng chứng."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Chỗ PRD-0 còn mơ hồ: tự giả định hợp lý và ghi lại."
+            - listitem [level=1]
+              - ListMarker "• "
+              - StaticText "Sáng tạo thêm được khuyến khích, nhưng không được làm hỏng phần lõi và Test Contract."
+          - generic
+            - StaticText "BẮT BUỘC"
+            - heading "Test Contract v1.0" [level=2, ref=e31]
+            - paragraph
+              - StaticText "Mọi bài nộp phải có một "
+              - strong
+                - StaticText "chế độ chạy không giao diện (headless)"
+              - StaticText " để giảng viên chạy kiểm thử tự động, bất kể công nghệ."
+            - heading "A. File game.contract.json ở gốc repo" [level=3, ref=e32]
+            - code
+              - StaticText "{\n  \"contract_version\": \"1.0\",\n  \"team\": \"mssv-ho-ten\",\n  \"build_cmd\": \"lệnh cài đặt/biên dịch\",\n  \"run_cmd\": \"lệnh mở game có giao diện\",\n  \"headless_cmd\": \"lệnh chạy headless (sẽ được nối thêm tham số)\",\n  \"tuning\": {\n    \"player_speed\": 0,\n    \"carry_capacity\": 0,\n    \"lantern_cost\": 0,\n    \"lantern_count_night1\": 5,\n    \"pickup_radius\": 0,\n    \"interact_radius\": 0,\n    \"pulse_cost\": 0,\n    \"pulse_radius\": 0,\n    \"night1_duration_s\": 0,\n    \"flames\": 0,\n    \"invuln_s\": 0,\n    \"hit_drop_ratio\": 0,\n    \"pulse_stun_s\": 0,\n    \"pulse_push_m\": 0,\n    \"pulse_cooldown_s\": 0,\n    \"safe_radius\": 0,\n    \"shade_speed\": 0,\n    \"shade_hit_radius\": 0,\n    \"fall_enabled\": false,\n    \"score\": { \"per_mote\": 0, \"per_lantern\": 0, \"per_stun\": 0,\n               \"per_second_left\": 0, \"per_flame_left\": 0 }\n  }\n}"
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "tuning"
+                - StaticText ": bạn điền "
+                - strong
+                  - StaticText "đúng các số mà game của bạn đang dùng"
+                - StaticText ". Nếu game không có khái niệm đó, điền "
+                - code
+                  - StaticText "null"
+                - StaticText " (hoặc "
+                - code
+                  - StaticText "false"
+                - StaticText ") và giải thích trong README. Bài test Phase 1 sinh tình huống dựa trên các số này, nên khai sai sẽ làm trượt test."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Ý nghĩa: "
+                - code
+                  - StaticText "hit_drop_ratio"
+                - StaticText " là tỉ lệ đom đóm đánh rơi khi bị chạm (0 nếu không rơi); "
+                - code
+                  - StaticText "safe_radius"
+                - StaticText " là bán kính quanh đèn mà Bóng Mực không vào được; "
+                - code
+                  - StaticText "fall_enabled"
+                - StaticText " cho biết rơi khỏi đảo có bị phạt hay không; "
+                - code
+                  - StaticText "score.*"
+                - StaticText " là điểm cho mỗi sự kiện."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Lệnh phải chạy được trên macOS/Linux sau "
+                - code
+                  - StaticText "build_cmd"
+                - StaticText ". Docker được phép."
+            - heading "B. Tham số headless" [level=3, ref=e33]
+            - code
+              - StaticText "<headless_cmd> --seed <int> --night 1 [--scenario <file.json>] [--inputs <file.json>]\n               --ticks <int> --out <file.jsonl> [--snapshot-every <int, mặc định 10>]"
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Logic game chạy ở "
+                - strong
+                  - StaticText "60 tick/giây cố định"
+                - StaticText " (1 tick = 1/60 giây), "
+                - strong
+                  - StaticText "không cần cửa sổ, không cần GPU"
+                - StaticText ", nhanh nhất có thể."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Dừng khi chạy đủ "
+                - code
+                  - StaticText "--ticks"
+                - StaticText " hoặc khi game kết thúc (thắng/thua). Thoát với mã 0."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Lỗi → mã thoát khác 0, thông báo lỗi ra stderr. File inputs/scenario sai định dạng → mã thoát "
+                - strong
+                  - StaticText "2"
+                - StaticText "."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Đơn vị độ dài là mét; "
+                - strong
+                  - StaticText "trục Y hướng lên"
+                - StaticText "; mặt đất đảo ở Y = 0; người chơi xuất phát tại (0, 0, 0)."
+            - heading "Mô hình tick (để mọi bài đếm giống nhau)" [level=4, ref=e34]
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Snapshot tick 0 là trạng thái "
+                - strong
+                  - StaticText "sau khi dựng scenario, trước khi áp dụng input"
+                - StaticText "."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Bước thứ k (k = 0 … N−1) đọc input của tick k và tạo ra trạng thái k+1. Sự kiện xảy ra trong bước đó ghi "
+                - code
+                  - StaticText "tick = k+1"
+                - StaticText ". "
+                - code
+                  - StaticText "--ticks N"
+                - StaticText " thực hiện "
+                - strong
+                  - StaticText "đúng N bước"
+                - StaticText "."
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "time_left_s"
+                - StaticText " = thời lượng Đêm − (số bước đã chạy) / 60."
+            - heading "Quy ước vị trí" [level=4, ref=e35]
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "player.pos"
+                - StaticText " là "
+                - strong
+                  - StaticText "chân"
+                - StaticText " nhân vật; "
+                - code
+                  - StaticText "shade.pos"
+                - StaticText " là "
+                - strong
+                  - StaticText "tâm"
+                - StaticText " Bóng Mực; "
+                - code
+                  - StaticText "lantern.pos"
+                - StaticText " là chân cột đèn; vị trí đom đóm là điểm trên "
+                - strong
+                  - StaticText "mặt đất"
+                - StaticText " (độ cao lơ lửng chỉ là hiển thị)."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Mọi khoảng cách trong "
+                - code
+                  - StaticText "tuning"
+                - StaticText " đo giữa các điểm này, theo mặt phẳng ngang XZ, "
+                - strong
+                  - StaticText "không"
+                - StaticText " cộng thêm kích thước nhân vật. \"Trong bán kính r\" nghĩa là khoảng cách "
+                - strong
+                  - StaticText "≤ r"
+                - StaticText "."
+            - heading "C. File inputs" [level=3, ref=e36]
+            - code
+              - StaticText "{\n  \"frames\": [\n    { \"tick\": 0,   \"move\": [0, 1], \"cam_yaw_deg\": 0 },\n    { \"tick\": 120, \"move\": [0, 0], \"interact\": true },\n    { \"tick\": 121, \"interact\": false },\n    { \"tick\": 200, \"pulse\": true },\n    { \"tick\": 201, \"pulse\": false }\n  ]\n}"
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Giá trị mặc định trước frame đầu tiên: "
+                - code
+                  - StaticText "move [0,0]"
+                - StaticText ", "
+                - code
+                  - StaticText "cam_yaw_deg 0"
+                - StaticText ", mọi nút "
+                - code
+                  - StaticText "false"
+                - StaticText "."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Mỗi frame chỉ đổi các trường có mặt trong frame đó; trường vắng mặt "
+                - strong
+                  - StaticText "giữ giá trị cũ"
+                - StaticText "."
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "tick"
+                - StaticText " của các frame phải tăng nghiêm ngặt (không trùng, không giảm)."
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "move"
+                - StaticText ": "
+                - code
+                  - StaticText "[x, z]"
+                - StaticText ", mỗi thành phần trong [−1, 1]. Với θ = "
+                - code
+                  - StaticText "cam_yaw_deg"
+                - StaticText " đổi sang radian, hướng di chuyển trong thế giới là "
+                - code
+                  - StaticText "x' = x·cosθ + z·sinθ"
+                - StaticText ", "
+                - code
+                  - StaticText "z' = −x·sinθ + z·cosθ"
+                - StaticText " (khi θ = 0 thì "
+                - code
+                  - StaticText "x"
+                - StaticText " là +X, "
+                - code
+                  - StaticText "z"
+                - StaticText " là +Z). Vector dài hơn 1 phải được chuẩn hóa về độ dài 1."
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "jump"
+                - StaticText ", "
+                - code
+                  - StaticText "interact"
+                - StaticText ", "
+                - code
+                  - StaticText "pulse"
+                - StaticText " (và "
+                - code
+                  - StaticText "dash"
+                - StaticText " nếu có): boolean, hành động kích hoạt khi giá trị "
+                - strong
+                  - StaticText "chuyển từ false sang true"
+                - StaticText "."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Không có file inputs nghĩa là người chơi đứng yên."
+            - heading "D. File scenario (dựng tình huống cho test)" [level=3, ref=e37]
+            - code
+              - StaticText "{\n  \"player\": { \"pos\": [0, 0, 0], \"carried\": 0, \"flames\": 3 },\n  \"random_motes\": false,\n  \"random_shades\": false,\n  \"motes\": [[0, 0, 5]],\n  \"shades\": [{ \"pos\": [10, 0, 0] }],\n  \"lanterns\": [{ \"id\": \"L1\", \"pos\": [0, 0, 25], \"deposited\": 0 }],\n  \"time_left_s\": 300\n}"
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "random_motes: false"
+                - StaticText ": không tự sinh đom đóm, chỉ có những con được liệt kê."
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "random_shades: false"
+                - StaticText ": không tự sinh Bóng Mực, chỉ có những con được liệt kê (ở trạng thái hoạt động bình thường ngay lập tức)."
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "lanterns"
+                - StaticText ": "
+                - strong
+                  - StaticText "cập nhật theo id"
+                - StaticText " các đèn của màn ("
+                - code
+                  - StaticText "L1"
+                - StaticText "…"
+                - code
+                  - StaticText "L5"
+                - StaticText "). Đèn không được nhắc tới giữ nguyên; có "
+                - code
+                  - StaticText "pos"
+                - StaticText " thì đổi vị trí; có thể đặt "
+                - code
+                  - StaticText "lit: true"
+                - StaticText "."
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "motes"
+                - StaticText ", "
+                - code
+                  - StaticText "shades"
+                - StaticText ": "
+                - strong
+                  - StaticText "thay thế"
+                - StaticText " danh sách ban đầu tương ứng; mảng rỗng nghĩa là không có con nào. "
+                - code
+                  - StaticText "shades[]"
+                - StaticText " có thể kèm "
+                - code
+                  - StaticText "id"
+                - StaticText " để test tham chiếu."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Trường nào không có thì dùng mặc định của game."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Dựng scenario "
+                - strong
+                  - StaticText "không"
+                - StaticText " phát sự kiện và "
+                - strong
+                  - StaticText "không"
+                - StaticText " cộng điểm (ví dụ đèn đặt sẵn "
+                - code
+                  - StaticText "lit: true"
+                - StaticText " không được cộng điểm thắp đèn)."
+            - heading "E. Output JSONL" [level=3, ref=e38]
+            - paragraph
+              - StaticText "Mỗi dòng là một đối tượng JSON, gồm ba loại."
+            - paragraph
+              - strong
+                - StaticText "Snapshot"
+              - StaticText ", mỗi "
+              - code
+                - StaticText "--snapshot-every"
+              - StaticText " tick, bắt đầu từ tick 0:"
+            - code
+              - StaticText "{\"type\":\"snapshot\",\"tick\":120,\"sim_tick\":120,\"state\":\"playing\",\"time_left_s\":298.0,\"score\":20,\n \"player\":{\"pos\":[0.0,0.0,12.0],\"flames\":3,\"carried\":2},\n \"lanterns\":[{\"id\":\"L1\",\"pos\":[0,0,25],\"lit\":false,\"deposited\":0}],\n \"shades\":[{\"id\":\"S1\",\"pos\":[30.1,1.0,2.0],\"state\":\"chase\"}],\n \"motes_active\":19}"
+            - paragraph
+              - strong
+                - StaticText "Event"
+              - StaticText ", ghi ngay khi sự kiện xảy ra. Ví dụ: "
+              - code
+                - StaticText "{\"type\":\"event\",\"tick\":131,\"name\":\"mote_picked\",\"data\":{\"carried\":3}}"
+            - table
+              - rowgroup
+                - row
+                  - columnheader "NAME" [ref=e53]
+                  - columnheader "DATA" [ref=e54]
+              - row
+                - cell "mote_picked" [ref=e39]
+                  - code
+                    - StaticText "mote_picked"
+                - cell "{\"carried\": n}" [ref=e40]
+                  - code
+                    - StaticText "{\"carried\": n}"
+              - row
+                - cell "deposit" [ref=e41]
+                  - code
+                    - StaticText "deposit"
+                - cell "{\"lantern_id\": \"L1\", \"amount\": n, \"deposited\": n}" [ref=e42]
+                  - code
+                    - StaticText "{\"lantern_id\": \"L1\", \"amount\": n, \"deposited\": n}"
+              - row
+                - cell "lantern_lit" [ref=e43]
+                  - code
+                    - StaticText "lantern_lit"
+                - cell "{\"lantern_id\": \"L1\"}" [ref=e44]
+                  - code
+                    - StaticText "{\"lantern_id\": \"L1\"}"
+              - row
+                - cell "pulse" [ref=e45]
+                  - code
+                    - StaticText "pulse"
+                - cell "{\"stunned_ids\": [\"S1\"]}" [ref=e46]
+                  - code
+                    - StaticText "{\"stunned_ids\": [\"S1\"]}"
+              - row
+                - cell "player_hit" [ref=e47]
+                  - code
+                    - StaticText "player_hit"
+                - cell "{\"by\": \"shade\" | \"fall\", \"flames\": n, \"dropped\": n}" [ref=e48]
+                  - code
+                    - StaticText "{\"by\": \"shade\" | \"fall\", \"flames\": n, \"dropped\": n}"
+              - row
+                - cell "shade_spawned" [ref=e49]
+                  - code
+                    - StaticText "shade_spawned"
+                - cell "{\"id\": \"S3\"}" [ref=e50]
+                  - code
+                    - StaticText "{\"id\": \"S3\"}"
+              - row
+                - cell "game_over" [ref=e51]
+                  - code
+                    - StaticText "game_over"
+                - cell "{\"result\": \"won\" | \"lost\", \"reason\": \"all_lit\" | \"dawn\" | \"no_flames\"}" [ref=e52]
+                  - code
+                    - StaticText "{\"result\": \"won\" | \"lost\", \"reason\": \"all_lit\" | \"dawn\" | \"no_flames\"}"
+            - paragraph
+              - strong
+                - StaticText "End"
+              - StaticText ", dòng cuối cùng và bắt buộc: "
+              - code
+                - StaticText "{\"type\":\"end\",\"ticks\":4800,\"state\":\"won\",\"score\":1730}"
+            - list
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "state"
+                - StaticText " thuộc "
+                - code
+                  - StaticText "playing"
+                - StaticText ", "
+                - code
+                  - StaticText "won"
+                - StaticText ", "
+                - code
+                  - StaticText "lost"
+                - StaticText ". Trạng thái Bóng Mực tối thiểu phải có "
+                - code
+                  - StaticText "stunned"
+                - StaticText "; các trạng thái khác do bạn đặt tên."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Tọa độ làm tròn 3 chữ số thập phân."
+              - listitem [level=1]
+                - ListMarker "• "
+                - strong
+                  - StaticText "Tính tất định:"
+                - StaticText " cùng "
+                - code
+                  - StaticText "--seed"
+                - StaticText ", cùng scenario và cùng inputs phải cho output "
+                - strong
+                  - StaticText "giống hệt nhau"
+                - StaticText " giữa hai lần chạy, kể cả các id tự sinh. Các bạn không cần sinh cùng chuỗi ngẫu nhiên với nhau."
+              - listitem [level=1]
+                - ListMarker "• "
+                - code
+                  - StaticText "sim_tick"
+                - StaticText " là số bước gameplay đã chạy (ở Phase 1 bằng "
+                - code
+                  - StaticText "tick"
+                - StaticText ")."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Mảng "
+                - code
+                  - StaticText "motes"
+                - StaticText " (mỗi phần tử "
+                - code
+                  - StaticText "id"
+                - StaticText ", "
+                - code
+                  - StaticText "pos"
+                - StaticText ") trong snapshot là "
+                - strong
+                  - StaticText "khuyến nghị"
+                - StaticText " ở v1.0."
+              - listitem [level=1]
+                - ListMarker "• "
+                - StaticText "Nếu một sự kiện không xảy ra trong game của bạn (ví dụ không có rơi khỏi đảo) thì không ghi sự kiện đó."

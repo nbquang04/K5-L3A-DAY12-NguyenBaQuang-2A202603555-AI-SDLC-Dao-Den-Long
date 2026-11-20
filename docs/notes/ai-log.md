@@ -1,0 +1,53 @@
+# Nhật ký sử dụng AI
+
+## 2026-11-20 — chuẩn bị harness và đặc tả
+
+- Yêu cầu: đọc tài liệu lab, kiểm tra khả năng dùng Spec Kit từng phase, tạo AGENTS và ARCHITECTURE cùng bộ tài liệu mẫu Phase 1.
+- Đã đọc: README, GUIDE, CHECKPOINTS, SUBMISSION, RULES, RUBRIC. Repo ban đầu chỉ có sáu file này.
+- Skill hỗ trợ: find-skills để kiểm tra hướng tìm công cụ; orca-cli để mở artifact. Chưa có skill Spec Kit được nạp/cài.
+- Nguồn ngoài: GitHub Spec Kit và quickstart chính thức. Mở artifact qua web thất bại; trình duyệt Orca mở được nhưng yêu cầu đăng nhập để thấy dữ liệu.
+- Kết quả: tài liệu chuẩn bị, spec/plan/tasks nháp Phase 1; không viết mã game, không tạo protocol giả, không tạo bằng chứng gameplay hoặc tag phát hành.
+- Điều chỉnh harness: ghi rõ nguồn và trạng thái nháp để tránh AI coi tuning đề xuất là yêu cầu bắt buộc; không tuyên bố đã dùng lệnh Spec Kit khi chưa cài.
+- Token/chi phí: chưa có số liệu do công cụ cung cấp. Không tự ghi số ước lượng thiếu căn cứ.
+- Tiết kiệm: giữ hướng dẫn thường trực gọn; chỉ tạo yêu cầu Phase 1, không suy đoán các ticket tiếp theo.
+
+Mỗi phase bổ sung: yêu cầu đạt/chưa đạt, lệnh/bằng chứng và revision, hồi quy, lỗi AI/cách phát hiện/cách sửa harness, token/chi phí có nguồn hoặc ước tính có phương pháp. Chưa có kết quả nghiệm thu game.
+
+## 2026-11-20 — mở rộng tài liệu và Verify
+
+- Theo yêu cầu người dùng: bổ sung chi tiết constitution/AGENTS/ARCHITECTURE; thêm quy trình tạo/chạy test sau code và báo cáo.
+- Thêm VERIFICATION, STATUS, decision log, nguồn yêu cầu, ma trận Phase 1 và release checklist. Không sửa thêm README trong lượt này.
+- Thêm scripts/verify.py và manifest command rỗng. Script điều phối argv không qua shell, lưu raw log và report JSON/Markdown; không tự sinh test gameplay hoặc tự kết luận phase đạt.
+- Đã kiểm tra runner bằng sáu trường hợp: command thành công, thất bại, executable thiếu, timeout, manifest rỗng, manifest sai; trạng thái/exit code đúng và raw stdout/stderr được lưu. Đây là kiểm tra harness, không phải kiểm tra game.
+- Lần thử đầu bị sandbox chặn tempfile; chạy lại kiểm tra với quyền được chấp thuận. Manifest mặc định trả BLOCKED/exit 2 vì chưa cấu hình test thật.
+- Tài liệu Spec Kit chính thức xác nhận checklist/analyze/converge hỗ trợ kiểm tra tài liệu/code; dự án vẫn cần kiểm chứng runtime riêng.
+
+## 2026-11-20 — cài Spec Kit chính thức
+
+- Người dùng yêu cầu cài skill Spec Kit. Đọc skill-installer và hướng dẫn cài/integration Codex chính thức. Skill chính thức được sinh theo project bằng Specify CLI, không có thư mục SKILL.md tĩnh phù hợp để dùng helper tải skill GitHub trực tiếp.
+- Cài specify-cli 1.4.3 từ PyPI. Lần cài --user phát sinh Starlette không tương thích FastAPI; chuyển sang venv .tools/speckit rồi gỡ đúng 12 package vừa được thêm vào Python dùng chung. Xác nhận Starlette gốc 0.38.6 được khôi phục.
+- Sao lưu tài liệu vào .tools/speckit-install-backup trước init; khởi tạo codex/PowerShell, native events false. Trình cài giữ constitution; hash ba file chính trước/sau init giống nhau.
+- Đã có chín skill chính thức, template/script và workflow. Specify version 1.4.3; integration status ok, missing/modified managed files đều 0.
+- CLI dùng scripts/speckit.ps1; .tools được gitignore. Không chạy các skill tạo yêu cầu/code và không thay luật gameplay trong bước cài.
+
+## 2026-11-20 — triển khai Phase 1 qua Spec Kit
+
+- Người dùng yêu cầu hoàn thành Phase 1 tuần tự các skill, cho full access.
+- Đã đọc PRD-0/Test Contract thực tế qua Orca sau đăng nhập/reload; chỉ tab Phase 1.
+- Specify chuẩn hóa spec/feature state; clarify ghi nguồn và baseline tự chọn;
+  Plan dùng template resolver/setup và research agent; Tasks dùng setup-tasks;
+  Analyze read-only xác nhận FR/SC/task/model coverage trước triển khai.
+- Implement viết test trước (FAIL do module chưa tồn tại), xây core/CLI rồi renderer.
+  Checklist sinh mục chưa tích; reviewer độc lập đánh giá 10/10 rồi ghi kết quả riêng.
+- Converge/review phát hiện safe-circle overlap; test regression FAIL trước sửa,
+  sửa thuật toán, reviewer chạy độc lập 23/23 PASS. Sửa hardcode/locale/epsilon liên quan.
+- Verify: Windows Node 22.17.0, Linux Docker Node 22.23.2; 23 tests; ba scenario kết thúc;
+  full default route won ở tick921, 1188 điểm, 3 lửa; byte parity giữa tiến trình/nền tảng.
+- Browser thực: keyboard/pickup, jump, hit/dawn/restart, pulse, win/parity; camera drag
+  được kiểm tra riêng. Tab hidden tự pause làm lần kiểm tra live-input thất bại;
+  không sửa product để bỏ pause, restore Orca window rồi rerun đạt.
+- npm ci lần đầu lỗi CA môi trường; dùng Node --use-system-ca, không tắt TLS.
+- Token/chi phí: chưa có số đo nhà cung cấp, không tự ghi số. Tiết kiệm bằng core thuần,
+  node:test sẵn có, một dependency và tập trung Phase 1; không đoán phase sau.
+- Review kỹ thuật không thay nghiệm thu cảm giác chơi của người dùng. Chưa chạy hidden
+  tests giảng viên; không tuyên bố tương thích các yêu cầu chưa được công bố.
